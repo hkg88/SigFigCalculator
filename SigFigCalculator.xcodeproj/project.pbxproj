@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2706EB8C16852F6500326CCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8B16852F6500326CCD /* UIKit.framework */; };
+		2706EB8E16852F6500326CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8D16852F6500326CCD /* Foundation.framework */; };
+		2706EB9016852F6500326CCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8F16852F6500326CCD /* CoreGraphics.framework */; };
+		2706EB9616852F6500326CCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2706EB9416852F6500326CCD /* InfoPlist.strings */; };
+		2706EB9816852F6500326CCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB9716852F6500326CCD /* main.m */; };
+		2706EB9C16852F6500326CCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB9B16852F6500326CCD /* AppDelegate.m */; };
+		2706EB9F16852F6600326CCD /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2706EB9D16852F6600326CCD /* MainStoryboard_iPhone.storyboard */; };
+		2706EBA216852F6600326CCD /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2706EBA016852F6600326CCD /* MainStoryboard_iPad.storyboard */; };
+		2706EBA516852F6600326CCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EBA416852F6600326CCD /* ViewController.m */; };
+		2706EBAD16852F6600326CCD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EBAC16852F6600326CCD /* SenTestingKit.framework */; };
+		2706EBAE16852F6600326CCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8B16852F6500326CCD /* UIKit.framework */; };
+		2706EBAF16852F6600326CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8D16852F6500326CCD /* Foundation.framework */; };
+		2706EBB716852F6600326CCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2706EBB516852F6600326CCD /* InfoPlist.strings */; };
+		2706EBBA16852F6600326CCD /* SigFigCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EBB916852F6600326CCD /* SigFigCalculatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2706EBB016852F6600326CCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2706EB7E16852F6500326CCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2706EB8616852F6500326CCD;
+			remoteInfo = SigFigCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2706EB8716852F6500326CCD /* SigFigCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SigFigCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2706EB8B16852F6500326CCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2706EB8D16852F6500326CCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2706EB8F16852F6500326CCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2706EB9316852F6500326CCD /* SigFigCalculator-Info.plist */ = {isa = PBXFileReference; path = "SigFigCalculator-Info.plist"; sourceTree = "<group>"; };
+		2706EB9516852F6500326CCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2706EB9716852F6500326CCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2706EB9916852F6500326CCD /* SigFigCalculator-Prefix.pch */ = {isa = PBXFileReference; path = "SigFigCalculator-Prefix.pch"; sourceTree = "<group>"; };
+		2706EB9A16852F6500326CCD /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		2706EB9B16852F6500326CCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2706EB9E16852F6600326CCD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		2706EBA116852F6600326CCD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		2706EBA316852F6600326CCD /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		2706EBA416852F6600326CCD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2706EBAB16852F6600326CCD /* SigFigCalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SigFigCalculatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2706EBAC16852F6600326CCD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2706EBB416852F6600326CCD /* SigFigCalculatorTests-Info.plist */ = {isa = PBXFileReference; path = "SigFigCalculatorTests-Info.plist"; sourceTree = "<group>"; };
+		2706EBB616852F6600326CCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2706EBB816852F6600326CCD /* SigFigCalculatorTests.h */ = {isa = PBXFileReference; path = SigFigCalculatorTests.h; sourceTree = "<group>"; };
+		2706EBB916852F6600326CCD /* SigFigCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigFigCalculatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2706EB8416852F6500326CCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2706EB8C16852F6500326CCD /* UIKit.framework in Frameworks */,
+				2706EB8E16852F6500326CCD /* Foundation.framework in Frameworks */,
+				2706EB9016852F6500326CCD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2706EBA716852F6600326CCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2706EBAD16852F6600326CCD /* SenTestingKit.framework in Frameworks */,
+				2706EBAE16852F6600326CCD /* UIKit.framework in Frameworks */,
+				2706EBAF16852F6600326CCD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2706EB7C16852F6500326CCD = {
+			isa = PBXGroup;
+			children = (
+				2706EB9116852F6500326CCD /* SigFigCalculator */,
+				2706EBB216852F6600326CCD /* SigFigCalculatorTests */,
+				2706EB8A16852F6500326CCD /* Frameworks */,
+				2706EB8816852F6500326CCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2706EB8816852F6500326CCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2706EB8716852F6500326CCD /* SigFigCalculator.app */,
+				2706EBAB16852F6600326CCD /* SigFigCalculatorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2706EB8A16852F6500326CCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2706EB8B16852F6500326CCD /* UIKit.framework */,
+				2706EB8D16852F6500326CCD /* Foundation.framework */,
+				2706EB8F16852F6500326CCD /* CoreGraphics.framework */,
+				2706EBAC16852F6600326CCD /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2706EB9116852F6500326CCD /* SigFigCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				2706EB9A16852F6500326CCD /* AppDelegate.h */,
+				2706EB9B16852F6500326CCD /* AppDelegate.m */,
+				2706EB9D16852F6600326CCD /* MainStoryboard_iPhone.storyboard */,
+				2706EBA016852F6600326CCD /* MainStoryboard_iPad.storyboard */,
+				2706EBA316852F6600326CCD /* ViewController.h */,
+				2706EBA416852F6600326CCD /* ViewController.m */,
+				2706EB9216852F6500326CCD /* Supporting Files */,
+			);
+			path = SigFigCalculator;
+			sourceTree = "<group>";
+		};
+		2706EB9216852F6500326CCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2706EB9316852F6500326CCD /* SigFigCalculator-Info.plist */,
+				2706EB9416852F6500326CCD /* InfoPlist.strings */,
+				2706EB9716852F6500326CCD /* main.m */,
+				2706EB9916852F6500326CCD /* SigFigCalculator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2706EBB216852F6600326CCD /* SigFigCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				2706EBB816852F6600326CCD /* SigFigCalculatorTests.h */,
+				2706EBB916852F6600326CCD /* SigFigCalculatorTests.m */,
+				2706EBB316852F6600326CCD /* Supporting Files */,
+			);
+			path = SigFigCalculatorTests;
+			sourceTree = "<group>";
+		};
+		2706EBB316852F6600326CCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2706EBB416852F6600326CCD /* SigFigCalculatorTests-Info.plist */,
+				2706EBB516852F6600326CCD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2706EB8616852F6500326CCD /* SigFigCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2706EBBD16852F6600326CCD /* Build configuration list for PBXNativeTarget "SigFigCalculator" */;
+			buildPhases = (
+				2706EB8316852F6500326CCD /* Sources */,
+				2706EB8416852F6500326CCD /* Frameworks */,
+				2706EB8516852F6500326CCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SigFigCalculator;
+			productName = SigFigCalculator;
+			productReference = 2706EB8716852F6500326CCD /* SigFigCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2706EBAA16852F6600326CCD /* SigFigCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2706EBC016852F6600326CCD /* Build configuration list for PBXNativeTarget "SigFigCalculatorTests" */;
+			buildPhases = (
+				2706EBA616852F6600326CCD /* Sources */,
+				2706EBA716852F6600326CCD /* Frameworks */,
+				2706EBA816852F6600326CCD /* Resources */,
+				2706EBA916852F6600326CCD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2706EBB116852F6600326CCD /* PBXTargetDependency */,
+			);
+			name = SigFigCalculatorTests;
+			productName = SigFigCalculatorTests;
+			productReference = 2706EBAB16852F6600326CCD /* SigFigCalculatorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2706EB7E16852F6500326CCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "University of Texas at Austin";
+			};
+			buildConfigurationList = 2706EB8116852F6500326CCD /* Build configuration list for PBXProject "SigFigCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2706EB7C16852F6500326CCD;
+			productRefGroup = 2706EB8816852F6500326CCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2706EB8616852F6500326CCD /* SigFigCalculator */,
+				2706EBAA16852F6600326CCD /* SigFigCalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2706EB8516852F6500326CCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2706EB9616852F6500326CCD /* InfoPlist.strings in Resources */,
+				2706EB9F16852F6600326CCD /* MainStoryboard_iPhone.storyboard in Resources */,
+				2706EBA216852F6600326CCD /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2706EBA816852F6600326CCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2706EBB716852F6600326CCD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2706EBA916852F6600326CCD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2706EB8316852F6500326CCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2706EB9816852F6500326CCD /* main.m in Sources */,
+				2706EB9C16852F6500326CCD /* AppDelegate.m in Sources */,
+				2706EBA516852F6600326CCD /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2706EBA616852F6600326CCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2706EBBA16852F6600326CCD /* SigFigCalculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2706EBB116852F6600326CCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2706EB8616852F6500326CCD /* SigFigCalculator */;
+			targetProxy = 2706EBB016852F6600326CCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2706EB9416852F6500326CCD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2706EB9516852F6500326CCD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2706EB9D16852F6600326CCD /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2706EB9E16852F6600326CCD /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		2706EBA016852F6600326CCD /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2706EBA116852F6600326CCD /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		2706EBB516852F6600326CCD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2706EBB616852F6600326CCD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2706EBBB16852F6600326CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2706EBBC16852F6600326CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2706EBBE16852F6600326CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SigFigCalculator/SigFigCalculator-Prefix.pch";
+				INFOPLIST_FILE = "SigFigCalculator/SigFigCalculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2706EBBF16852F6600326CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SigFigCalculator/SigFigCalculator-Prefix.pch";
+				INFOPLIST_FILE = "SigFigCalculator/SigFigCalculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2706EBC116852F6600326CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SigFigCalculator.app/SigFigCalculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SigFigCalculator/SigFigCalculator-Prefix.pch";
+				INFOPLIST_FILE = "SigFigCalculatorTests/SigFigCalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2706EBC216852F6600326CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SigFigCalculator.app/SigFigCalculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SigFigCalculator/SigFigCalculator-Prefix.pch";
+				INFOPLIST_FILE = "SigFigCalculatorTests/SigFigCalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2706EB8116852F6500326CCD /* Build configuration list for PBXProject "SigFigCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2706EBBB16852F6600326CCD /* Debug */,
+				2706EBBC16852F6600326CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2706EBBD16852F6600326CCD /* Build configuration list for PBXNativeTarget "SigFigCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2706EBBE16852F6600326CCD /* Debug */,
+				2706EBBF16852F6600326CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2706EBC016852F6600326CCD /* Build configuration list for PBXNativeTarget "SigFigCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2706EBC116852F6600326CCD /* Debug */,
+				2706EBC216852F6600326CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2706EB7E16852F6500326CCD /* Project object */;
+}
