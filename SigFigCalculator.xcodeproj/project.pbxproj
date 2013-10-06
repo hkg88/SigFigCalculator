@@ -10,17 +10,44 @@
 		2706EB8C16852F6500326CCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8B16852F6500326CCD /* UIKit.framework */; };
 		2706EB8E16852F6500326CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8D16852F6500326CCD /* Foundation.framework */; };
 		2706EB9016852F6500326CCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8F16852F6500326CCD /* CoreGraphics.framework */; };
-		2706EB9616852F6500326CCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2706EB9416852F6500326CCD /* InfoPlist.strings */; };
 		2706EB9816852F6500326CCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB9716852F6500326CCD /* main.m */; };
 		2706EB9C16852F6500326CCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB9B16852F6500326CCD /* AppDelegate.m */; };
-		2706EB9F16852F6600326CCD /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2706EB9D16852F6600326CCD /* MainStoryboard_iPhone.storyboard */; };
-		2706EBA216852F6600326CCD /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2706EBA016852F6600326CCD /* MainStoryboard_iPad.storyboard */; };
-		2706EBA516852F6600326CCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EBA416852F6600326CCD /* ViewController.m */; };
+		2706EBA516852F6600326CCD /* SigFigCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EBA416852F6600326CCD /* SigFigCalculator.m */; };
 		2706EBAD16852F6600326CCD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EBAC16852F6600326CCD /* SenTestingKit.framework */; };
 		2706EBAE16852F6600326CCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8B16852F6500326CCD /* UIKit.framework */; };
 		2706EBAF16852F6600326CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8D16852F6500326CCD /* Foundation.framework */; };
 		2706EBB716852F6600326CCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2706EBB516852F6600326CCD /* InfoPlist.strings */; };
 		2706EBBA16852F6600326CCD /* SigFigCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EBB916852F6600326CCD /* SigFigCalculatorTests.m */; };
+		27120DA1180115BC00708378 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27120DA0180115BC00708378 /* MainStoryboard_iPad.storyboard */; };
+		271AC79E16C5B6FE001C7FD8 /* Operand.m in Sources */ = {isa = PBXBuildFile; fileRef = 271AC79D16C5B6FE001C7FD8 /* Operand.m */; };
+		271AC7A116C5B851001C7FD8 /* sigFigCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271AC7A016C5B851001C7FD8 /* sigFigCalculatorViewController.m */; };
+		271B0DC817DCD849003E8B92 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 271B0DCA17DCD849003E8B92 /* Localizable.strings */; };
+		271B88CB16E990A100684311 /* sigFigCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88CA16E990A100684311 /* sigFigCounterViewController.m */; };
+		271B88D516EBDA3600684311 /* SigFigCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88D416EBDA3600684311 /* SigFigCounter.m */; };
+		271B88D816EBF91A00684311 /* sigFigRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88D716EBF91A00684311 /* sigFigRulesViewController.m */; };
+		271B88E316EC147100684311 /* sigFigConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88E216EC147100684311 /* sigFigConverterViewController.m */; };
+		271B88E616F1158100684311 /* SigFigConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88E516F1158100684311 /* SigFigConverter.m */; };
+		2757BFFE17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2757BFFD17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard */; };
+		27610E2C16F3CB89004693AE /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 27610E2B16F3CB89004693AE /* Icon-72.png */; };
+		27610E2E16F3CB8B004693AE /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27610E2D16F3CB8B004693AE /* Icon-72@2x.png */; };
+		27610E3016F3CBA5004693AE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27610E2F16F3CBA5004693AE /* Icon.png */; };
+		27610E3216F3CBB3004693AE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27610E3116F3CBB3004693AE /* Icon@2x.png */; };
+		27610E3416F3CFF8004693AE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27610E3316F3CFF8004693AE /* Default@2x.png */; };
+		27610E3616F3D006004693AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27610E3516F3D006004693AE /* Default-568h@2x.png */; };
+		27610E3816F3D008004693AE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 27610E3716F3D008004693AE /* Default.png */; };
+		27610E3D16F3D542004693AE /* converterTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27610E3916F3D542004693AE /* converterTabBarIcon.png */; };
+		27610E3E16F3D542004693AE /* calculatorTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27610E3A16F3D542004693AE /* calculatorTabBarIcon.png */; };
+		27610E3F16F3D542004693AE /* rulesTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27610E3B16F3D542004693AE /* rulesTabBarIcon.png */; };
+		27610E4016F3D542004693AE /* counterTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27610E3C16F3D542004693AE /* counterTabBarIcon.png */; };
+		2788C661173F7D9D007DF05A /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2788C660173F7D9D007DF05A /* iAd.framework */; };
+		2790A29717DCC1E0008A56DB /* NSObject+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A28817DCC1E0008A56DB /* NSObject+AGi18n.m */; };
+		2790A29817DCC1E0008A56DB /* UIBarButtonItem+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A28A17DCC1E0008A56DB /* UIBarButtonItem+AGi18n.m */; };
+		2790A29917DCC1E0008A56DB /* UIButton+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A28C17DCC1E0008A56DB /* UIButton+AGi18n.m */; };
+		2790A29A17DCC1E0008A56DB /* UILabel+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A28E17DCC1E0008A56DB /* UILabel+AGi18n.m */; };
+		2790A29B17DCC1E0008A56DB /* UINavigationItem+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A29017DCC1E0008A56DB /* UINavigationItem+AGi18n.m */; };
+		2790A29C17DCC1E0008A56DB /* UISearchBar+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A29217DCC1E0008A56DB /* UISearchBar+AGi18n.m */; };
+		2790A29D17DCC1E0008A56DB /* UITextField+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A29417DCC1E0008A56DB /* UITextField+AGi18n.m */; };
+		2790A29E17DCC1E0008A56DB /* UITextView+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A29617DCC1E0008A56DB /* UITextView+AGi18n.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +65,66 @@
 		2706EB8B16852F6500326CCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2706EB8D16852F6500326CCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2706EB8F16852F6500326CCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2706EB9316852F6500326CCD /* SigFigCalculator-Info.plist */ = {isa = PBXFileReference; path = "SigFigCalculator-Info.plist"; sourceTree = "<group>"; };
-		2706EB9516852F6500326CCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2706EB9316852F6500326CCD /* SigFigCalculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SigFigCalculator-Info.plist"; sourceTree = "<group>"; };
 		2706EB9716852F6500326CCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2706EB9916852F6500326CCD /* SigFigCalculator-Prefix.pch */ = {isa = PBXFileReference; path = "SigFigCalculator-Prefix.pch"; sourceTree = "<group>"; };
-		2706EB9A16852F6500326CCD /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		2706EB9916852F6500326CCD /* SigFigCalculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SigFigCalculator-Prefix.pch"; sourceTree = "<group>"; };
+		2706EB9A16852F6500326CCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2706EB9B16852F6500326CCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2706EB9E16852F6600326CCD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		2706EBA116852F6600326CCD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		2706EBA316852F6600326CCD /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		2706EBA416852F6600326CCD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2706EBA316852F6600326CCD /* SigFigCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SigFigCalculator.h; sourceTree = "<group>"; };
+		2706EBA416852F6600326CCD /* SigFigCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigFigCalculator.m; sourceTree = "<group>"; };
 		2706EBAB16852F6600326CCD /* SigFigCalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SigFigCalculatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2706EBAC16852F6600326CCD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		2706EBB416852F6600326CCD /* SigFigCalculatorTests-Info.plist */ = {isa = PBXFileReference; path = "SigFigCalculatorTests-Info.plist"; sourceTree = "<group>"; };
+		2706EBB416852F6600326CCD /* SigFigCalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SigFigCalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		2706EBB616852F6600326CCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2706EBB816852F6600326CCD /* SigFigCalculatorTests.h */ = {isa = PBXFileReference; path = SigFigCalculatorTests.h; sourceTree = "<group>"; };
+		2706EBB816852F6600326CCD /* SigFigCalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SigFigCalculatorTests.h; sourceTree = "<group>"; };
 		2706EBB916852F6600326CCD /* SigFigCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigFigCalculatorTests.m; sourceTree = "<group>"; };
+		27120DA0180115BC00708378 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		271AC79C16C5B6FE001C7FD8 /* Operand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operand.h; sourceTree = "<group>"; };
+		271AC79D16C5B6FE001C7FD8 /* Operand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operand.m; sourceTree = "<group>"; };
+		271AC79F16C5B851001C7FD8 /* sigFigCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sigFigCalculatorViewController.h; sourceTree = "<group>"; };
+		271AC7A016C5B851001C7FD8 /* sigFigCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sigFigCalculatorViewController.m; sourceTree = "<group>"; };
+		271B0DC917DCD849003E8B92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		271B0DCB17DCD84D003E8B92 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		271B88C916E990A100684311 /* sigFigCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sigFigCounterViewController.h; sourceTree = "<group>"; };
+		271B88CA16E990A100684311 /* sigFigCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sigFigCounterViewController.m; sourceTree = "<group>"; };
+		271B88D316EBDA3600684311 /* SigFigCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigFigCounter.h; sourceTree = "<group>"; };
+		271B88D416EBDA3600684311 /* SigFigCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigFigCounter.m; sourceTree = "<group>"; };
+		271B88D616EBF91A00684311 /* sigFigRulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sigFigRulesViewController.h; sourceTree = "<group>"; };
+		271B88D716EBF91A00684311 /* sigFigRulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sigFigRulesViewController.m; sourceTree = "<group>"; };
+		271B88E116EC147100684311 /* sigFigConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sigFigConverterViewController.h; sourceTree = "<group>"; };
+		271B88E216EC147100684311 /* sigFigConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sigFigConverterViewController.m; sourceTree = "<group>"; };
+		271B88E416F1158100684311 /* SigFigConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigFigConverter.h; sourceTree = "<group>"; };
+		271B88E516F1158100684311 /* SigFigConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigFigConverter.m; sourceTree = "<group>"; };
+		2757BFFD17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		27610E2B16F3CB89004693AE /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
+		27610E2D16F3CB8B004693AE /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../Icon-72@2x.png"; sourceTree = "<group>"; };
+		27610E2F16F3CBA5004693AE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		27610E3116F3CBB3004693AE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		27610E3316F3CFF8004693AE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		27610E3516F3D006004693AE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		27610E3716F3D008004693AE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		27610E3916F3D542004693AE /* converterTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = converterTabBarIcon.png; path = ../converterTabBarIcon.png; sourceTree = "<group>"; };
+		27610E3A16F3D542004693AE /* calculatorTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calculatorTabBarIcon.png; path = ../calculatorTabBarIcon.png; sourceTree = "<group>"; };
+		27610E3B16F3D542004693AE /* rulesTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rulesTabBarIcon.png; path = ../rulesTabBarIcon.png; sourceTree = "<group>"; };
+		27610E3C16F3D542004693AE /* counterTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = counterTabBarIcon.png; path = ../counterTabBarIcon.png; sourceTree = "<group>"; };
+		2788C660173F7D9D007DF05A /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		2790A28517DCB9FC008A56DB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2790A28717DCC1E0008A56DB /* NSObject+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AGi18n.h"; sourceTree = "<group>"; };
+		2790A28817DCC1E0008A56DB /* NSObject+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AGi18n.m"; sourceTree = "<group>"; };
+		2790A28917DCC1E0008A56DB /* UIBarButtonItem+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+AGi18n.h"; sourceTree = "<group>"; };
+		2790A28A17DCC1E0008A56DB /* UIBarButtonItem+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+AGi18n.m"; sourceTree = "<group>"; };
+		2790A28B17DCC1E0008A56DB /* UIButton+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AGi18n.h"; sourceTree = "<group>"; };
+		2790A28C17DCC1E0008A56DB /* UIButton+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AGi18n.m"; sourceTree = "<group>"; };
+		2790A28D17DCC1E0008A56DB /* UILabel+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+AGi18n.h"; sourceTree = "<group>"; };
+		2790A28E17DCC1E0008A56DB /* UILabel+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AGi18n.m"; sourceTree = "<group>"; };
+		2790A28F17DCC1E0008A56DB /* UINavigationItem+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+AGi18n.h"; sourceTree = "<group>"; };
+		2790A29017DCC1E0008A56DB /* UINavigationItem+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+AGi18n.m"; sourceTree = "<group>"; };
+		2790A29117DCC1E0008A56DB /* UISearchBar+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+AGi18n.h"; sourceTree = "<group>"; };
+		2790A29217DCC1E0008A56DB /* UISearchBar+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+AGi18n.m"; sourceTree = "<group>"; };
+		2790A29317DCC1E0008A56DB /* UITextField+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+AGi18n.h"; sourceTree = "<group>"; };
+		2790A29417DCC1E0008A56DB /* UITextField+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+AGi18n.m"; sourceTree = "<group>"; };
+		2790A29517DCC1E0008A56DB /* UITextView+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+AGi18n.h"; sourceTree = "<group>"; };
+		2790A29617DCC1E0008A56DB /* UITextView+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+AGi18n.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2788C661173F7D9D007DF05A /* iAd.framework in Frameworks */,
 				2706EB8C16852F6500326CCD /* UIKit.framework in Frameworks */,
 				2706EB8E16852F6500326CCD /* Foundation.framework in Frameworks */,
 				2706EB9016852F6500326CCD /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +159,7 @@
 				2706EBB216852F6600326CCD /* SigFigCalculatorTests */,
 				2706EB8A16852F6500326CCD /* Frameworks */,
 				2706EB8816852F6500326CCD /* Products */,
+				2790A28617DCC1E0008A56DB /* lib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +175,7 @@
 		2706EB8A16852F6500326CCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2788C660173F7D9D007DF05A /* iAd.framework */,
 				2706EB8B16852F6500326CCD /* UIKit.framework */,
 				2706EB8D16852F6500326CCD /* Foundation.framework */,
 				2706EB8F16852F6500326CCD /* CoreGraphics.framework */,
@@ -113,12 +187,9 @@
 		2706EB9116852F6500326CCD /* SigFigCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				2706EB9A16852F6500326CCD /* AppDelegate.h */,
-				2706EB9B16852F6500326CCD /* AppDelegate.m */,
-				2706EB9D16852F6600326CCD /* MainStoryboard_iPhone.storyboard */,
-				2706EBA016852F6600326CCD /* MainStoryboard_iPad.storyboard */,
-				2706EBA316852F6600326CCD /* ViewController.h */,
-				2706EBA416852F6600326CCD /* ViewController.m */,
+				2745FFAC16C40ED70004EED6 /* Controller */,
+				2745FFAB16C40ED20004EED6 /* VIew */,
+				2745FFA916C40EC80004EED6 /* Model */,
 				2706EB9216852F6500326CCD /* Supporting Files */,
 			);
 			path = SigFigCalculator;
@@ -127,10 +198,23 @@
 		2706EB9216852F6500326CCD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				27610E3916F3D542004693AE /* converterTabBarIcon.png */,
+				27610E3A16F3D542004693AE /* calculatorTabBarIcon.png */,
+				27610E3B16F3D542004693AE /* rulesTabBarIcon.png */,
+				27610E3C16F3D542004693AE /* counterTabBarIcon.png */,
+				27610E3716F3D008004693AE /* Default.png */,
+				27610E3516F3D006004693AE /* Default-568h@2x.png */,
+				27610E3316F3CFF8004693AE /* Default@2x.png */,
+				27610E3116F3CBB3004693AE /* Icon@2x.png */,
+				27610E2F16F3CBA5004693AE /* Icon.png */,
+				27610E2D16F3CB8B004693AE /* Icon-72@2x.png */,
+				27610E2B16F3CB89004693AE /* Icon-72.png */,
+				2706EB9A16852F6500326CCD /* AppDelegate.h */,
+				2706EB9B16852F6500326CCD /* AppDelegate.m */,
 				2706EB9316852F6500326CCD /* SigFigCalculator-Info.plist */,
-				2706EB9416852F6500326CCD /* InfoPlist.strings */,
 				2706EB9716852F6500326CCD /* main.m */,
 				2706EB9916852F6500326CCD /* SigFigCalculator-Prefix.pch */,
+				271B0DCA17DCD849003E8B92 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,6 +236,68 @@
 				2706EBB516852F6600326CCD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2745FFA916C40EC80004EED6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2706EBA316852F6600326CCD /* SigFigCalculator.h */,
+				2706EBA416852F6600326CCD /* SigFigCalculator.m */,
+				271AC79C16C5B6FE001C7FD8 /* Operand.h */,
+				271AC79D16C5B6FE001C7FD8 /* Operand.m */,
+				271B88D316EBDA3600684311 /* SigFigCounter.h */,
+				271B88D416EBDA3600684311 /* SigFigCounter.m */,
+				271B88E416F1158100684311 /* SigFigConverter.h */,
+				271B88E516F1158100684311 /* SigFigConverter.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2745FFAB16C40ED20004EED6 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				27120DA0180115BC00708378 /* MainStoryboard_iPad.storyboard */,
+				2757BFFD17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard */,
+			);
+			name = VIew;
+			sourceTree = "<group>";
+		};
+		2745FFAC16C40ED70004EED6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				271AC79F16C5B851001C7FD8 /* sigFigCalculatorViewController.h */,
+				271AC7A016C5B851001C7FD8 /* sigFigCalculatorViewController.m */,
+				271B88C916E990A100684311 /* sigFigCounterViewController.h */,
+				271B88CA16E990A100684311 /* sigFigCounterViewController.m */,
+				271B88E116EC147100684311 /* sigFigConverterViewController.h */,
+				271B88E216EC147100684311 /* sigFigConverterViewController.m */,
+				271B88D616EBF91A00684311 /* sigFigRulesViewController.h */,
+				271B88D716EBF91A00684311 /* sigFigRulesViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2790A28617DCC1E0008A56DB /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				2790A28717DCC1E0008A56DB /* NSObject+AGi18n.h */,
+				2790A28817DCC1E0008A56DB /* NSObject+AGi18n.m */,
+				2790A28917DCC1E0008A56DB /* UIBarButtonItem+AGi18n.h */,
+				2790A28A17DCC1E0008A56DB /* UIBarButtonItem+AGi18n.m */,
+				2790A28B17DCC1E0008A56DB /* UIButton+AGi18n.h */,
+				2790A28C17DCC1E0008A56DB /* UIButton+AGi18n.m */,
+				2790A28D17DCC1E0008A56DB /* UILabel+AGi18n.h */,
+				2790A28E17DCC1E0008A56DB /* UILabel+AGi18n.m */,
+				2790A28F17DCC1E0008A56DB /* UINavigationItem+AGi18n.h */,
+				2790A29017DCC1E0008A56DB /* UINavigationItem+AGi18n.m */,
+				2790A29117DCC1E0008A56DB /* UISearchBar+AGi18n.h */,
+				2790A29217DCC1E0008A56DB /* UISearchBar+AGi18n.m */,
+				2790A29317DCC1E0008A56DB /* UITextField+AGi18n.h */,
+				2790A29417DCC1E0008A56DB /* UITextField+AGi18n.m */,
+				2790A29517DCC1E0008A56DB /* UITextView+AGi18n.h */,
+				2790A29617DCC1E0008A56DB /* UITextView+AGi18n.m */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +345,7 @@
 		2706EB7E16852F6500326CCD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "University of Texas at Austin";
 			};
 			buildConfigurationList = 2706EB8116852F6500326CCD /* Build configuration list for PBXProject "SigFigCalculator" */;
@@ -208,6 +354,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ja,
 			);
 			mainGroup = 2706EB7C16852F6500326CCD;
 			productRefGroup = 2706EB8816852F6500326CCD /* Products */;
@@ -225,9 +372,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2706EB9616852F6500326CCD /* InfoPlist.strings in Resources */,
-				2706EB9F16852F6600326CCD /* MainStoryboard_iPhone.storyboard in Resources */,
-				2706EBA216852F6600326CCD /* MainStoryboard_iPad.storyboard in Resources */,
+				27610E2C16F3CB89004693AE /* Icon-72.png in Resources */,
+				27610E2E16F3CB8B004693AE /* Icon-72@2x.png in Resources */,
+				27610E3016F3CBA5004693AE /* Icon.png in Resources */,
+				27610E3216F3CBB3004693AE /* Icon@2x.png in Resources */,
+				27610E3416F3CFF8004693AE /* Default@2x.png in Resources */,
+				27610E3616F3D006004693AE /* Default-568h@2x.png in Resources */,
+				27610E3816F3D008004693AE /* Default.png in Resources */,
+				27610E3D16F3D542004693AE /* converterTabBarIcon.png in Resources */,
+				27610E3E16F3D542004693AE /* calculatorTabBarIcon.png in Resources */,
+				27610E3F16F3D542004693AE /* rulesTabBarIcon.png in Resources */,
+				27610E4016F3D542004693AE /* counterTabBarIcon.png in Resources */,
+				271B0DC817DCD849003E8B92 /* Localizable.strings in Resources */,
+				2757BFFE17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard in Resources */,
+				27120DA1180115BC00708378 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +422,22 @@
 			files = (
 				2706EB9816852F6500326CCD /* main.m in Sources */,
 				2706EB9C16852F6500326CCD /* AppDelegate.m in Sources */,
-				2706EBA516852F6600326CCD /* ViewController.m in Sources */,
+				2706EBA516852F6600326CCD /* SigFigCalculator.m in Sources */,
+				271AC79E16C5B6FE001C7FD8 /* Operand.m in Sources */,
+				271AC7A116C5B851001C7FD8 /* sigFigCalculatorViewController.m in Sources */,
+				271B88CB16E990A100684311 /* sigFigCounterViewController.m in Sources */,
+				271B88D516EBDA3600684311 /* SigFigCounter.m in Sources */,
+				271B88D816EBF91A00684311 /* sigFigRulesViewController.m in Sources */,
+				271B88E316EC147100684311 /* sigFigConverterViewController.m in Sources */,
+				271B88E616F1158100684311 /* SigFigConverter.m in Sources */,
+				2790A29717DCC1E0008A56DB /* NSObject+AGi18n.m in Sources */,
+				2790A29817DCC1E0008A56DB /* UIBarButtonItem+AGi18n.m in Sources */,
+				2790A29917DCC1E0008A56DB /* UIButton+AGi18n.m in Sources */,
+				2790A29A17DCC1E0008A56DB /* UILabel+AGi18n.m in Sources */,
+				2790A29B17DCC1E0008A56DB /* UINavigationItem+AGi18n.m in Sources */,
+				2790A29C17DCC1E0008A56DB /* UISearchBar+AGi18n.m in Sources */,
+				2790A29D17DCC1E0008A56DB /* UITextField+AGi18n.m in Sources */,
+				2790A29E17DCC1E0008A56DB /* UITextView+AGi18n.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,36 +460,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2706EB9416852F6500326CCD /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2706EB9516852F6500326CCD /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2706EB9D16852F6600326CCD /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2706EB9E16852F6600326CCD /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		2706EBA016852F6600326CCD /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2706EBA116852F6600326CCD /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		2706EBB516852F6600326CCD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2706EBB616852F6600326CCD /* en */,
+				2790A28517DCB9FC008A56DB /* ja */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		271B0DCA17DCD849003E8B92 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				271B0DC917DCD849003E8B92 /* en */,
+				271B0DCB17DCD84D003E8B92 /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -328,6 +487,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hunter Gearhart";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -343,6 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +519,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hunter Gearhart";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -363,6 +533,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -375,7 +546,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SigFigCalculator/SigFigCalculator-Prefix.pch";
 				INFOPLIST_FILE = "SigFigCalculator/SigFigCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -386,7 +559,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SigFigCalculator/SigFigCalculator-Prefix.pch";
 				INFOPLIST_FILE = "SigFigCalculator/SigFigCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -444,6 +619,7 @@
 				2706EBBF16852F6600326CCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2706EBC016852F6600326CCD /* Build configuration list for PBXNativeTarget "SigFigCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +628,7 @@
 				2706EBC216852F6600326CCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
