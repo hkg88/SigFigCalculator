@@ -16,13 +16,16 @@
 @property (strong, nonatomic) SigFigCounter *sigFigCounter;
 @property (strong, nonatomic) SigFigConverter *sigFigConverter;
 
+@property (strong, nonatomic) IBOutlet UILabel *numberTextLabel;
 @property (strong, nonatomic) IBOutlet UITextField *numberTextField;
+@property (strong, nonatomic) IBOutlet UILabel *numSigFigsTextLabel;
 @property (strong, nonatomic) IBOutlet UITextField *numSigFigsTextField;
+@property (strong, nonatomic) IBOutlet UILabel *resultingNumberTextLabel;
 @property (strong, nonatomic) IBOutlet UILabel *resultingNumberLabel;
 @property (strong, nonatomic) IBOutlet UITabBarItem *tabBarTextConverter;
 
 // Advertisements
-@property (strong, nonatomic) ADBannerView *adView;
+@property (strong, nonatomic) IBOutlet ADBannerView *adView;
 @property BOOL bannerIsVisible;
 
 - (IBAction)numberEntered:(UITextField *)sender;

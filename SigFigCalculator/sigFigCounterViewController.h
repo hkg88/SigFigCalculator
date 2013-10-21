@@ -17,8 +17,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *numSigFigsLabel;
 @property (strong, nonatomic) IBOutlet UITabBarItem *tabBarTextCounter;
 
+// Plain text that will have font given by Dynamic Font
+@property (strong, nonatomic) IBOutlet UILabel *numberTextLabel;
+@property (strong, nonatomic) IBOutlet UILabel *numSigFigsTextLabel;
+
+
 // Advertisements
-@property (strong, nonatomic) ADBannerView *adView;
+@property (strong, nonatomic) IBOutlet ADBannerView *adView;
 @property BOOL bannerIsVisible;
 
 - (IBAction)backgroundTapped:(UIControl *)sender;

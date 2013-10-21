@@ -28,16 +28,23 @@ enum{
     DIVIDE = 4,
 };
 
-#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
-
 #define atLeastIOS6 [[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0
 
 #pragma mark -- View Lifecycle
+
+- (void)awakeFromNib
+{
+    self.tabBarTextCalculator.title = NSLocalizedString(@"Calculator", @"Calculator Tab Bar Title");
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self initialize];
+    
+    // Initialize the Ad Banner
+    self.adView.delegate = self;
+    self.bannerIsVisible = false;
 }
 
 - (void)initialize
@@ -46,32 +53,11 @@ enum{
     self.sigFigCalculator = [[SigFigCalculator alloc] init];
     self.sigFigCounter = [[SigFigCounter alloc] init];
     self.sigFigConverter = [[SigFigConverter alloc] init];
-    self.tabBarTextCalculator.title = NSLocalizedString(@"Calculator", @"Calculator Tab Bar Title");
     self.display.text = @"0";
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    
-    [super viewDidLoad];
-    
-    // Initialize the Ad Banner
-    self.adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-    self.adView.requiredContentSizeIdentifiers = [NSSet setWithObject: ADBannerContentSizeIdentifierPortrait];
-    self.adView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
-    // Places the banner above the tab bar
-    if (IS_IPHONE_5) {
-        self.adView.frame = CGRectMake(0, 450+100, self.adView.frame.size.width, self.adView.frame.size.height);
-    } else {
-        self.adView.frame = CGRectMake(0, 360+100, self.adView.frame.size.width, self.adView.frame.size.height);
-    }
-    
-    self.adView.delegate = self;
-    self.adView.autoresizesSubviews = YES;
-    self.adView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-    self.bannerIsVisible = false;
-    [self.view addSubview:self.adView];
-    
     // Initialize the calculator
     self.sigFigCalculator = [[SigFigCalculator alloc] init];
     self.display.text = @"0";
@@ -94,11 +80,6 @@ enum{
 {
     [super viewWillDisappear:animated];
     
-    [self.adView removeFromSuperview];
-    self.adView.delegate = nil;
-    self.adView = nil;
-    self.bannerIsVisible = NO;
-    
     self.sigFigCalculator = nil;
     self.sigFigConverter = nil;
     self.sigFigCounter = nil;
@@ -116,7 +97,6 @@ enum{
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-    //return YES;
 }
 
 #pragma mark -- iAd Lifecycle
@@ -128,7 +108,7 @@ enum{
         [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
         [UIView setAnimationDuration:0.25];
         
-        banner.frame = CGRectOffset(banner.frame, 0, -100);
+        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height-1);
         
         [UIView commitAnimations];
         self.bannerIsVisible = YES;
@@ -142,7 +122,7 @@ enum{
         [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
         [UIView setAnimationDuration:0.25];
         
-        banner.frame = CGRectOffset(banner.frame, 0, 100);
+        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height+1);
         
         [UIView commitAnimations];
         self.bannerIsVisible = NO;

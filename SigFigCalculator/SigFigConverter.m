@@ -53,6 +53,8 @@
         return [[NSAttributedString alloc] initWithString:NSLocalizedString(@"The Desired Number of Significant Figures can not be a float", @"Converter Float Input")];
     } else if(![intPredicate evaluateWithObject:desiredNumSigFigs]) {
         return [[NSAttributedString alloc] initWithString:NSLocalizedString(@"The Desired Number of Significant Figures must be an integer", @"Converter Invalid DNOSF Input")];
+    } else if([desiredNumSigFigs intValue] > 10000) {
+        return [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Please, be kind to your hardware", @"Converter Too Large Input")];
     }
     
     // If the number is just a string of zeroes, handle specially
@@ -132,10 +134,13 @@
     for(int i = 0; i < desiredNumSigFigs; i++) {
         result = [result stringByAppendingString:@"0"];
     }
-    NSMutableAttributedString *underlinedString = [[NSMutableAttributedString alloc] initWithString:result];
+    NSMutableAttributedString *underlinedString;
     // Only underline if the device supports it
     if(atLeastIOS6) {
+        underlinedString = [[NSMutableAttributedString alloc] initWithString:result];
         [underlinedString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0, underlinedString.length)];
+    } else {
+        underlinedString = [[NSMutableAttributedString alloc] initWithString:result];
     }
     return [[NSAttributedString alloc] initWithAttributedString:underlinedString];
 }

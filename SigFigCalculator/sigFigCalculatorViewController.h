@@ -26,7 +26,7 @@
 @property (strong, nonatomic) IBOutlet UITabBarItem *tabBarTextCalculator;
 
 // Advertisements
-@property (strong, nonatomic) ADBannerView *adView;
+@property (strong, nonatomic) IBOutlet ADBannerView *adView;
 @property BOOL bannerIsVisible;
 
 - (IBAction)pressedDigit:(UIButton *)sender;

@@ -15,7 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITabBarItem *tabBarTextRules;
 
 // Advertisements
-@property (strong, nonatomic) ADBannerView *adView;
+@property (strong, nonatomic) IBOutlet ADBannerView *adView;
 @property BOOL bannerIsVisible;
 
 @end

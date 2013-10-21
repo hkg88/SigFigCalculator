@@ -105,6 +105,7 @@ enum{
             }
         }
         result = [decimalNumResult stringValue];
+        
         // Obtain the correct result by converting the result's number of SigFigs to the minimum
         // of the two operands
         int minNumSigFigs;

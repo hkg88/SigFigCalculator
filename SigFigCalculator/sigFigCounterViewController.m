@@ -14,8 +14,8 @@
 @synthesize tabBarTextCounter = _tabBarTextCounter;
 @synthesize numSigFigsLabel = _numSigFigsLabel;
 @synthesize adView = _adView;
-
-#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+@synthesize numberTextLabel = _numberTextLabel;
+@synthesize numSigFigsTextLabel = _numSigFigsTextLabel;
 
 #pragma mark -- View Lifecycle
 
@@ -29,26 +29,23 @@
     [super viewDidLoad];
     self.sigFigCounter = [[SigFigCounter alloc] init];
     self.textField.delegate = self;
+    
+    // Initialize the Ad Banner
+    self.adView.delegate = self;
+    self.bannerIsVisible = false;
+    
+    // Set up fonts and add a listener as to be able to adapt to changes
+    self.numberTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    self.textField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    self.numSigFigsTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    self.numSigFigsLabel.font = [UIFont fontWithName:@"Helvetica" size:125];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    // Initialize the Ad Banner
-    self.adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-    self.adView.requiredContentSizeIdentifiers = [NSSet setWithObject: ADBannerContentSizeIdentifierPortrait];
-    self.adView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
-    // Places the banner above the tab bar
-    if (IS_IPHONE_5) {
-        self.adView.frame = CGRectMake(0, 450+100, self.adView.frame.size.width, self.adView.frame.size.height);
-    } else {
-        self.adView.frame = CGRectMake(0, 360+100, self.adView.frame.size.width, self.adView.frame.size.height);
-    }
     
-    self.adView.delegate = self;
-    self.adView.autoresizesSubviews = YES;
-    self.adView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-    self.bannerIsVisible = false;
-    [self.view addSubview:self.adView];
 }
 
 - (void)viewDidUnload
@@ -64,11 +61,6 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    
-    [self.adView removeFromSuperview];
-    self.adView.delegate = nil;
-    self.adView = nil;
-    self.bannerIsVisible = NO;
 }
 
 // Clears out the text information when the view leaves the screen
@@ -93,7 +85,7 @@
         [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
         [UIView setAnimationDuration:0.25];
         
-        banner.frame = CGRectOffset(banner.frame, 0, -100);
+        self.adView.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height-1);
         
         [UIView commitAnimations];
         self.bannerIsVisible = YES;
@@ -107,7 +99,7 @@
         [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
         [UIView setAnimationDuration:0.25];
         
-        banner.frame = CGRectOffset(banner.frame, 0, 100);
+        self.adView.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height+1);
         
         [UIView commitAnimations];
         self.bannerIsVisible = NO;
@@ -156,5 +148,15 @@
         [textField resignFirstResponder];
     }
     return NO;
+}
+
+#pragma mark -- Notification Center
+
+- (void)preferredContentSizeChanged:(NSNotification *)notification
+{
+    self.numberTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    self.textField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    self.numSigFigsTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    //self.numSigFigsLabel.font = [UIFont fontWithName:UIFontTextStyleHeadline size:50];
 }
 @end
