@@ -22,6 +22,7 @@
 - (void)awakeFromNib
 {
     self.tabBarTextCounter.title = NSLocalizedString(@"Counter", @"Counter Tab Bar Title");
+    self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyAutomatic;
 }
 
 - (void)viewDidLoad
@@ -32,7 +33,7 @@
     
     // Initialize the Ad Banner
     self.adView.delegate = self;
-    self.bannerIsVisible = false;
+    self.bannerIsVisible = NO;
     
     // Set up fonts and add a listener as to be able to adapt to changes
     self.numberTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
@@ -157,6 +158,5 @@
     self.numberTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     self.textField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     self.numSigFigsTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-    //self.numSigFigsLabel.font = [UIFont fontWithName:UIFontTextStyleHeadline size:50];
 }
 @end

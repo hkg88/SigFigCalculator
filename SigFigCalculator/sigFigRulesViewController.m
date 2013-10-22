@@ -17,6 +17,7 @@
 - (void)awakeFromNib
 {
     self.tabBarTextRules.title = NSLocalizedString(@"SigFig Rules", @"SigFig Rules Tab Bar Title");
+    self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyAutomatic;
 }
 
 - (void)viewDidLoad
@@ -33,7 +34,7 @@
     
     // Initialize the Ad Banner
     self.adView.delegate = self;
-    self.bannerIsVisible = false;
+    self.bannerIsVisible = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated

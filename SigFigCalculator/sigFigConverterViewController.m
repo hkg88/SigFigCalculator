@@ -30,6 +30,7 @@
 - (void)awakeFromNib
 {
     self.tabBarTextConverter.title = NSLocalizedString(@"Converter", @"Converter Tab Bar Title");
+    self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyAutomatic;
 }
 - (void)viewDidLoad
 {
@@ -41,7 +42,7 @@
     
     // Initialize the Ad Banner
     self.adView.delegate = self;
-    self.bannerIsVisible = false;
+    self.bannerIsVisible = NO;
     
     // Set-up Dynamic Text and a listener to react to any changes to it
     self.numberTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
@@ -172,7 +173,6 @@
     self.numSigFigsTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     self.numSigFigsTextField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     self.resultingNumberTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-    self.resultingNumberLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
 }
 

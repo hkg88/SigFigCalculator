@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
 //
 
-// TODO : Add Landscape support
-
 #import "sigFigCalculatorViewController.h"
 
 @implementation sigFigCalculatorViewController
@@ -35,6 +33,7 @@ enum{
 - (void)awakeFromNib
 {
     self.tabBarTextCalculator.title = NSLocalizedString(@"Calculator", @"Calculator Tab Bar Title");
+    self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyAutomatic;
 }
 
 - (void)viewDidLoad
@@ -44,7 +43,7 @@ enum{
     
     // Initialize the Ad Banner
     self.adView.delegate = self;
-    self.bannerIsVisible = false;
+    self.bannerIsVisible = NO;
 }
 
 - (void)initialize
@@ -256,12 +255,20 @@ enum{
                 self.sigFigCalculator.firstOperand.value = [self.sigFigCalculator.firstOperand.value stringByAppendingString:@"."];
                 self.sigFigCalculator.firstOperand.containsDecimal = YES;
                 self.display.text = self.sigFigCalculator.firstOperand.value;
+                // Append back the lost negative sign
+                if(self.sigFigCalculator.firstOperand.isNegative) {
+                    self.display.text = [@"-" stringByAppendingString:self.display.text];
+                }
             }
         } else {
             if(!self.sigFigCalculator.secondOperand.containsDecimal) {
                 self.sigFigCalculator.secondOperand.value = [self.sigFigCalculator.secondOperand.value stringByAppendingString:@"."];
                 self.sigFigCalculator.secondOperand.containsDecimal = YES;
                 self.display.text = self.sigFigCalculator.secondOperand.value;
+                // Append back the lost negative sign
+                if(self.sigFigCalculator.secondOperand.isNegative) {
+                    self.display.text = [@"-" stringByAppendingString:self.display.text];
+                }
             }
         }
     }
@@ -301,7 +308,7 @@ enum{
             }
             self.sigFigCalculator.firstOperand.isNegative = !self.sigFigCalculator.firstOperand.isNegative;
         } else {
-            if([self.sigFigCalculator.secondOperand.value floatValue] > 0) {
+            if(!self.sigFigCalculator.secondOperand.isNegative) {
                 self.display.text = [@"-" stringByAppendingString:self.sigFigCalculator.secondOperand.value];
             } else {
                 self.display.text = [self.sigFigCalculator.secondOperand.value substringFromIndex:0];
