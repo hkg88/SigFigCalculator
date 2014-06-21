@@ -6,34 +6,17 @@
 //  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
 //
 
-#import "sigFigCounterViewController.h"
+#import "SFCounterViewController.h"
 
-@implementation sigFigCounterViewController
-@synthesize sigFigCounter = _sigFigCounter;
-@synthesize textField = _textField;
-@synthesize tabBarTextCounter = _tabBarTextCounter;
-@synthesize numSigFigsLabel = _numSigFigsLabel;
-@synthesize adView = _adView;
-@synthesize numberTextLabel = _numberTextLabel;
-@synthesize numSigFigsTextLabel = _numSigFigsTextLabel;
+@implementation SFCounterViewController
 
 #pragma mark -- View Lifecycle
-
-- (void)awakeFromNib
-{
-    self.tabBarTextCounter.title = NSLocalizedString(@"Counter", @"Counter Tab Bar Title");
-    self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyAutomatic;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.sigFigCounter = [[SigFigCounter alloc] init];
     self.textField.delegate = self;
-    
-    // Initialize the Ad Banner
-    self.adView.delegate = self;
-    self.bannerIsVisible = NO;
     
     // Set up fonts and add a listener as to be able to adapt to changes
     self.numberTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
@@ -54,8 +37,6 @@
     self.sigFigCounter = nil;
     self.numSigFigsLabel = nil;
     self.textField = nil;
-    self.tabBarTextCounter = nil;
-    self.adView = nil;
     [super viewDidUnload];
 }
 
@@ -75,48 +56,6 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark -- iAd Lifecycle
-
-// Brings the banner into view
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-    if (!self.bannerIsVisible) {
-        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-        [UIView setAnimationDuration:0.25];
-        
-        self.adView.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height-1);
-        
-        [UIView commitAnimations];
-        self.bannerIsVisible = YES;
-    }
-}
-
-// If an advertisement retrieval fails, push the banner offscreen
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-    if (self.bannerIsVisible) {
-        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
-        [UIView setAnimationDuration:0.25];
-        
-        self.adView.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height+1);
-        
-        [UIView commitAnimations];
-        self.bannerIsVisible = NO;
-    }
-}
-
-// If the banner is tapped, don't leave the app and just allow the ad to cover the screen
-- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
-{
-    return YES;
-}
-
-// Placeholder for processing which needs to be done when the app is brought back from the background
-- (void)bannerViewActionDidFinish:(ADBannerView *)banner
-{
-    
 }
 
 #pragma mark -- View Behavior Methods

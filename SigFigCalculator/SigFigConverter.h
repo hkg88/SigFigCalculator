@@ -5,6 +5,11 @@
 //  Created by Kyle Gearhart on 13/03/13.
 //  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
 //
+//  A SigFigConverter will accept any positive, or negative integer or float and
+//  return the number of significant figures contained within it. Implementing a
+//  sort of strategy design pattern, the converter will accept input into its
+//  generic countSigFigs method and then utilize the appropriate conversion
+//  algorithm depending on the input type.
 
 #import <Foundation/Foundation.h>
 #import <math.h>
@@ -12,12 +17,9 @@
 
 @interface SigFigConverter : NSObject
 
-// Accepts the initial call, does some input checking, and then passes the buck to the appropriate helper method
-- (NSAttributedString *)convertNumSigFigs:(NSString *)number :(NSString *)desiredNumSigFigs;
-
-// Helper methods which handle conversion of the different possible types of numbers
-- (NSAttributedString *)convertZeroStringSigFigs:(NSString *)number :(int)desiredNumSigFigs;
-- (NSString *)convertFloatNumSigFigs:(NSString *)number :(int)numSigFigs :(int)desiredNumSigFigs;
-- (NSString *)convertIntNumSigFigs:(NSString *)number :(int)numSigFigs :(int)desiredNumSigFigs;
+// Accepts the input integer or float and converts it into a new integer or
+// float with the given number of significant figures
+- (NSAttributedString *)convertNumSigFigs:(NSString *)number
+                                       to:(NSString *)desiredNumSigFigs;
 
 @end

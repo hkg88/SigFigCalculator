@@ -49,7 +49,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:ADD];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"4.4"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 
 }
 
@@ -64,7 +64,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:ADD];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"-112.1134"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
     
 }
 
@@ -79,8 +79,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:ADD];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"-124.123456789123456789123456789123456789"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    //NSLog([NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
     
 }
 
@@ -96,7 +95,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:ADD];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"2.2"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic addition problem with two ints
@@ -110,7 +109,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:ADD];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"125"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic addition problem with zero being one of the operands
@@ -124,7 +123,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:ADD];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"123123"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests an addition with the use of floats with leading zeroes
@@ -138,7 +137,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:ADD];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"0.0132"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests an addition with the use of a positive and negative float with leading zeroes
@@ -152,7 +151,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:ADD];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"0.0112"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests an addition with the use two negative floats
@@ -166,7 +165,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:ADD];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"-0.0134"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 #pragma mark -- Subtraction Tests
@@ -184,7 +183,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:SUBTRACT];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"-2.2"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
     
 }
 
@@ -199,7 +198,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:SUBTRACT];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"-4.4"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -213,7 +212,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:SUBTRACT];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"-121"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -227,7 +226,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:SUBTRACT];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"-123123"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -241,7 +240,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:SUBTRACT];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"-123122.123"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -255,7 +254,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:SUBTRACT];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"0.0011"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -269,7 +268,7 @@ enum{
     calc.currOperator = [NSNumber numberWithInt:SUBTRACT];
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:@"0.0013"];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // **********MULTIPLICATION***********
@@ -288,8 +287,8 @@ enum{
     NSMutableAttributedString *result = [[NSMutableAttributedString alloc] initWithString:@"0"];
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,1)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+  //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -305,7 +304,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,1)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -321,7 +320,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,3)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -337,7 +336,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,1)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -353,7 +352,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,1)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -369,7 +368,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,3)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -385,23 +384,23 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(result.length-1,1)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
 - (void)testCalculatorBasicMultiplicationTwoFloatsLeadingZeroNegative
 {
     SigFigCalculator *calc = [[SigFigCalculator alloc] init];
-    Operand *firstOp = [[Operand alloc] initWithValue:@"0.0012"];
-    Operand *secondOp = [[Operand alloc] initWithValue:@"-0.0001"];
+    Operand *firstOp = [[Operand alloc] initWithValue:@"0.012"];
+    Operand *secondOp = [[Operand alloc] initWithValue:@"-0.01"];
     calc.firstOperand = firstOp;
     calc.secondOperand = secondOp;
     calc.currOperator = [NSNumber numberWithInt:MULTIPLY];
-    NSMutableAttributedString *result = [[NSMutableAttributedString alloc] initWithString:@"-0.0000001"];
+    NSMutableAttributedString *result = [[NSMutableAttributedString alloc] initWithString:@"-0.0001"];
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(result.length-1,1)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
-    //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 #pragma mark -- Division Tests
@@ -421,7 +420,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,1)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic division problem of two ints close in value
@@ -437,7 +436,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,3)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic division problem of two ints close in value
@@ -453,7 +452,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,3)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic division problem of two floats with the result having precision expressed in zeros
@@ -469,7 +468,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,4)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests division of zero by an int
@@ -485,7 +484,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,1)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a division of zero by a float
@@ -501,7 +500,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,4)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic division problem of two ints close in value
@@ -517,7 +516,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,1)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic division problem of two ints close in value
@@ -548,7 +547,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(0,1)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 // Tests a basic subtraction problem with the result having to be rounded up and a negative number being an operand
@@ -564,7 +563,7 @@ enum{
     [result addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSUnderlineStyleSingle] range:NSMakeRange(1,1)];
     NSAttributedString *calculatedNumber = [calc calculateResult];
     //NSLog([NSString stringWithFormat:@"RESULT: %@\nEXPECTED: %@\n", [calculatedNumber description], [result description]]);
-    STAssertEqualObjects(result, calculatedNumber, [NSString stringWithFormat:@"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result]);
+    XCTAssertEqualObjects(result, calculatedNumber, @"TEST FAILED : ACTUAL %@: EXPECTED : %@", calculatedNumber, result);
 }
 
 //--------------
@@ -577,33 +576,33 @@ enum{
 - (void)testOperandDefaultConstructor
 {
     Operand *op = [[Operand alloc] init];
-    STAssertEqualObjects(op.value, @"0", [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : 0", op.value]);
-    STAssertEquals(op.precision, 0, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.precision]);
-    STAssertEquals(op.numSigFigs, 0, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.numSigFigs]);
-    STAssertEquals(op.containsDecimal, NO, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.containsDecimal) ? @"YES" : @"NO"]);
-    STAssertEquals(op.isNegative, NO, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.isNegative) ? @"YES" : @"NO"]);
+    XCTAssertEqualObjects(op.value, @"0", @"TEST FAILED : ACTUAL : %@  EXPECTED : 0", op.value);
+    XCTAssertEqual(op.precision, 0, @"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.precision);
+    XCTAssertEqual(op.numSigFigs, 0, @"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.numSigFigs);
+    XCTAssertEqual(op.containsDecimal, NO, @"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.containsDecimal) ? @"YES" : @"NO");
+    XCTAssertEqual(op.isNegative, NO, @"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.isNegative) ? @"YES" : @"NO");
 }
 
 // Tests that the Operand's convenience constructor initializes everything correctly
 - (void)testOperandConvenienceConstructor
 {
     Operand *op = [[Operand alloc] initWithValue:@"912.321"];
-    STAssertEqualObjects(op.value, @"912.321", [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : 0", op.value]);
-    STAssertEquals(op.precision, 3, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.precision]);
-    STAssertEquals(op.numSigFigs, 6, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.numSigFigs]);
-    STAssertEquals(op.containsDecimal, YES, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.containsDecimal) ? @"YES" : @"NO"]);
-    STAssertEquals(op.isNegative, NO, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.isNegative) ? @"YES" : @"NO"]);
+    XCTAssertEqualObjects(op.value, @"912.321", @"TEST FAILED : ACTUAL : %@  EXPECTED : 0", op.value);
+    XCTAssertEqual(op.precision, 3, @"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.precision);
+    XCTAssertEqual(op.numSigFigs, 6, @"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.numSigFigs);
+    XCTAssertEqual(op.containsDecimal, YES, @"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.containsDecimal) ? @"YES" : @"NO");
+    XCTAssertEqual(op.isNegative, NO, @"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.isNegative) ? @"YES" : @"NO");
 }
 
 // Tests that the Operand's convenience constructor initializes everything correctly if the number is negative
 - (void)testOperandConvenienceConstructorNegativeNumber
 {
     Operand *op = [[Operand alloc] initWithValue:@"-912.321"];
-    STAssertEqualObjects(op.value, @"912.321", [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : 0", op.value]);
-    STAssertEquals(op.precision, 3, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.precision]);
-    STAssertEquals(op.numSigFigs, 6, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.numSigFigs]);
-    STAssertEquals(op.containsDecimal, YES, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.containsDecimal) ? @"YES" : @"NO"]);
-    STAssertEquals(op.isNegative, YES, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.isNegative) ? @"YES" : @"NO"]);
+    XCTAssertEqualObjects(op.value, @"912.321", @"TEST FAILED : ACTUAL : %@  EXPECTED : 0", op.value);
+    XCTAssertEqual(op.precision, 3, @"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.precision);
+    XCTAssertEqual(op.numSigFigs, 6, @"TEST FAILED : ACTUAL : %d  EXPECTED : 0", op.numSigFigs);
+    XCTAssertEqual(op.containsDecimal, YES, @"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.containsDecimal) ? @"YES" : @"NO");
+    XCTAssertEqual(op.isNegative, YES, @"TEST FAILED : ACTUAL : %@  EXPECTED : 0", (op.isNegative) ? @"YES" : @"NO");
 }
 
 #pragma mark -- Counter Tests
@@ -618,7 +617,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 4;
     int actual = [counter countSigFigs:@"-00000.1104"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 // Tests if the counter correctly counts multiple zeroed negated int
@@ -627,7 +626,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 7;
     int actual = [counter countSigFigs:@"-0000123.1104"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 // Tests if the counter correctly counts multiple zeroed negated int
@@ -636,7 +635,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 4;
     int actual = [counter countSigFigs:@"-0000"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 // Tests if the counter correctly counts multiple zeroed int
@@ -645,7 +644,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 4;
     int actual = [counter countSigFigs:@"0000"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 // Tests if the counter correctly counts multiple zeroed negated int
@@ -654,7 +653,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 4;
     int actual = [counter countSigFigs:@"-00.00"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 // Tests if the counter correctly counts a single zero
@@ -663,7 +662,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 1;
     int actual = [counter countSigFigs:@"0"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 // Tests if the counter correctly counts multiple zeros
@@ -672,7 +671,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 8;
     int actual = [counter countSigFigs:@"0000.0000"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 // Tests if the counter correctly counts zeros after the decimal
@@ -681,7 +680,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 6;
     int actual = [counter countSigFigs:@"123.000"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 // Tests if the counter correctly counts zeros in the number
@@ -690,7 +689,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 6;
     int actual = [counter countSigFigs:@"120001"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 // Tests if the counter correctly ignores zeros located before the number
@@ -699,7 +698,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 4;
     int actual = [counter countSigFigs:@"0001234"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 // Tests if the counter can handle a negative int
@@ -708,7 +707,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 4;
     int actual = [counter countSigFigs:@"-001234"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 // Tests if the counter can handle a negative float
@@ -717,7 +716,7 @@ enum{
     SigFigCounter *counter = [[SigFigCounter alloc] init];
     int result = 5;
     int actual = [counter countSigFigs:@"-234.23"];
-    STAssertEquals(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result]);
+    XCTAssertEqual(actual, result, @"TEST FAILED : ACTUAL : %d  EXPECTED : %d", actual, result);
 }
 
 #pragma mark -- Converter Tests
@@ -731,8 +730,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"0";
-    NSString *actual = [[converter convertNumSigFigs:@"-000000" :@"1"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"-000000" to:@"1"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly converts a negative 0 float value
@@ -740,8 +739,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"0";
-    NSString *actual = [[converter convertNumSigFigs:@"-000.000" :@"1"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"-000.000" to:@"1"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly converts a few 0s into less
@@ -749,8 +748,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"00";
-    NSString *actual = [[converter convertNumSigFigs:@"000000" :@"2"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"000000" to:@"2"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly converts a few 0s into more
@@ -758,8 +757,17 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"00000";
-    NSString *actual = [[converter convertNumSigFigs:@"00" :@"5"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"00" to:@"5"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
+}
+
+// Tests if the converter correctly converts a negated string of zeros
+- (void)testConverterNegatedZeroString
+{
+  SigFigConverter *converter = [[SigFigConverter alloc] init];
+  NSString *result = @"00000";
+  NSString *actual = [[converter convertNumSigFigs:@"-00" to:@"5"] string];
+  XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly converts to 0 SigFigs
@@ -767,8 +775,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"0";
-    NSString *actual = [[converter convertNumSigFigs:@"12321" :@"0"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"12321" to:@"0"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds a float down
@@ -776,8 +784,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"1.0";
-    NSString *actual = [[converter convertNumSigFigs:@"1.02857" :@"2"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"1.02857" to:@"2"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds a float down
@@ -785,8 +793,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"1.0";
-    NSString *actual = [[converter convertNumSigFigs:@"1.00002857" :@"2"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"1.00002857" to:@"2"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds a float down
@@ -794,8 +802,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"1.20";
-    NSString *actual = [[converter convertNumSigFigs:@"1.20000123" :@"3"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"1.20000123" to:@"3"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds a float down
@@ -803,8 +811,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"1";
-    NSString *actual = [[converter convertNumSigFigs:@"1.000123" :@"1"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"1.000123" to:@"1"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds a float up
@@ -812,8 +820,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"1.3";
-    NSString *actual = [[converter convertNumSigFigs:@"1.25" :@"2"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"1.25" to:@"2"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds a float up and changes it to an int
@@ -821,8 +829,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"2";
-    NSString *actual = [[converter convertNumSigFigs:@"1.5" :@"1"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"1.5" to:@"1"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds an int up
@@ -830,8 +838,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"2800";
-    NSString *actual = [[converter convertNumSigFigs:@"2794" :@"2"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"2794" to:@"2"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds an int up and adds an extra zero
@@ -839,8 +847,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"10000";
-    NSString *actual = [[converter convertNumSigFigs:@"9999" :@"1"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"9999" to:@"1"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds with a negative int as the number
@@ -848,8 +856,8 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"-10000";
-    NSString *actual = [[converter convertNumSigFigs:@"-9999" :@"1"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"-9999" to:@"1"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds a negative float
@@ -857,17 +865,17 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"-130";
-    NSString *actual = [[converter convertNumSigFigs:@"-127.123" :@"2"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"-127.123" to:@"2"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds a float beginning with zeroes
 - (void)testConverterRoundFloatWithLeadingZeroes
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
-    NSString *result = @"0.0000123";
-    NSString *actual = [[converter convertNumSigFigs:@"0.00001225" :@"3"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *result = @"0.013";
+    NSString *actual = [[converter convertNumSigFigs:@"0.0125" to:@"2"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 
 // Tests if the converter correctly rounds a negative float beginning with zeroes
@@ -875,7 +883,16 @@ enum{
 {
     SigFigConverter *converter = [[SigFigConverter alloc] init];
     NSString *result = @"-0.013";
-    NSString *actual = [[converter convertNumSigFigs:@"-0.0125" :@"2"] string];
-    STAssertEqualObjects(actual, result, [NSString stringWithFormat:@"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result]);
+    NSString *actual = [[converter convertNumSigFigs:@"-0.0125" to:@"2"] string];
+    XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
+}
+
+// Tests if the converter correctly rounds a negative integer
+- (void)testConverterRoundNegativeInteger
+{
+  SigFigConverter *converter = [[SigFigConverter alloc] init];
+  NSString *result = @"-12500";
+  NSString *actual = [[converter convertNumSigFigs:@"-12485" to:@"3"] string];
+  XCTAssertEqualObjects(actual, result, @"TEST FAILED : ACTUAL : %@  EXPECTED : %@", actual, result);
 }
 @end

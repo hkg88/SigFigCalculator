@@ -13,19 +13,18 @@
 		2706EB9816852F6500326CCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB9716852F6500326CCD /* main.m */; };
 		2706EB9C16852F6500326CCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB9B16852F6500326CCD /* AppDelegate.m */; };
 		2706EBA516852F6600326CCD /* SigFigCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EBA416852F6600326CCD /* SigFigCalculator.m */; };
-		2706EBAD16852F6600326CCD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EBAC16852F6600326CCD /* SenTestingKit.framework */; };
 		2706EBAE16852F6600326CCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8B16852F6500326CCD /* UIKit.framework */; };
 		2706EBAF16852F6600326CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8D16852F6500326CCD /* Foundation.framework */; };
 		2706EBB716852F6600326CCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2706EBB516852F6600326CCD /* InfoPlist.strings */; };
 		2706EBBA16852F6600326CCD /* SigFigCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EBB916852F6600326CCD /* SigFigCalculatorTests.m */; };
 		2713B1351815613D00CF5D58 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2713B1341815613D00CF5D58 /* MainStoryboard_iPad.storyboard */; };
 		271AC79E16C5B6FE001C7FD8 /* Operand.m in Sources */ = {isa = PBXBuildFile; fileRef = 271AC79D16C5B6FE001C7FD8 /* Operand.m */; };
-		271AC7A116C5B851001C7FD8 /* sigFigCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271AC7A016C5B851001C7FD8 /* sigFigCalculatorViewController.m */; };
+		271AC7A116C5B851001C7FD8 /* SFCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271AC7A016C5B851001C7FD8 /* SFCalculatorViewController.m */; };
 		271B0DC817DCD849003E8B92 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 271B0DCA17DCD849003E8B92 /* Localizable.strings */; };
-		271B88CB16E990A100684311 /* sigFigCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88CA16E990A100684311 /* sigFigCounterViewController.m */; };
+		271B88CB16E990A100684311 /* SFCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88CA16E990A100684311 /* SFCounterViewController.m */; };
 		271B88D516EBDA3600684311 /* SigFigCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88D416EBDA3600684311 /* SigFigCounter.m */; };
-		271B88D816EBF91A00684311 /* sigFigRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88D716EBF91A00684311 /* sigFigRulesViewController.m */; };
-		271B88E316EC147100684311 /* sigFigConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88E216EC147100684311 /* sigFigConverterViewController.m */; };
+		271B88D816EBF91A00684311 /* SFRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88D716EBF91A00684311 /* SFRulesViewController.m */; };
+		271B88E316EC147100684311 /* SFConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88E216EC147100684311 /* SFConverterViewController.m */; };
 		271B88E616F1158100684311 /* SigFigConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88E516F1158100684311 /* SigFigConverter.m */; };
 		2757BFFE17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2757BFFD17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard */; };
 		2788C661173F7D9D007DF05A /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2788C660173F7D9D007DF05A /* iAd.framework */; };
@@ -38,6 +37,10 @@
 		2790A29D17DCC1E0008A56DB /* UITextField+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A29417DCC1E0008A56DB /* UITextField+AGi18n.m */; };
 		2790A29E17DCC1E0008A56DB /* UITextView+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A29617DCC1E0008A56DB /* UITextView+AGi18n.m */; };
 		27C9950F1808E73C00D6C252 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C9950E1808E73C00D6C252 /* Media.xcassets */; };
+		EE2CC73E190BC7E100503DD3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2CC73D190BC7E100503DD3 /* MessageUI.framework */; };
+		EE52938219035F35008AF503 /* SFCustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE52938119035F35008AF503 /* SFCustomTabBarViewController.m */; };
+		EE52938519036544008AF503 /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE52938419036544008AF503 /* SFSettingsViewController.m */; };
+		EE74B2171905254800B51BAD /* SFBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE74B2161905254800B51BAD /* SFBannerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +65,7 @@
 		2706EB9B16852F6500326CCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2706EBA316852F6600326CCD /* SigFigCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SigFigCalculator.h; sourceTree = "<group>"; };
 		2706EBA416852F6600326CCD /* SigFigCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigFigCalculator.m; sourceTree = "<group>"; };
-		2706EBAB16852F6600326CCD /* SigFigCalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SigFigCalculatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2706EBAC16852F6600326CCD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2706EBAB16852F6600326CCD /* SigFigCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SigFigCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2706EBB416852F6600326CCD /* SigFigCalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SigFigCalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		2706EBB616852F6600326CCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2706EBB816852F6600326CCD /* SigFigCalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SigFigCalculatorTests.h; sourceTree = "<group>"; };
@@ -71,18 +73,18 @@
 		2713B1341815613D00CF5D58 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		271AC79C16C5B6FE001C7FD8 /* Operand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operand.h; sourceTree = "<group>"; };
 		271AC79D16C5B6FE001C7FD8 /* Operand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operand.m; sourceTree = "<group>"; };
-		271AC79F16C5B851001C7FD8 /* sigFigCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sigFigCalculatorViewController.h; sourceTree = "<group>"; };
-		271AC7A016C5B851001C7FD8 /* sigFigCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sigFigCalculatorViewController.m; sourceTree = "<group>"; };
+		271AC79F16C5B851001C7FD8 /* SFCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCalculatorViewController.h; sourceTree = "<group>"; };
+		271AC7A016C5B851001C7FD8 /* SFCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCalculatorViewController.m; sourceTree = "<group>"; };
 		271B0DC917DCD849003E8B92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		271B0DCB17DCD84D003E8B92 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		271B88C916E990A100684311 /* sigFigCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sigFigCounterViewController.h; sourceTree = "<group>"; };
-		271B88CA16E990A100684311 /* sigFigCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sigFigCounterViewController.m; sourceTree = "<group>"; };
+		271B88C916E990A100684311 /* SFCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCounterViewController.h; sourceTree = "<group>"; };
+		271B88CA16E990A100684311 /* SFCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCounterViewController.m; sourceTree = "<group>"; };
 		271B88D316EBDA3600684311 /* SigFigCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigFigCounter.h; sourceTree = "<group>"; };
 		271B88D416EBDA3600684311 /* SigFigCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigFigCounter.m; sourceTree = "<group>"; };
-		271B88D616EBF91A00684311 /* sigFigRulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sigFigRulesViewController.h; sourceTree = "<group>"; };
-		271B88D716EBF91A00684311 /* sigFigRulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sigFigRulesViewController.m; sourceTree = "<group>"; };
-		271B88E116EC147100684311 /* sigFigConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sigFigConverterViewController.h; sourceTree = "<group>"; };
-		271B88E216EC147100684311 /* sigFigConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sigFigConverterViewController.m; sourceTree = "<group>"; };
+		271B88D616EBF91A00684311 /* SFRulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRulesViewController.h; sourceTree = "<group>"; };
+		271B88D716EBF91A00684311 /* SFRulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRulesViewController.m; sourceTree = "<group>"; };
+		271B88E116EC147100684311 /* SFConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFConverterViewController.h; sourceTree = "<group>"; };
+		271B88E216EC147100684311 /* SFConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFConverterViewController.m; sourceTree = "<group>"; };
 		271B88E416F1158100684311 /* SigFigConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigFigConverter.h; sourceTree = "<group>"; };
 		271B88E516F1158100684311 /* SigFigConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigFigConverter.m; sourceTree = "<group>"; };
 		2757BFFD17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -105,6 +107,13 @@
 		2790A29517DCC1E0008A56DB /* UITextView+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+AGi18n.h"; sourceTree = "<group>"; };
 		2790A29617DCC1E0008A56DB /* UITextView+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+AGi18n.m"; sourceTree = "<group>"; };
 		27C9950E1808E73C00D6C252 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		EE2CC73D190BC7E100503DD3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		EE52938019035F35008AF503 /* SFCustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCustomTabBarViewController.h; sourceTree = "<group>"; };
+		EE52938119035F35008AF503 /* SFCustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCustomTabBarViewController.m; sourceTree = "<group>"; };
+		EE52938319036544008AF503 /* SFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSettingsViewController.h; sourceTree = "<group>"; };
+		EE52938419036544008AF503 /* SFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSettingsViewController.m; sourceTree = "<group>"; };
+		EE74B2151905254800B51BAD /* SFBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBannerViewController.h; sourceTree = "<group>"; };
+		EE74B2161905254800B51BAD /* SFBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBannerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE2CC73E190BC7E100503DD3 /* MessageUI.framework in Frameworks */,
 				2788C661173F7D9D007DF05A /* iAd.framework in Frameworks */,
 				2706EB8C16852F6500326CCD /* UIKit.framework in Frameworks */,
 				2706EB8E16852F6500326CCD /* Foundation.framework in Frameworks */,
@@ -123,7 +133,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2706EBAD16852F6600326CCD /* SenTestingKit.framework in Frameworks */,
 				2706EBAE16852F6600326CCD /* UIKit.framework in Frameworks */,
 				2706EBAF16852F6600326CCD /* Foundation.framework in Frameworks */,
 			);
@@ -147,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				2706EB8716852F6500326CCD /* SigFigCalculator.app */,
-				2706EBAB16852F6600326CCD /* SigFigCalculatorTests.octest */,
+				2706EBAB16852F6600326CCD /* SigFigCalculatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,11 +164,11 @@
 		2706EB8A16852F6500326CCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE2CC73D190BC7E100503DD3 /* MessageUI.framework */,
 				2788C660173F7D9D007DF05A /* iAd.framework */,
 				2706EB8B16852F6500326CCD /* UIKit.framework */,
 				2706EB8D16852F6500326CCD /* Foundation.framework */,
 				2706EB8F16852F6500326CCD /* CoreGraphics.framework */,
-				2706EBAC16852F6600326CCD /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,14 +244,20 @@
 		2745FFAC16C40ED70004EED6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				271AC79F16C5B851001C7FD8 /* sigFigCalculatorViewController.h */,
-				271AC7A016C5B851001C7FD8 /* sigFigCalculatorViewController.m */,
-				271B88C916E990A100684311 /* sigFigCounterViewController.h */,
-				271B88CA16E990A100684311 /* sigFigCounterViewController.m */,
-				271B88E116EC147100684311 /* sigFigConverterViewController.h */,
-				271B88E216EC147100684311 /* sigFigConverterViewController.m */,
-				271B88D616EBF91A00684311 /* sigFigRulesViewController.h */,
-				271B88D716EBF91A00684311 /* sigFigRulesViewController.m */,
+				EE74B2151905254800B51BAD /* SFBannerViewController.h */,
+				EE74B2161905254800B51BAD /* SFBannerViewController.m */,
+				271AC79F16C5B851001C7FD8 /* SFCalculatorViewController.h */,
+				271AC7A016C5B851001C7FD8 /* SFCalculatorViewController.m */,
+				271B88C916E990A100684311 /* SFCounterViewController.h */,
+				271B88CA16E990A100684311 /* SFCounterViewController.m */,
+				271B88E116EC147100684311 /* SFConverterViewController.h */,
+				271B88E216EC147100684311 /* SFConverterViewController.m */,
+				271B88D616EBF91A00684311 /* SFRulesViewController.h */,
+				271B88D716EBF91A00684311 /* SFRulesViewController.m */,
+				EE52938019035F35008AF503 /* SFCustomTabBarViewController.h */,
+				EE52938119035F35008AF503 /* SFCustomTabBarViewController.m */,
+				EE52938319036544008AF503 /* SFSettingsViewController.h */,
+				EE52938419036544008AF503 /* SFSettingsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -306,8 +321,8 @@
 			);
 			name = SigFigCalculatorTests;
 			productName = SigFigCalculatorTests;
-			productReference = 2706EBAB16852F6600326CCD /* SigFigCalculatorTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 2706EBAB16852F6600326CCD /* SigFigCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -315,7 +330,8 @@
 		2706EB7E16852F6500326CCD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "University of Texas at Austin";
 			};
 			buildConfigurationList = 2706EB8116852F6500326CCD /* Build configuration list for PBXProject "SigFigCalculator" */;
@@ -384,19 +400,22 @@
 				2706EB9C16852F6500326CCD /* AppDelegate.m in Sources */,
 				2706EBA516852F6600326CCD /* SigFigCalculator.m in Sources */,
 				271AC79E16C5B6FE001C7FD8 /* Operand.m in Sources */,
-				271AC7A116C5B851001C7FD8 /* sigFigCalculatorViewController.m in Sources */,
-				271B88CB16E990A100684311 /* sigFigCounterViewController.m in Sources */,
+				271AC7A116C5B851001C7FD8 /* SFCalculatorViewController.m in Sources */,
+				271B88CB16E990A100684311 /* SFCounterViewController.m in Sources */,
 				271B88D516EBDA3600684311 /* SigFigCounter.m in Sources */,
-				271B88D816EBF91A00684311 /* sigFigRulesViewController.m in Sources */,
-				271B88E316EC147100684311 /* sigFigConverterViewController.m in Sources */,
+				271B88D816EBF91A00684311 /* SFRulesViewController.m in Sources */,
+				271B88E316EC147100684311 /* SFConverterViewController.m in Sources */,
 				271B88E616F1158100684311 /* SigFigConverter.m in Sources */,
 				2790A29717DCC1E0008A56DB /* NSObject+AGi18n.m in Sources */,
 				2790A29817DCC1E0008A56DB /* UIBarButtonItem+AGi18n.m in Sources */,
 				2790A29917DCC1E0008A56DB /* UIButton+AGi18n.m in Sources */,
 				2790A29A17DCC1E0008A56DB /* UILabel+AGi18n.m in Sources */,
+				EE74B2171905254800B51BAD /* SFBannerViewController.m in Sources */,
 				2790A29B17DCC1E0008A56DB /* UINavigationItem+AGi18n.m in Sources */,
 				2790A29C17DCC1E0008A56DB /* UISearchBar+AGi18n.m in Sources */,
+				EE52938219035F35008AF503 /* SFCustomTabBarViewController.m in Sources */,
 				2790A29D17DCC1E0008A56DB /* UITextField+AGi18n.m in Sources */,
+				EE52938519036544008AF503 /* SFSettingsViewController.m in Sources */,
 				2790A29E17DCC1E0008A56DB /* UITextView+AGi18n.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,7 +531,6 @@
 		2706EBBE16852F6600326CCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				"ARCHS[sdk=*]" = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -530,7 +548,6 @@
 		2706EBBF16852F6600326CCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -550,14 +567,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SigFigCalculator.app/SigFigCalculator";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SigFigCalculator/SigFigCalculator-Prefix.pch";
 				INFOPLIST_FILE = "SigFigCalculatorTests/SigFigCalculatorTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -567,14 +583,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SigFigCalculator.app/SigFigCalculator";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SigFigCalculator/SigFigCalculator-Prefix.pch";
 				INFOPLIST_FILE = "SigFigCalculatorTests/SigFigCalculatorTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

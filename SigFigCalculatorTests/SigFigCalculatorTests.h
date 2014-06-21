@@ -6,12 +6,12 @@
 //  Copyright (c) 2012 Kyle Gearhart. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "SigFigConverter.h"
 #import "SigFigCounter.h"
 #import "Operand.h"
 #import "SigFigCalculator.h"
 
-@interface SigFigCalculatorTests : SenTestCase
+@interface SigFigCalculatorTests : XCTestCase
 
 @end

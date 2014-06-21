@@ -6,19 +6,9 @@
 //  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
 //
 
-#import "sigFigRulesViewController.h"
+#import "SFRulesViewController.h"
 
-@implementation sigFigRulesViewController
-
-@synthesize rulesTextView = _rulesTextView;
-@synthesize tabBarTextRules = _tabBarTextRules;
-@synthesize adView = _adView;
-
-- (void)awakeFromNib
-{
-    self.tabBarTextRules.title = NSLocalizedString(@"SigFig Rules", @"SigFig Rules Tab Bar Title");
-    self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyAutomatic;
-}
+@implementation SFRulesViewController
 
 - (void)viewDidLoad
 {
@@ -32,9 +22,6 @@
     self.rulesTextView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
     
-    // Initialize the Ad Banner
-    self.adView.delegate = self;
-    self.bannerIsVisible = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -44,7 +31,6 @@
 - (void)viewDidUnload
 {
     self.rulesTextView = nil;
-    self.tabBarTextRules = nil;
     [super viewDidUnload];
 }
 
@@ -60,47 +46,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#pragma mark -- iAd Lifecycle
-
-// Brings the banner into view
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-    if (!self.bannerIsVisible) {
-        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-        [UIView setAnimationDuration:0.25];
-        
-        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height-1);
-        
-        [UIView commitAnimations];
-        self.bannerIsVisible = YES;
-    }
-}
-
-// If an advertisement retrieval fails, push the banner offscreen
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-    if (self.bannerIsVisible) {
-        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-        [UIView setAnimationDuration:0.25];
-        
-        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height+1);
-        
-        [UIView commitAnimations];
-        self.bannerIsVisible = NO;
-    }
-}
-
-// If the banner is tapped, don't leave the app and just allow the ad to cover the screen
-- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
-{
-    return YES;
-}
-
-// Placeholder for processing which needs to be done when the app is brought back from the background
-- (void)bannerViewActionDidFinish:(ADBannerView *)banner
-{
-    
-}
 
 # pragma Mark - Notification Center
 

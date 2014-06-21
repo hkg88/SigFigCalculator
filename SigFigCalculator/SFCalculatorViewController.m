@@ -6,18 +6,9 @@
 //  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
 //
 
-#import "sigFigCalculatorViewController.h"
+#import "SFCalculatorViewController.h"
 
-@implementation sigFigCalculatorViewController
-@synthesize display = _display;
-@synthesize operatorDisplayLabel = _operatorDisplayLabel;
-@synthesize sigFigCalculator = _sigFigCalculator;
-@synthesize sigFigCounter = _sigFigCounter;
-@synthesize sigFigConverter = _sigFigConverter;
-@synthesize tabBarTextCalculator = _tabBarTextCalculator;
-@synthesize nonClearButtons = _nonClearButtons;
-@synthesize adView = _adView;
-@synthesize bannerIsVisible = _bannerIsVisible;
+@implementation SFCalculatorViewController
 
 enum{
     ADD = 1,
@@ -30,20 +21,10 @@ enum{
 
 #pragma mark -- View Lifecycle
 
-- (void)awakeFromNib
-{
-    self.tabBarTextCalculator.title = NSLocalizedString(@"Calculator", @"Calculator Tab Bar Title");
-    self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyAutomatic;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self initialize];
-    
-    // Initialize the Ad Banner
-    self.adView.delegate = self;
-    self.bannerIsVisible = NO;
 }
 
 - (void)initialize
@@ -70,8 +51,6 @@ enum{
     self.display = nil;
     self.operatorDisplayLabel = nil;
     self.nonClearButtons = nil;
-    self.tabBarTextCalculator = nil;
-    self.adView = nil;
     [super viewDidUnload];
 }
 
@@ -96,48 +75,6 @@ enum{
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark -- iAd Lifecycle
-
-// Brings the banner into view
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-    if (!self.bannerIsVisible) {
-        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-        [UIView setAnimationDuration:0.25];
-        
-        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height-1);
-        
-        [UIView commitAnimations];
-        self.bannerIsVisible = YES;
-    }
-}
-
-// If an advertisement retrieval fails, push the banner offscreen
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-    if (self.bannerIsVisible) {
-        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
-        [UIView setAnimationDuration:0.25];
-        
-        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height+1);
-        
-        [UIView commitAnimations];
-        self.bannerIsVisible = NO;
-    }
-}
-
-// If the banner is tapped, don't leave the app and just allow the ad to cover the screen
-- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
-{
-    return YES;
-}
-
-// Placeholder for processing which needs to be done when the app is brought back from the background
-- (void)bannerViewActionDidFinish:(ADBannerView *)banner
-{
-
 }
 
 #pragma mark -- View Behavior Methods

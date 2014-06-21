@@ -1,19 +1,18 @@
-//
-//  sigFigCalculatorViewControllerViewController.h
-//  SigFigCalculator
-//
-//  Created by Kyle Gearhart on 13/02/08.
-//  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
-//
+/*
+  SFCalculatorViewControllerViewController.h
+  SFCalculator
+
+  Created by Kyle Gearhart on 13/02/08.
+  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
+*/
 
 #import <UIKit/UIKit.h>
-#import <iAd/iAd.h>
 #import "Math.h"
 #import "SigFigCalculator.h"
 #import "SigFigCounter.h"
 #import "SigFigConverter.h"
 
-@interface sigFigCalculatorViewController : UIViewController <ADBannerViewDelegate>
+@interface SFCalculatorViewController : UIViewController
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *nonClearButtons;
 
@@ -23,11 +22,6 @@
 
 @property (strong, nonatomic) SigFigCounter *sigFigCounter;
 @property (strong, nonatomic) SigFigConverter *sigFigConverter;
-@property (strong, nonatomic) IBOutlet UITabBarItem *tabBarTextCalculator;
-
-// Advertisements
-@property (strong, nonatomic) IBOutlet ADBannerView *adView;
-@property BOOL bannerIsVisible;
 
 - (IBAction)pressedDigit:(UIButton *)sender;
 - (IBAction)pressedClear:(UIButton *)sender;

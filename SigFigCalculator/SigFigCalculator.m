@@ -5,119 +5,111 @@
 //  Created by Kyle Gearhart on 12/12/21.
 //  Copyright (c) 2012 Kyle Gearhart. All rights reserved.
 //
+//  Calculates simple two-operand calculations and returns the result with
+//  its significant figures underlined.
 
 #import "SigFigCalculator.h"
 
 @implementation SigFigCalculator
 
-@synthesize firstOperand = _firstOperand;
-@synthesize secondOperand = _secondOperand;
-@synthesize currOperator = _currOperator;
-@synthesize sigFigCounter = _sigFigCounter;
+#define ADDITION 1
+#define SUBTRACTION 2
+#define MULTIPLICATION 3
+#define DIVISION 4
 
-enum{
-    ADD = 1,
-    SUBTRACT = 2,
-    MULTIPLY = 3,
-    DIVIDE = 4,
-};
+#pragma mark Overridden NSObject Methods
 
-- (id)init
-{
+// ** Designated Initializer **
+- (id)init {
     self = [super init];
     if(self) {
-        self.firstOperand = nil;
-        self.secondOperand = nil;
-        self.currOperator = nil;
-        self.sigFigCounter = nil;
     }
     return self;
 }
 
-- (void)dealloc
-{
-    self.firstOperand = nil;
-    self.secondOperand = nil;
-    self.currOperator = nil;
-    self.sigFigCounter = nil;
-}
+#pragma mark Unique SigFigCalculator Class Methods
 
 - (NSAttributedString *) calculateResult
 {
-    // If an operator is specified, carry it out on the operands
-    NSDecimalNumber *decimalNumResult;
-    NSString *result;
-    NSAttributedString *attributedStringResult;
+  // If an operator is specified, carry it out on the operands
+  NSDecimalNumber *decimalNumResult;
+  NSString *stringResult;
+  NSAttributedString *attributedStringResult;
 
-    SigFigCounter *sigFigCounter = [[SigFigCounter alloc] init];
-    SigFigConverter *sigFigConverter = [[SigFigConverter alloc] init];
+  SigFigCounter *sigFigCounter = [[SigFigCounter alloc] init];
+  SigFigConverter *sigFigConverter = [[SigFigConverter alloc] init];
     
-    // At this point, if a second operand has not been entered, it should be set to the value
-    // of the first.
-    if(!self.secondOperand) {
-        self.secondOperand = [[Operand alloc] initWithOperand:self.firstOperand];
+  // In the case that only one operand has been entered, duplicate it as the second
+  if(!self.secondOperand) {
+    self.secondOperand = [[Operand alloc] initWithOperand:self.firstOperand];
+  }
+    
+  // Must obtain the number of SigFigs in both numbers
+  self.firstOperand.numSigFigs = [sigFigCounter countSigFigs:self.firstOperand.value];
+  self.secondOperand.numSigFigs = [sigFigCounter countSigFigs:self.secondOperand.value];
+    
+  // Get, and negate, operand values if necessary
+  NSDecimalNumber *firstValue = [NSDecimalNumber decimalNumberWithString:self.firstOperand.value];
+  if(self.firstOperand.isNegative) {
+    firstValue = [firstValue decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:@"-1"]];
+  }
+  NSDecimalNumber *secondValue = [NSDecimalNumber decimalNumberWithString:self.secondOperand.value];
+  if(self.secondOperand.isNegative) {
+    secondValue = [secondValue decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:@"-1"]];
+  }
+    
+  // Carry out the designated operation
+  int currOp = [self.currOperator intValue];
+  if(currOp == ADDITION || currOp == SUBTRACTION) {
+    int precisionOfFirstNum = self.firstOperand.precision;
+    int precisionOfSecondNum = self.secondOperand.precision;
+    int minPrecision = (precisionOfFirstNum <= precisionOfSecondNum) ? precisionOfFirstNum : precisionOfSecondNum;
+    if(currOp == ADDITION) {
+      decimalNumResult = [firstValue decimalNumberByAdding:secondValue];
+    } else if(currOp == SUBTRACTION) {
+      decimalNumResult = [firstValue decimalNumberBySubtracting:secondValue];
     }
-    
-    // Must obtain the number of SigFigs in both numbers
-    self.firstOperand.numSigFigs = [sigFigCounter countSigFigs:self.firstOperand.value];
-    self.secondOperand.numSigFigs = [sigFigCounter countSigFigs:self.secondOperand.value];
-    
-    // Get, and negate, operand values if necessary
-    NSDecimalNumber *firstValue = [NSDecimalNumber decimalNumberWithString:self.firstOperand.value];
-    if(self.firstOperand.isNegative) {
-        firstValue = [firstValue decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:@"-1"]];
-    }
-    NSDecimalNumber *secondValue = [NSDecimalNumber decimalNumberWithString:self.secondOperand.value];
-    if(self.secondOperand.isNegative) {
-        secondValue = [secondValue decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:@"-1"]];
-    }
-    
-    // Carry out the designated operation
-    int currOp = [self.currOperator intValue];
-    if(currOp == ADD || currOp == SUBTRACT) {
-        int precisionOfFirstNum = self.firstOperand.precision;
-        int precisionOfSecondNum = self.secondOperand.precision;
-        int minPrecision;
-        minPrecision = (precisionOfFirstNum <= precisionOfSecondNum) ? precisionOfFirstNum : precisionOfSecondNum;
-        if(currOp == ADD) {
-            decimalNumResult = [firstValue decimalNumberByAdding:secondValue];
-        } else if(currOp == SUBTRACT) {
-            decimalNumResult = [firstValue decimalNumberBySubtracting:secondValue];
-        }
-        // The position to round at is the minprecision
-        // Ex. 3.128 to 1 precision --> 1 which will round the number to 3.1
-        int scale = minPrecision;
-        NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:scale raiseOnExactness:FALSE raiseOnOverflow:TRUE raiseOnUnderflow:TRUE raiseOnDivideByZero:TRUE];
-        result = [[decimalNumResult decimalNumberByRoundingAccordingToBehavior:roundingBehavior] stringValue];
-        attributedStringResult = [[NSAttributedString alloc] initWithString:result];
-    } else if(currOp == MULTIPLY || currOp == DIVIDE) {
-        if(currOp == MULTIPLY) {
-            decimalNumResult = [firstValue decimalNumberByMultiplyingBy:secondValue];
-        } else if(currOp == DIVIDE) {
-            // Handle division by zero
-            if([secondValue isEqualToNumber:[[NSNumber alloc] initWithInt:0]]) {
-                return [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Infinity", @"Calculator Infinity")];
-            // Handle the case where it's zero divided by something
-            } else if ([firstValue isEqualToNumber:[[NSNumber alloc] initWithInt:0]]) {
-                decimalNumResult = [[NSDecimalNumber alloc] initWithString:@"0"];
-            } else {
-                decimalNumResult = [firstValue decimalNumberByDividingBy:secondValue];
-            }
-        }
-        result = [decimalNumResult stringValue];
-        
-        // Obtain the correct result by converting the result's number of SigFigs to the minimum
-        // of the two operands
-        int minNumSigFigs;
-        minNumSigFigs = (self.firstOperand.numSigFigs <= self.secondOperand.numSigFigs) ? self.firstOperand.numSigFigs : self.secondOperand.numSigFigs;
-        if(result < 0) {
-            attributedStringResult = [sigFigConverter convertNumSigFigs:[result substringFromIndex:0]   :[NSString stringWithFormat:@"%d", minNumSigFigs]]
-            ;
+    // As per significant figure rules, round the result to the minimum precision
+    int indexToRoundTo = minPrecision;
+    NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler
+                              decimalNumberHandlerWithRoundingMode:NSRoundPlain
+                                                             scale:indexToRoundTo
+                                                  raiseOnExactness:FALSE
+                                                   raiseOnOverflow:TRUE
+                                                  raiseOnUnderflow:TRUE
+                                               raiseOnDivideByZero:TRUE];
+    stringResult = [[decimalNumResult decimalNumberByRoundingAccordingToBehavior:roundingBehavior] stringValue];
+    attributedStringResult = [[NSAttributedString alloc] initWithString:stringResult];
+  } else if(currOp == MULTIPLICATION || currOp == DIVISION) {
+    if(currOp == MULTIPLICATION) {
+      decimalNumResult = [firstValue decimalNumberByMultiplyingBy:secondValue];
+    } else if(currOp == DIVISION) {
+      // Handle division by zero
+      if([secondValue isEqualToNumber:[[NSNumber alloc] initWithInt:0]]) {
+        return [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Infinity", @"Calculator Infinity")];
+        // Handle the case where it's zero divided by something
+        } else if ([firstValue isEqualToNumber:[[NSNumber alloc] initWithInt:0]]) {
+          decimalNumResult = [[NSDecimalNumber alloc] initWithString:@"0"];
         } else {
-            attributedStringResult = [sigFigConverter convertNumSigFigs:result :[NSString stringWithFormat:@"%d", minNumSigFigs]];
+          decimalNumResult = [firstValue decimalNumberByDividingBy:secondValue];
         }
     }
+    stringResult = [decimalNumResult stringValue];
     
+    NSLog([self description]);
+    NSLog([NSString stringWithFormat:@"Decimal Num Result = %@", stringResult]);
+        
+    // Obtain the correct result by converting the result's number of SigFigs to the minimum
+    // of the two operands
+    int minNumSigFigs;
+    NSLog([NSString stringWithFormat:@"First op num sigfigs: %d and second %d", self.firstOperand.numSigFigs, self.secondOperand.numSigFigs]);
+    minNumSigFigs = (self.firstOperand.numSigFigs <= self.secondOperand.numSigFigs) ?
+                     self.firstOperand.numSigFigs : self.secondOperand.numSigFigs;
+    attributedStringResult = [sigFigConverter convertNumSigFigs:stringResult
+                                                             to:[NSString stringWithFormat:@"%d", minNumSigFigs]];
+    
+    NSLog([NSString stringWithFormat:@"Att String Result = %@", attributedStringResult]);
+  }
     self.firstOperand = nil;
     self.secondOperand = nil;
 
