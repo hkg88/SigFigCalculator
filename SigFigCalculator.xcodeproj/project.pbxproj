@@ -17,7 +17,6 @@
 		2706EBAF16852F6600326CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8D16852F6500326CCD /* Foundation.framework */; };
 		2706EBB716852F6600326CCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2706EBB516852F6600326CCD /* InfoPlist.strings */; };
 		2706EBBA16852F6600326CCD /* SigFigCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EBB916852F6600326CCD /* SigFigCalculatorTests.m */; };
-		2713B1351815613D00CF5D58 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2713B1341815613D00CF5D58 /* MainStoryboard_iPad.storyboard */; };
 		271AC79E16C5B6FE001C7FD8 /* Operand.m in Sources */ = {isa = PBXBuildFile; fileRef = 271AC79D16C5B6FE001C7FD8 /* Operand.m */; };
 		271AC7A116C5B851001C7FD8 /* SFCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271AC7A016C5B851001C7FD8 /* SFCalculatorViewController.m */; };
 		271B0DC817DCD849003E8B92 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 271B0DCA17DCD849003E8B92 /* Localizable.strings */; };
@@ -38,9 +37,11 @@
 		2790A29E17DCC1E0008A56DB /* UITextView+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A29617DCC1E0008A56DB /* UITextView+AGi18n.m */; };
 		27C9950F1808E73C00D6C252 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C9950E1808E73C00D6C252 /* Media.xcassets */; };
 		EE2CC73E190BC7E100503DD3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2CC73D190BC7E100503DD3 /* MessageUI.framework */; };
-		EE52938219035F35008AF503 /* SFCustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE52938119035F35008AF503 /* SFCustomTabBarViewController.m */; };
+		EE32037C19BC737E009085C0 /* SFUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE32037B19BC737E009085C0 /* SFUserDefaultsHelper.m */; };
 		EE52938519036544008AF503 /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE52938419036544008AF503 /* SFSettingsViewController.m */; };
-		EE74B2171905254800B51BAD /* SFBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE74B2161905254800B51BAD /* SFBannerViewController.m */; };
+		EE9354E51AA754F900E9D389 /* SFBannerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9354E41AA754F900E9D389 /* SFBannerViewManager.m */; };
+		EEF0796D1A74FDC700271599 /* SFBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0796C1A74FDC700271599 /* SFBannerViewController.m */; };
+		EEF8052219AE9A76008FF4FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF8052119AE9A76008FF4FF /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +71,6 @@
 		2706EBB616852F6600326CCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2706EBB816852F6600326CCD /* SigFigCalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SigFigCalculatorTests.h; sourceTree = "<group>"; };
 		2706EBB916852F6600326CCD /* SigFigCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigFigCalculatorTests.m; sourceTree = "<group>"; };
-		2713B1341815613D00CF5D58 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		271AC79C16C5B6FE001C7FD8 /* Operand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operand.h; sourceTree = "<group>"; };
 		271AC79D16C5B6FE001C7FD8 /* Operand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operand.m; sourceTree = "<group>"; };
 		271AC79F16C5B851001C7FD8 /* SFCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCalculatorViewController.h; sourceTree = "<group>"; };
@@ -108,12 +108,16 @@
 		2790A29617DCC1E0008A56DB /* UITextView+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+AGi18n.m"; sourceTree = "<group>"; };
 		27C9950E1808E73C00D6C252 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		EE2CC73D190BC7E100503DD3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		EE52938019035F35008AF503 /* SFCustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCustomTabBarViewController.h; sourceTree = "<group>"; };
-		EE52938119035F35008AF503 /* SFCustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCustomTabBarViewController.m; sourceTree = "<group>"; };
+		EE32037A19BC737E009085C0 /* SFUserDefaultsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUserDefaultsHelper.h; sourceTree = "<group>"; };
+		EE32037B19BC737E009085C0 /* SFUserDefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUserDefaultsHelper.m; sourceTree = "<group>"; };
+		EE32037D19BC7588009085C0 /* SFConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFConstants.h; sourceTree = "<group>"; };
 		EE52938319036544008AF503 /* SFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSettingsViewController.h; sourceTree = "<group>"; };
 		EE52938419036544008AF503 /* SFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSettingsViewController.m; sourceTree = "<group>"; };
-		EE74B2151905254800B51BAD /* SFBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBannerViewController.h; sourceTree = "<group>"; };
-		EE74B2161905254800B51BAD /* SFBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBannerViewController.m; sourceTree = "<group>"; };
+		EE9354E31AA754F900E9D389 /* SFBannerViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBannerViewManager.h; sourceTree = "<group>"; };
+		EE9354E41AA754F900E9D389 /* SFBannerViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBannerViewManager.m; sourceTree = "<group>"; };
+		EEF0796B1A74FDC700271599 /* SFBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBannerViewController.h; sourceTree = "<group>"; };
+		EEF0796C1A74FDC700271599 /* SFBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBannerViewController.m; sourceTree = "<group>"; };
+		EEF8052119AE9A76008FF4FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEF8052219AE9A76008FF4FF /* StoreKit.framework in Frameworks */,
 				EE2CC73E190BC7E100503DD3 /* MessageUI.framework in Frameworks */,
 				2788C661173F7D9D007DF05A /* iAd.framework in Frameworks */,
 				2706EB8C16852F6500326CCD /* UIKit.framework in Frameworks */,
@@ -164,6 +169,7 @@
 		2706EB8A16852F6500326CCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEF8052119AE9A76008FF4FF /* StoreKit.framework */,
 				EE2CC73D190BC7E100503DD3 /* MessageUI.framework */,
 				2788C660173F7D9D007DF05A /* iAd.framework */,
 				2706EB8B16852F6500326CCD /* UIKit.framework */,
@@ -220,6 +226,9 @@
 		2745FFA916C40EC80004EED6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EE32037D19BC7588009085C0 /* SFConstants.h */,
+				EE32037A19BC737E009085C0 /* SFUserDefaultsHelper.h */,
+				EE32037B19BC737E009085C0 /* SFUserDefaultsHelper.m */,
 				2706EBA316852F6600326CCD /* SigFigCalculator.h */,
 				2706EBA416852F6600326CCD /* SigFigCalculator.m */,
 				271AC79C16C5B6FE001C7FD8 /* Operand.h */,
@@ -235,7 +244,6 @@
 		2745FFAB16C40ED20004EED6 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
-				2713B1341815613D00CF5D58 /* MainStoryboard_iPad.storyboard */,
 				2757BFFD17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard */,
 			);
 			name = VIew;
@@ -244,8 +252,8 @@
 		2745FFAC16C40ED70004EED6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EE74B2151905254800B51BAD /* SFBannerViewController.h */,
-				EE74B2161905254800B51BAD /* SFBannerViewController.m */,
+				EEF0796B1A74FDC700271599 /* SFBannerViewController.h */,
+				EEF0796C1A74FDC700271599 /* SFBannerViewController.m */,
 				271AC79F16C5B851001C7FD8 /* SFCalculatorViewController.h */,
 				271AC7A016C5B851001C7FD8 /* SFCalculatorViewController.m */,
 				271B88C916E990A100684311 /* SFCounterViewController.h */,
@@ -254,10 +262,10 @@
 				271B88E216EC147100684311 /* SFConverterViewController.m */,
 				271B88D616EBF91A00684311 /* SFRulesViewController.h */,
 				271B88D716EBF91A00684311 /* SFRulesViewController.m */,
-				EE52938019035F35008AF503 /* SFCustomTabBarViewController.h */,
-				EE52938119035F35008AF503 /* SFCustomTabBarViewController.m */,
 				EE52938319036544008AF503 /* SFSettingsViewController.h */,
 				EE52938419036544008AF503 /* SFSettingsViewController.m */,
+				EE9354E31AA754F900E9D389 /* SFBannerViewManager.h */,
+				EE9354E41AA754F900E9D389 /* SFBannerViewManager.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -331,7 +339,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "University of Texas at Austin";
 			};
 			buildConfigurationList = 2706EB8116852F6500326CCD /* Build configuration list for PBXProject "SigFigCalculator" */;
@@ -358,7 +366,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2713B1351815613D00CF5D58 /* MainStoryboard_iPad.storyboard in Resources */,
 				271B0DC817DCD849003E8B92 /* Localizable.strings in Resources */,
 				2757BFFE17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard in Resources */,
 				27C9950F1808E73C00D6C252 /* Media.xcassets in Resources */,
@@ -399,6 +406,7 @@
 				2706EB9816852F6500326CCD /* main.m in Sources */,
 				2706EB9C16852F6500326CCD /* AppDelegate.m in Sources */,
 				2706EBA516852F6600326CCD /* SigFigCalculator.m in Sources */,
+				EE9354E51AA754F900E9D389 /* SFBannerViewManager.m in Sources */,
 				271AC79E16C5B6FE001C7FD8 /* Operand.m in Sources */,
 				271AC7A116C5B851001C7FD8 /* SFCalculatorViewController.m in Sources */,
 				271B88CB16E990A100684311 /* SFCounterViewController.m in Sources */,
@@ -406,14 +414,14 @@
 				271B88D816EBF91A00684311 /* SFRulesViewController.m in Sources */,
 				271B88E316EC147100684311 /* SFConverterViewController.m in Sources */,
 				271B88E616F1158100684311 /* SigFigConverter.m in Sources */,
+				EE32037C19BC737E009085C0 /* SFUserDefaultsHelper.m in Sources */,
 				2790A29717DCC1E0008A56DB /* NSObject+AGi18n.m in Sources */,
 				2790A29817DCC1E0008A56DB /* UIBarButtonItem+AGi18n.m in Sources */,
 				2790A29917DCC1E0008A56DB /* UIButton+AGi18n.m in Sources */,
+				EEF0796D1A74FDC700271599 /* SFBannerViewController.m in Sources */,
 				2790A29A17DCC1E0008A56DB /* UILabel+AGi18n.m in Sources */,
-				EE74B2171905254800B51BAD /* SFBannerViewController.m in Sources */,
 				2790A29B17DCC1E0008A56DB /* UINavigationItem+AGi18n.m in Sources */,
 				2790A29C17DCC1E0008A56DB /* UISearchBar+AGi18n.m in Sources */,
-				EE52938219035F35008AF503 /* SFCustomTabBarViewController.m in Sources */,
 				2790A29D17DCC1E0008A56DB /* UITextField+AGi18n.m in Sources */,
 				EE52938519036544008AF503 /* SFSettingsViewController.m in Sources */,
 				2790A29E17DCC1E0008A56DB /* UITextView+AGi18n.m in Sources */,
@@ -470,10 +478,12 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hunter Gearhart";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -507,10 +517,12 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hunter Gearhart";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

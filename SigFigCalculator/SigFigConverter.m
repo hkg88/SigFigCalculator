@@ -1,49 +1,10 @@
-
-//
-//  SigFigConverter.m
-//  SigFigCalculator
-//
-//  Created by Kyle Gearhart on 13/03/13.
-//  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
-//
-//  A SigFigConverter will accept any positive, or negative integer or float and
-//  return the number of significant figures contained within it. Implementing a
-//  sort of strategy design pattern, the converter will accept input into its
-//  generic countSigFigs method and then utilize the appropriate conversion
-//  algorithm depending on the input type.
-
 #import "SigFigConverter.h"
-
-// Used to detect if a device is unable to use NSAttributed String's underlining
-#define atLeastIOS6 [[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0
 
 @implementation SigFigConverter
 
-#pragma mark Overridden NSObject Methods
-
-// ** Designated initializer **
-- (id)init
-{
-    self = [super init];
-    if(self) {
-    }
-    return self;
-}
-
-#pragma mark Unique Operand Class Methods
-
-// Employs the appropriate conversion algorithm following the analysis of the
-// input given, and then returns the resulting integer or float with its
-// significant figures underlined if allowed by the iOS version (6.0+ needed).
-// @param NSString : Positive or negative integer or float represented as an
-// NSString
-// @param NSString : Desired number of significant figures in the result
-// @return NSAttributedString : New float or integer value with the desired
-// number of significant figures contained and underlined within.
 - (NSAttributedString *)convertNumSigFigs:(NSString *)number
-                                       to:(NSString *)desiredNumSigFigs {
-  
-  // Count the number of SigFigs to determine if conversion is necessary
+                                       to:(NSString *)desiredNumSigFigs
+{
   NSString *result = number;
   
   // Matches integers which only contain zeros
@@ -164,13 +125,9 @@
 }
 
 
-// Converts the number of significant figures in an integer of all zeros
-// @param NSString : Input integer or float containing only zeros
-// @param int : Desired number of significant figures for the result
-// @result NSAttributedString : String of zeros of the appropriate number which
-// will be underlined if supported by the device
 - (NSAttributedString *)convertNumSigFigsInZeroString:(NSString *)number
-                                                   to:(int)desiredNumSigFigs {
+                                                   to:(int)desiredNumSigFigs
+{
   NSString *result = @"";
   // Build a string of 0s of length of the number of desired significant figures
   for(int i = 0; i < desiredNumSigFigs; i++) {
@@ -186,15 +143,10 @@
   return [[NSAttributedString alloc] initWithAttributedString:underlinedString];
 }
 
-// Converts the number of significant figures in a float
-// @param NSString : Float containing the specified number of significant figures
-// @param int : Number of significant figures contained in the input
-// @param int : Desired number of significant figures for the result
-// @result NSAttributedString : Resulting float with the appropriate number of
-// significant figures
 - (NSString *)convertNumSigFigsInFloat:(NSString *)number
                                   from:(int)numSigFigs
-                                    to:(int)desiredNumSigFigs {
+                                    to:(int)desiredNumSigFigs
+{
   NSString *result = number;
   // If more SigFigs are desired on a float, simply tack on extra 0s
   if(desiredNumSigFigs > numSigFigs) {
@@ -206,7 +158,7 @@
     // If the number begins without any leading zeroes, the position to round at
     // is the number of desired significant figures - the position of the decimal
     // Ex. 3.128 to 3 sigfigs --> 3 - 1 = 2 which will round the number to 3.13
-    int positionOfDecimal = [number rangeOfString:@"."].location;
+    int positionOfDecimal = (int)[number rangeOfString:@"."].location;
     int indexToRoundTo = 0;
     // Round a negative float without any leading zeros
     if([number characterAtIndex:0] == '-' && [number characterAtIndex:1] != '0') {
@@ -217,10 +169,10 @@
       indexToRoundTo = desiredNumSigFigs - positionOfDecimal;
     // Round a negative number with leading zeros
     } else if([number characterAtIndex:0] == '-') {
-      indexToRoundTo = (number.length - (numSigFigs - desiredNumSigFigs)) - (positionOfDecimal + 1);
+      indexToRoundTo = (int)(number.length - (numSigFigs - desiredNumSigFigs)) - (positionOfDecimal + 1);
     // Round a positive number with leading zeros
     } else {
-      indexToRoundTo = (number.length - (numSigFigs - desiredNumSigFigs)) - (positionOfDecimal + 1);
+      indexToRoundTo = (int)(number.length - (numSigFigs - desiredNumSigFigs)) - (positionOfDecimal + 1);
     }
     // -0.0125      length = 7 pos = 2
     // 0.0125       length = 6 pos = 1
@@ -252,15 +204,10 @@
   return result;
 }
 
-// Converts the number of significant figures in a float
-// @param NSString : Integer containing the specified number of significant figures
-// @param int : Number of significant figures contained in the input
-// @param int : Desired number of significant figures for the result
-// @result NSAttributedString : Resulting float with the appropriate number of
-// significant figures
 - (NSString *)convertNumSigFigsInInt:(NSString *)number
                                 from:(int)numSigFigs
-                                  to:(int)desiredNumSigFigs {
+                                  to:(int)desiredNumSigFigs
+{
   NSString *result = number;
   // More SigFigs are desired, simply tack on extra 0s after a decimal point
   if(desiredNumSigFigs > numSigFigs) {
@@ -274,7 +221,7 @@
     // The position to round at is the number of desired sigfigs - the length
     // of the int
     // Ex. 38928 to 2 sigfigs --> 2 - 5 = -3 which will round the number to 39000
-    int indexToRoundTo = desiredNumSigFigs - [number length];
+    int indexToRoundTo = (int)(desiredNumSigFigs - [number length]);
     // Negative numbers should be rounded one extra digit to the right
     if ([number characterAtIndex:0] == '-') {
       indexToRoundTo++;

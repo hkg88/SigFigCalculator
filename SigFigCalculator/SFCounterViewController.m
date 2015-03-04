@@ -1,16 +1,22 @@
-//
-//  sigFigCounterViewController.m
-//  SigFigCalculator
-//
-//  Created by Kyle Gearhart on 13/03/07.
-//  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
-//
-
 #import "SFCounterViewController.h"
+#import "SigFigCounter.h"
+#import "SFBannerViewController.h"
+
+@interface SFCounterViewController()
+
+@property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (strong, nonatomic) IBOutlet UILabel *numSigFigsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *numberTextLabel;
+@property (strong, nonatomic) IBOutlet UILabel *numSigFigsTextLabel;
+
+@property (strong, nonatomic) SigFigCounter *sigFigCounter;
+
+- (IBAction)backgroundTapped:(UIControl *)sender;
+- (IBAction)numberEntered:(UITextField *)sender;
+
+@end
 
 @implementation SFCounterViewController
-
-#pragma mark -- View Lifecycle
 
 - (void)viewDidLoad
 {
@@ -27,25 +33,6 @@
     
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    
-}
-
-- (void)viewDidUnload
-{
-    self.sigFigCounter = nil;
-    self.numSigFigsLabel = nil;
-    self.textField = nil;
-    [super viewDidUnload];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-// Clears out the text information when the view leaves the screen
 - (void)viewDidDisappear:(BOOL)animated
 {
     self.textField.text = @"";
@@ -53,15 +40,8 @@
     [super viewDidDisappear:animated];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (IBAction)numberEntered:(UITextField *)sender
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark -- View Behavior Methods
-
-// Initiated whenever the user is finished editing the current number
-- (IBAction)numberEntered:(UITextField *)sender {
     // Only attempt and count the SigFigs of a non-empty NSString
     if(![self.textField.text isEqualToString:@""]) {
         int numSigFigs = [self.sigFigCounter countSigFigs:sender.text];
@@ -76,21 +56,20 @@
     }
 }
 
-// Background was tapped, exit the keyboard if it's present
-- (void)backgroundTapped:(UIControl *)sender {
+#pragma mark UITextFieldDelegate
+
+- (void)backgroundTapped:(UIControl *)sender
+{
     [self.textField resignFirstResponder];
 }
 
-
-// Allows for the resignation of the text field's keyboard when editing is complete
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
     if (textField == self.textField) {
         [textField resignFirstResponder];
     }
     return NO;
 }
-
-#pragma mark -- Notification Center
 
 - (void)preferredContentSizeChanged:(NSNotification *)notification
 {
@@ -98,4 +77,5 @@
     self.textField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     self.numSigFigsTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
 }
+
 @end

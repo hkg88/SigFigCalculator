@@ -1,12 +1,5 @@
-//
-//  AppDelegate.m
-//  SigFigCalculator
-//
-//  Created by Kyle Gearhart on 12/12/21.
-//  Copyright (c) 2012 Kyle Gearhart. All rights reserved.
-//
-
 #import "AppDelegate.h"
+#import "SFBannerViewController.h"
 
 @implementation AppDelegate
 
@@ -14,7 +7,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     return YES;
 }
 							

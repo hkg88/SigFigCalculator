@@ -1,34 +1,37 @@
-//
-//  sigFigCalculatorViewControllerViewController.m
-//  SigFigCalculator
-//
-//  Created by Kyle Gearhart on 13/02/08.
-//  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
-//
-
 #import "SFCalculatorViewController.h"
+#import "Math.h"
+#import "SigFigCalculator.h"
+#import "SigFigCounter.h"
+#import "SigFigConverter.h"
+#import "SFBannerViewController.h"
+
+@interface SFCalculatorViewController()
+
+@property (strong, nonatomic) IBOutlet UILabel *display;
+@property (strong, nonatomic) IBOutlet UILabel *operatorDisplayLabel;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *nonClearButtons;
+
+@property (strong, nonatomic) SigFigCounter *sigFigCounter;
+@property (strong, nonatomic) SigFigConverter *sigFigConverter;
+@property (strong, nonatomic) SigFigCalculator *sigFigCalculator;
+
+@end
 
 @implementation SFCalculatorViewController
 
-enum{
+enum {
     ADD = 1,
     SUBTRACT = 2,
     MULTIPLY = 3,
     DIVIDE = 4,
 };
 
-#define atLeastIOS6 [[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0
-
-#pragma mark -- View Lifecycle
+#pragma mark -- UIViewController Lifecycle Methods
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initialize];
-}
-
-- (void)initialize
-{
+    
     // Initialize the View's SigFigCalculator Model
     self.sigFigCalculator = [[SigFigCalculator alloc] init];
     self.sigFigCounter = [[SigFigCounter alloc] init];
@@ -36,61 +39,19 @@ enum{
     self.display.text = @"0";
 }
 
-- (void) viewWillAppear:(BOOL)animated
-{
-    // Initialize the calculator
-    self.sigFigCalculator = [[SigFigCalculator alloc] init];
-    self.display.text = @"0";
-}
+#pragma mark -- Private Methods
 
-- (void)viewDidUnload
-{
-    self.sigFigCalculator = nil;
-    self.sigFigConverter = nil;
-    self.sigFigCounter = nil;
-    self.display = nil;
-    self.operatorDisplayLabel = nil;
-    self.nonClearButtons = nil;
-    [super viewDidUnload];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    
-    self.sigFigCalculator = nil;
-    self.sigFigConverter = nil;
-    self.sigFigCounter = nil;
-    self.display.text = @"";
-    self.operatorDisplayLabel.text = @"";
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [self initialize];
-    [super viewDidAppear:animated];
-}
-
-// Only supports Portrait
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark -- View Behavior Methods
-
-// Handles entry of digits to become operands
 - (IBAction)pressedDigit:(UIButton *)sender
 {
-    int digit = sender.tag;
+    NSInteger digit = sender.tag;
     
     // If the first operand is undefined, define it with the new digit
     if(!self.sigFigCalculator.firstOperand) {
-        self.sigFigCalculator.firstOperand = [[Operand alloc] initWithValue:[NSString stringWithFormat:@"%d", digit]];
+        self.sigFigCalculator.firstOperand = [[Operand alloc] initWithValue:[NSString stringWithFormat:@"%ld", (long)digit]];
         self.display.text = self.sigFigCalculator.firstOperand.value;
     // Reset the display if we need to for the new second operand
     } else if(self.sigFigCalculator.currOperator && !self.sigFigCalculator.secondOperand) {
-        self.sigFigCalculator.secondOperand = [[Operand alloc] initWithValue:[NSString stringWithFormat:@"%d", digit]];
+        self.sigFigCalculator.secondOperand = [[Operand alloc] initWithValue:[NSString stringWithFormat:@"%ld", digit]];
         self.display.text = self.sigFigCalculator.secondOperand.value;
     // Else simply append the new digit onto the current string
     } else {
@@ -101,9 +62,9 @@ enum{
             if(!([currNum isEqualToString:@"0"] && digit == 0)) {
                 // Replace any single zero operands with their new value
                 if([currNum isEqualToString:@"0"]) {
-                    currNum = [NSString stringWithFormat:@"%d", digit];
+                    currNum = [NSString stringWithFormat:@"%ld", digit];
                 } else {
-                    currNum = [currNum stringByAppendingString:[NSString stringWithFormat:@"%d", digit]];
+                    currNum = [currNum stringByAppendingString:[NSString stringWithFormat:@"%ld", digit]];
                 }
                 self.sigFigCalculator.firstOperand.value = currNum;
                 if(self.sigFigCalculator.firstOperand.containsDecimal) {
@@ -119,9 +80,9 @@ enum{
             if(!([currNum isEqualToString:@"0"] && digit == 0)) {
                 // Replace any single zero operands with their new value
                 if([currNum isEqualToString:@"0"]) {
-                    currNum = [NSString stringWithFormat:@"%d", digit];
+                    currNum = [NSString stringWithFormat:@"%ld", digit];
                 } else {
-                    currNum = [currNum stringByAppendingString:[NSString stringWithFormat:@"%d", digit]];
+                    currNum = [currNum stringByAppendingString:[NSString stringWithFormat:@"%ld", digit]];
                 }
                 self.sigFigCalculator.secondOperand.value = currNum;
                 if(self.sigFigCalculator.secondOperand.containsDecimal) {
@@ -138,8 +99,7 @@ enum{
     }
 }
 
-// Clears the display and updates the SigFigCalculator object depending on the type of clear
-- (IBAction)pressedClear:(UIButton *)sender;
+- (IBAction)pressedClear:(UIButton *)sender
 {
     // Force the user to clear out the calculator after recording the result
     for(UIButton *button in self.nonClearButtons) {
@@ -148,20 +108,20 @@ enum{
     }
     self.sigFigCalculator.firstOperand = nil;
     self.sigFigCalculator.secondOperand = nil;
-    self.display.text = @"0";
     self.sigFigCalculator.currOperator = nil;
+    
+    self.display.text = @"0";
     self.operatorDisplayLabel.text = @"";
 }
 
-// Using the tag of the Operation Button, sets the display label and changes to new Operator
-- (IBAction)pressedOperator:(UIButton *)sender;
+- (IBAction)pressedOperator:(UIButton *)sender
 {
     // This is the case where the user initially presses an operator with the stock zero up
     // on the display
     if(self.sigFigCalculator.firstOperand == nil) {
         self.sigFigCalculator.firstOperand = [[Operand alloc]initWithValue:@"0"];
     }
-    int newOperator = sender.tag;
+    int newOperator = (int)sender.tag;
     if(newOperator == ADD) {
         self.operatorDisplayLabel.text = @"+";
     } else if(newOperator == SUBTRACT) {
@@ -174,8 +134,8 @@ enum{
     self.sigFigCalculator.currOperator = [NSNumber numberWithInt:newOperator];
 }
 
-// Adds a decimal to the appropriate operand if possible
-- (IBAction)pressedDecimal:(UIButton *)sender {
+- (IBAction)pressedDecimal:(UIButton *)sender
+{
     // Initialize Operand as decimal if this is it's first digit's value
     if(!self.sigFigCalculator.firstOperand) {
         self.sigFigCalculator.firstOperand = [[Operand alloc] initWithValue:@"0."];
@@ -211,8 +171,8 @@ enum{
     }
 }
 
-// Carries out the current operation on the entered operands
-- (IBAction)pressedEquals:(UIButton *)sender {
+- (IBAction)pressedEquals:(UIButton *)sender
+{
     if(self.sigFigCalculator.currOperator) {
         // Have the SigFigCalculator calculate the result
         // Only utilize attributedStrings if the device supports them
@@ -233,7 +193,6 @@ enum{
     }
 }
 
-// Adds or deletes the '-' from the current number, effectively negating it
 - (IBAction)pressedNegate:(id)sender
 {
     if(!([self.display.text floatValue] == 0)) {
@@ -255,8 +214,8 @@ enum{
     }
 }
 
-// Implements a backspace which can be used to correct typos while entering values
-- (IBAction)pressedBackspace:(UIButton *)sender {
+- (IBAction)pressedBackspace:(UIButton *)sender
+{
     // If the screen is simply a 0, a backspace can not be performed
     if(![self.display.text isEqual:@"0"]) {
         // We know that we're removing from the first operand

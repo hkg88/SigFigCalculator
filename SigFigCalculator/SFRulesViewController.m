@@ -1,12 +1,11 @@
-//
-//  sigFigRulesViewController.m
-//  SigFigCalculator
-//
-//  Created by Kyle Gearhart on 13/03/09.
-//  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
-//
-
 #import "SFRulesViewController.h"
+#import "SFBannerViewController.h"
+
+@interface SFRulesViewController()
+
+@property (strong, nonatomic) IBOutlet UITextView *rulesTextView;
+
+@end
 
 @implementation SFRulesViewController
 
@@ -20,38 +19,14 @@
     
     // Set up Dynamic Text with a listener
     self.rulesTextView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
     
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-}
-
-- (void)viewDidUnload
-{
-    self.rulesTextView = nil;
-    [super viewDidUnload];
-}
-
-// Clears out all of the labels and text fields when the view leaves the screen
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-
-# pragma Mark - Notification Center
-
 - (void)preferredContentSizeChanged:(NSNotification *)notification
 {
-    self.rulesTextView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    self.rulesTextView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 }
 
 @end

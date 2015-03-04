@@ -1,19 +1,26 @@
-//
-//  SFConverterViewController.m
-//  SFCalculator
-//
-//  Created by Kyle Gearhart on 13/03/09.
-//  Copyright (c) 2013 Kyle Gearhart. All rights reserved.
-//
-
+#import "SigFigCounter.h"
+#import "SigFigConverter.h"
+#import "SFBannerViewController.h"
 #import "SFConverterViewController.h"
 
 #define NUMBER_TEXTFIELD_TAG 1
 #define NUMSIGFIGS_TEXTFIELD_TAG 2
 
-@implementation SFConverterViewController
+@interface SFConverterViewController()
 
-#define atLeastIOS6 [[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0
+@property (strong, nonatomic) IBOutlet UILabel *numberTextLabel;
+@property (strong, nonatomic) IBOutlet UITextField *numberTextField;
+@property (strong, nonatomic) IBOutlet UILabel *numSigFigsTextLabel;
+@property (strong, nonatomic) IBOutlet UITextField *numSigFigsTextField;
+@property (strong, nonatomic) IBOutlet UILabel *resultingNumberTextLabel;
+@property (strong, nonatomic) IBOutlet UILabel *resultingNumberLabel;
+
+@property (strong, nonatomic) SigFigCounter *sigFigCounter;
+@property (strong, nonatomic) SigFigConverter *sigFigConverter;
+
+@end
+
+@implementation SFConverterViewController
 
 #pragma mark -- View Lifecycle
 
@@ -35,22 +42,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    
-}
-
-- (void)viewDidUnload
-{
-    self.sigFigCounter = nil;
-    self.sigFigConverter = nil;
-    self.numberTextField = nil;
-    self.numSigFigsTextField = nil;
-    self.resultingNumberLabel = nil;
-    [super viewDidUnload];
-}
-
-// Clears out all of the labels and text fields when the view leaves the screen
 - (void)viewDidDisappear:(BOOL)animated
 {
     self.numberTextField.text = @"";
@@ -59,29 +50,16 @@
     [super viewDidDisappear:animated];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [super viewWillDisappear:animated];
-}
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark -- View Behavior Methods
-
-// Allows for the resignation of the text field's keyboard when editing is complete
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == self.numberTextField || textField == self.numSigFigsTextField) {
         [textField resignFirstResponder];
     }
     return NO;
 }
 
-// Initiated whenever the user is finished editing the current number
-- (IBAction)numberEntered:(UITextField *)sender {
+- (IBAction)numberEntered:(UITextField *)sender
+{
     // If both text fields have values, attempt to count and convert the sigFigs
     if(![self.numberTextField.text isEqualToString:@""] && ![self.numSigFigsTextField.text isEqualToString:@""]) {
         if(atLeastIOS6) {
@@ -94,13 +72,11 @@
     }
 }
 
-// If the background is tapped while a TextField is being edited, remove the keyboard
-- (IBAction)backgroundTapped:(UIControl *)sender {
+- (IBAction)backgroundTapped:(UIControl *)sender
+{
     [self.numberTextField resignFirstResponder];
     [self.numSigFigsTextField resignFirstResponder];
 }
-
-#pragma mark -- Notification Center
 
 - (void)preferredContentSizeChanged:(NSNotification *)notification
 {

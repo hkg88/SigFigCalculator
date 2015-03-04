@@ -1,13 +1,3 @@
-//
-//  ViewController.m
-//  SigFigCalculator
-//
-//  Created by Kyle Gearhart on 12/12/21.
-//  Copyright (c) 2012 Kyle Gearhart. All rights reserved.
-//
-//  Calculates simple two-operand calculations and returns the result with
-//  its significant figures underlined.
-
 #import "SigFigCalculator.h"
 
 @implementation SigFigCalculator
@@ -16,16 +6,6 @@
 #define SUBTRACTION 2
 #define MULTIPLICATION 3
 #define DIVISION 4
-
-#pragma mark Overridden NSObject Methods
-
-// ** Designated Initializer **
-- (id)init {
-    self = [super init];
-    if(self) {
-    }
-    return self;
-}
 
 #pragma mark Unique SigFigCalculator Class Methods
 
@@ -95,26 +75,19 @@
         }
     }
     stringResult = [decimalNumResult stringValue];
-    
-    NSLog([self description]);
-    NSLog([NSString stringWithFormat:@"Decimal Num Result = %@", stringResult]);
         
     // Obtain the correct result by converting the result's number of SigFigs to the minimum
     // of the two operands
     int minNumSigFigs;
-    NSLog([NSString stringWithFormat:@"First op num sigfigs: %d and second %d", self.firstOperand.numSigFigs, self.secondOperand.numSigFigs]);
     minNumSigFigs = (self.firstOperand.numSigFigs <= self.secondOperand.numSigFigs) ?
                      self.firstOperand.numSigFigs : self.secondOperand.numSigFigs;
     attributedStringResult = [sigFigConverter convertNumSigFigs:stringResult
                                                              to:[NSString stringWithFormat:@"%d", minNumSigFigs]];
-    
-    NSLog([NSString stringWithFormat:@"Att String Result = %@", attributedStringResult]);
   }
     self.firstOperand = nil;
     self.secondOperand = nil;
 
     return attributedStringResult;
-    
 }
 
 // Prints out the current state of the SigFigCalculator
