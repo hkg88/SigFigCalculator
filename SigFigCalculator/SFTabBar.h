@@ -1,0 +1,3 @@
+@interface SFTabBar : UITabBar
+
+@end

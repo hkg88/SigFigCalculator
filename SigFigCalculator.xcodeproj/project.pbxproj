@@ -40,6 +40,7 @@
 		EE32037C19BC737E009085C0 /* SFUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE32037B19BC737E009085C0 /* SFUserDefaultsHelper.m */; };
 		EE52938519036544008AF503 /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE52938419036544008AF503 /* SFSettingsViewController.m */; };
 		EE9354E51AA754F900E9D389 /* SFBannerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9354E41AA754F900E9D389 /* SFBannerViewManager.m */; };
+		EE9354E81AA7618D00E9D389 /* SFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9354E71AA7618D00E9D389 /* SFTabBar.m */; };
 		EEF0796D1A74FDC700271599 /* SFBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0796C1A74FDC700271599 /* SFBannerViewController.m */; };
 		EEF8052219AE9A76008FF4FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF8052119AE9A76008FF4FF /* StoreKit.framework */; };
 /* End PBXBuildFile section */
@@ -115,6 +116,8 @@
 		EE52938419036544008AF503 /* SFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSettingsViewController.m; sourceTree = "<group>"; };
 		EE9354E31AA754F900E9D389 /* SFBannerViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBannerViewManager.h; sourceTree = "<group>"; };
 		EE9354E41AA754F900E9D389 /* SFBannerViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBannerViewManager.m; sourceTree = "<group>"; };
+		EE9354E61AA7618D00E9D389 /* SFTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTabBar.h; sourceTree = "<group>"; };
+		EE9354E71AA7618D00E9D389 /* SFTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTabBar.m; sourceTree = "<group>"; };
 		EEF0796B1A74FDC700271599 /* SFBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBannerViewController.h; sourceTree = "<group>"; };
 		EEF0796C1A74FDC700271599 /* SFBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBannerViewController.m; sourceTree = "<group>"; };
 		EEF8052119AE9A76008FF4FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -266,6 +269,8 @@
 				EE52938419036544008AF503 /* SFSettingsViewController.m */,
 				EE9354E31AA754F900E9D389 /* SFBannerViewManager.h */,
 				EE9354E41AA754F900E9D389 /* SFBannerViewManager.m */,
+				EE9354E61AA7618D00E9D389 /* SFTabBar.h */,
+				EE9354E71AA7618D00E9D389 /* SFTabBar.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 			files = (
 				2706EB9816852F6500326CCD /* main.m in Sources */,
 				2706EB9C16852F6500326CCD /* AppDelegate.m in Sources */,
+				EE9354E81AA7618D00E9D389 /* SFTabBar.m in Sources */,
 				2706EBA516852F6600326CCD /* SigFigCalculator.m in Sources */,
 				EE9354E51AA754F900E9D389 /* SFBannerViewManager.m in Sources */,
 				271AC79E16C5B6FE001C7FD8 /* Operand.m in Sources */,

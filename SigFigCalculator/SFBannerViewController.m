@@ -16,7 +16,6 @@ NSString * const BannerViewActionDidFinish = @"BannerViewActionDidFinish";
 - (void)setContentViewController:(UIViewController *)contentViewController
 {
     _contentViewController = contentViewController;
-    self.title = _contentViewController.title;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder

@@ -412,7 +412,7 @@
                 <tabBarController definesPresentationContext="YES" id="4q6-Yh-70M" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="QcQ-oA-Owc">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="QcQ-oA-Owc" customClass="SFTabBar">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -440,7 +440,7 @@
                             <segue destination="fVV-GE-vKU" kind="embed" id="m4E-dJ-VJL"/>
                         </connections>
                     </containerView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Xsc-RT-NfL"/>
+                    <tabBarItem key="tabBarItem" title="Counter" image="counterTabBarIcon" id="Xsc-RT-NfL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0O-el-lBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -457,7 +457,7 @@
                             <segue destination="c43-VU-DF4" kind="embed" id="mS2-Dw-tC6"/>
                         </connections>
                     </containerView>
-                    <tabBarItem key="tabBarItem" title="Item" id="BUG-a9-xNi"/>
+                    <tabBarItem key="tabBarItem" title="Converter" image="converterTabBarIcon" id="BUG-a9-xNi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCW-8i-P1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -474,7 +474,7 @@
                             <segue destination="Aq6-u5-JTT" kind="embed" id="eKD-yS-lcS"/>
                         </connections>
                     </containerView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Jcm-vK-NJg"/>
+                    <tabBarItem key="tabBarItem" title="Rules" image="rulesTabBarIcon" id="Jcm-vK-NJg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6A-uB-dVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -491,7 +491,7 @@
                             <segue destination="IpW-iI-X4a" kind="embed" id="KuB-IY-jh0"/>
                         </connections>
                     </containerView>
-                    <tabBarItem key="tabBarItem" title="Item" id="lkv-II-xNN"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settingsTabBarIcon" id="lkv-II-xNN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glV-4a-fX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -889,7 +889,7 @@
                             <segue destination="2" kind="embed" id="eUv-nF-Xo2"/>
                         </connections>
                     </containerView>
-                    <tabBarItem key="tabBarItem" title="Item" id="2se-5E-j4Z"/>
+                    <tabBarItem key="tabBarItem" title="Calculator" image="calculatorTabBarIcon" id="2se-5E-j4Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fp5-1Y-Qbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -897,10 +897,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calculatorTabBarIcon" width="30" height="30"/>
         <image name="calculatorTabBarIcon.png" width="30" height="30"/>
+        <image name="converterTabBarIcon" width="30" height="30"/>
         <image name="converterTabBarIcon.png" width="30" height="30"/>
+        <image name="counterTabBarIcon" width="30" height="30"/>
         <image name="counterTabBarIcon.png" width="30" height="30"/>
+        <image name="rulesTabBarIcon" width="30" height="30"/>
         <image name="rulesTabBarIcon.png" width="30" height="30"/>
+        <image name="settingsTabBarIcon" width="20" height="20"/>
         <image name="touchedButtonBackground.png" width="72" height="72"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
