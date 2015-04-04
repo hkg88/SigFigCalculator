@@ -38,6 +38,7 @@
 		27C9950F1808E73C00D6C252 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C9950E1808E73C00D6C252 /* Media.xcassets */; };
 		EE2CC73E190BC7E100503DD3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2CC73D190BC7E100503DD3 /* MessageUI.framework */; };
 		EE32037C19BC737E009085C0 /* SFUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE32037B19BC737E009085C0 /* SFUserDefaultsHelper.m */; };
+		EE493EB61AB598F10080A97F /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE493EB51AB598F10080A97F /* Launch Screen.xib */; };
 		EE52938519036544008AF503 /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE52938419036544008AF503 /* SFSettingsViewController.m */; };
 		EE9354E51AA754F900E9D389 /* SFBannerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9354E41AA754F900E9D389 /* SFBannerViewManager.m */; };
 		EE9354E81AA7618D00E9D389 /* SFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9354E71AA7618D00E9D389 /* SFTabBar.m */; };
@@ -112,6 +113,7 @@
 		EE32037A19BC737E009085C0 /* SFUserDefaultsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUserDefaultsHelper.h; sourceTree = "<group>"; };
 		EE32037B19BC737E009085C0 /* SFUserDefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUserDefaultsHelper.m; sourceTree = "<group>"; };
 		EE32037D19BC7588009085C0 /* SFConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFConstants.h; sourceTree = "<group>"; };
+		EE493EB51AB598F10080A97F /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		EE52938319036544008AF503 /* SFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSettingsViewController.h; sourceTree = "<group>"; };
 		EE52938419036544008AF503 /* SFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSettingsViewController.m; sourceTree = "<group>"; };
 		EE9354E31AA754F900E9D389 /* SFBannerViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBannerViewManager.h; sourceTree = "<group>"; };
@@ -186,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				2745FFAC16C40ED70004EED6 /* Controller */,
-				2745FFAB16C40ED20004EED6 /* VIew */,
+				2745FFAB16C40ED20004EED6 /* View */,
 				2745FFA916C40EC80004EED6 /* Model */,
 				2706EB9216852F6500326CCD /* Supporting Files */,
 			);
@@ -244,12 +246,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		2745FFAB16C40ED20004EED6 /* VIew */ = {
+		2745FFAB16C40ED20004EED6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				2757BFFD17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard */,
+				EE493EB51AB598F10080A97F /* Launch Screen.xib */,
 			);
-			name = VIew;
+			name = View;
 			sourceTree = "<group>";
 		};
 		2745FFAC16C40ED70004EED6 /* Controller */ = {
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				271B0DC817DCD849003E8B92 /* Localizable.strings in Resources */,
+				EE493EB61AB598F10080A97F /* Launch Screen.xib in Resources */,
 				2757BFFE17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard in Resources */,
 				27C9950F1808E73C00D6C252 /* Media.xcassets in Resources */,
 			);
