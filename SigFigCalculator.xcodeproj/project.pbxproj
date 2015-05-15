@@ -36,6 +36,7 @@
 		2790A29D17DCC1E0008A56DB /* UITextField+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A29417DCC1E0008A56DB /* UITextField+AGi18n.m */; };
 		2790A29E17DCC1E0008A56DB /* UITextView+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A29617DCC1E0008A56DB /* UITextView+AGi18n.m */; };
 		27C9950F1808E73C00D6C252 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C9950E1808E73C00D6C252 /* Media.xcassets */; };
+		EE1A95B61B0644FB006222F5 /* SFProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1A95B51B0644FB006222F5 /* SFProductManager.m */; };
 		EE2CC73E190BC7E100503DD3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2CC73D190BC7E100503DD3 /* MessageUI.framework */; };
 		EE32037C19BC737E009085C0 /* SFUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE32037B19BC737E009085C0 /* SFUserDefaultsHelper.m */; };
 		EE493EB61AB598F10080A97F /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE493EB51AB598F10080A97F /* Launch Screen.xib */; };
@@ -109,6 +110,8 @@
 		2790A29517DCC1E0008A56DB /* UITextView+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+AGi18n.h"; sourceTree = "<group>"; };
 		2790A29617DCC1E0008A56DB /* UITextView+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+AGi18n.m"; sourceTree = "<group>"; };
 		27C9950E1808E73C00D6C252 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		EE1A95B41B0644FB006222F5 /* SFProductManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFProductManager.h; sourceTree = "<group>"; };
+		EE1A95B51B0644FB006222F5 /* SFProductManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFProductManager.m; sourceTree = "<group>"; };
 		EE2CC73D190BC7E100503DD3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		EE32037A19BC737E009085C0 /* SFUserDefaultsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUserDefaultsHelper.h; sourceTree = "<group>"; };
 		EE32037B19BC737E009085C0 /* SFUserDefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUserDefaultsHelper.m; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 				271B88D416EBDA3600684311 /* SigFigCounter.m */,
 				271B88E416F1158100684311 /* SigFigConverter.h */,
 				271B88E516F1158100684311 /* SigFigConverter.m */,
+				EE1A95B41B0644FB006222F5 /* SFProductManager.h */,
+				EE1A95B51B0644FB006222F5 /* SFProductManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -422,6 +427,7 @@
 				271B88CB16E990A100684311 /* SFCounterViewController.m in Sources */,
 				271B88D516EBDA3600684311 /* SigFigCounter.m in Sources */,
 				271B88D816EBF91A00684311 /* SFRulesViewController.m in Sources */,
+				EE1A95B61B0644FB006222F5 /* SFProductManager.m in Sources */,
 				271B88E316EC147100684311 /* SFConverterViewController.m in Sources */,
 				271B88E616F1158100684311 /* SigFigConverter.m in Sources */,
 				EE32037C19BC737E009085C0 /* SFUserDefaultsHelper.m in Sources */,
