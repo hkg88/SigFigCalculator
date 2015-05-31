@@ -1,9 +1,5 @@
 #import "SFTabBar.h"
 
-@interface SFTabBar()
-@property (nonatomic, copy) NSArray *items;
-@end
-
 @implementation SFTabBar
 
 - (instancetype) initWithCoder:(NSCoder *)aDecoder
