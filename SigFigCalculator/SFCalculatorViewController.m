@@ -51,7 +51,7 @@ enum {
         self.display.text = self.sigFigCalculator.firstOperand.value;
     // Reset the display if we need to for the new second operand
     } else if(self.sigFigCalculator.currOperator && !self.sigFigCalculator.secondOperand) {
-        self.sigFigCalculator.secondOperand = [[Operand alloc] initWithValue:[NSString stringWithFormat:@"%ld", digit]];
+        self.sigFigCalculator.secondOperand = [[Operand alloc] initWithValue:[NSString stringWithFormat:@"%ld", (long)digit]];
         self.display.text = self.sigFigCalculator.secondOperand.value;
     // Else simply append the new digit onto the current string
     } else {
@@ -62,9 +62,9 @@ enum {
             if(!([currNum isEqualToString:@"0"] && digit == 0)) {
                 // Replace any single zero operands with their new value
                 if([currNum isEqualToString:@"0"]) {
-                    currNum = [NSString stringWithFormat:@"%ld", digit];
+                    currNum = [NSString stringWithFormat:@"%ld", (long)digit];
                 } else {
-                    currNum = [currNum stringByAppendingString:[NSString stringWithFormat:@"%ld", digit]];
+                    currNum = [currNum stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)digit]];
                 }
                 self.sigFigCalculator.firstOperand.value = currNum;
                 if(self.sigFigCalculator.firstOperand.containsDecimal) {
@@ -80,9 +80,9 @@ enum {
             if(!([currNum isEqualToString:@"0"] && digit == 0)) {
                 // Replace any single zero operands with their new value
                 if([currNum isEqualToString:@"0"]) {
-                    currNum = [NSString stringWithFormat:@"%ld", digit];
+                    currNum = [NSString stringWithFormat:@"%ld", (long)digit];
                 } else {
-                    currNum = [currNum stringByAppendingString:[NSString stringWithFormat:@"%ld", digit]];
+                    currNum = [currNum stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)digit]];
                 }
                 self.sigFigCalculator.secondOperand.value = currNum;
                 if(self.sigFigCalculator.secondOperand.containsDecimal) {
