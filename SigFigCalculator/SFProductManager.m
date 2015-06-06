@@ -66,6 +66,8 @@ static const NSString *adRemovalProductIdentifier = @"com.kylegearhart.sigfigcal
     if(count > 0) {
         NSLog(@"Products Available!");
         self.removeAdsProduct = [response.products objectAtIndex:0];
+        self.removeAdsProductLocalizedTitle = self.removeAdsProduct.localizedTitle;
+        self.removeAdsProductLocalizedPrice = [self formattedPriceStringWithPrice:self.removeAdsProduct.price];
     } else {
         NSLog(@"There's an issue with my product ID, double check it");
     }

@@ -1,5 +1,5 @@
 #import "SFBannerViewController.h"
 
-@interface SFSettingsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver>
+@interface SFSettingsViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
 
 @end

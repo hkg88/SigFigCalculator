@@ -11,9 +11,9 @@
 
 - (void)purchaseAdRemovalProduct;
 
-- (NSString *)formattedPriceStringWithPrice:(NSNumber *)price;
-
 @property (nonatomic, strong) SKProduct *removeAdsProduct;
 @property (nonatomic) BOOL removeAdsProductPurchased;
+@property (nonatomic, strong) NSString *removeAdsProductLocalizedTitle;
+@property (nonatomic, strong) NSString *removeAdsProductLocalizedPrice;
 
 @end
