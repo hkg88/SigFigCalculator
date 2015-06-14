@@ -24,13 +24,6 @@ static const NSString *adRemovalProductIdentifier = @"com.kylegearhart.sigfigcal
     return sharedProductManager;
 }
 
-- (id)init {
-    if (self = [super init]) {
-        [self makeProductRequests];
-    }
-    return self;
-}
-
 - (void)makeProductRequests
 {
     NSSet *productIdentifiers = [NSSet setWithObject:adRemovalProductIdentifier];

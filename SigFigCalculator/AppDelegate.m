@@ -1,5 +1,6 @@
 #import "AppDelegate.h"
 #import "SFBannerViewController.h"
+#import "SFProductManager.h"
 
 @implementation AppDelegate
 
@@ -8,6 +9,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    SFProductManager *productManager = [SFProductManager sharedManager];
+    if([productManager canMakePayments]){
+        [productManager makeProductRequests];
+    }
     
     return YES;
 }

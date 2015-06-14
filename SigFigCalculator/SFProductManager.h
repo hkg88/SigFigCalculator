@@ -11,6 +11,8 @@
 
 - (void)purchaseAdRemovalProduct;
 
+- (void)makeProductRequests;
+
 @property (nonatomic, strong) SKProduct *removeAdsProduct;
 @property (nonatomic) BOOL removeAdsProductPurchased;
 @property (nonatomic, strong) NSString *removeAdsProductLocalizedTitle;
