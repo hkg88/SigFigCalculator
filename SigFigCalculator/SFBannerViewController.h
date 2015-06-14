@@ -1,6 +1,7 @@
 @interface SFBannerViewController : UIViewController
 
-- (void)updateLayout;
+- (void)showBannerView;
+- (void)hideBannerView;
 
 @end
 

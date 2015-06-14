@@ -48,27 +48,18 @@
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
+    NSLog(@"Loaded an iAd for the banner view.");
     for (SFBannerViewController *bannerViewController in self.bannerViewControllers) {
-        [bannerViewController updateLayout];
+        [bannerViewController showBannerView];
     }
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
+    NSLog(@"Failed to load an iAd for the banner view.");
     for (SFBannerViewController *bannerViewController in self.bannerViewControllers) {
-        [bannerViewController updateLayout];
+        [bannerViewController hideBannerView];
     }
-}
-
-- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
-{
-    [[NSNotificationCenter defaultCenter] postNotificationName:BannerViewActionWillBegin object:self];
-    return YES;
-}
-
-- (void)bannerViewActionDidFinish:(ADBannerView *)banner
-{
-    [[NSNotificationCenter defaultCenter] postNotificationName:BannerViewActionDidFinish object:self];
 }
 
 @end
