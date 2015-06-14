@@ -24,6 +24,12 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.rulesTextView.contentOffset = CGPointMake(0.0f, 0.0f);
+}
+
 - (void)preferredContentSizeChanged:(NSNotification *)notification
 {
     self.rulesTextView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
