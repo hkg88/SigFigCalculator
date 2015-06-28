@@ -1,5 +1,7 @@
 #import "SFBannerViewManager.h"
 #import "SFBannerViewController.h"
+#import "SFConstants.h"
+#import "SFUserDefaultsHelper.h"
 
 @interface SFBannerViewManager()
 
@@ -23,6 +25,11 @@
 - (instancetype)init
 {
     self = [super init];
+    
+    if ([[SFUserDefaultsHelper sharedManager] getBooleanForKey:kRemoveAdsProductIdentifier]) {
+        return self;
+    }
+    
     if (self) {
         // On iOS 6 ADBannerView introduces a new initializer, use it when available.
         if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
@@ -48,6 +55,10 @@
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
+    if ([[SFUserDefaultsHelper sharedManager] getBooleanForKey:kRemoveAdsProductIdentifier]) {
+        return;
+    }
+    
     NSLog(@"Loaded an iAd for the banner view.");
     for (SFBannerViewController *bannerViewController in self.bannerViewControllers) {
         [bannerViewController showBannerView];
@@ -56,7 +67,18 @@
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
+    if ([[SFUserDefaultsHelper sharedManager] getBooleanForKey:kRemoveAdsProductIdentifier]) {
+        return;
+    }
+    
     NSLog(@"Failed to load an iAd for the banner view.");
+    for (SFBannerViewController *bannerViewController in self.bannerViewControllers) {
+        [bannerViewController hideBannerView];
+    }
+}
+
+- (void)hideAllCurrentlyShownBannerViews
+{
     for (SFBannerViewController *bannerViewController in self.bannerViewControllers) {
         [bannerViewController hideBannerView];
     }

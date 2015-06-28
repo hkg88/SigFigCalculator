@@ -8,6 +8,7 @@
 + (SFBannerViewManager *)sharedInstance;
 - (void)addBannerViewController:(SFBannerViewController *)controller;
 - (void)removeBannerViewController:(SFBannerViewController *)controller;
+- (void)hideAllCurrentlyShownBannerViews;
 
 @end
 

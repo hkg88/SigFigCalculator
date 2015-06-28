@@ -1,4 +1,5 @@
 #import "SFProductManager.h"
+#import "SFBannerViewManager.h"
 #import "SFConstants.h"
 #import "SFUserDefaultsHelper.h"
 
@@ -76,11 +77,13 @@ static const NSString *adRemovalProductIdentifier = @"com.kylegearhart.sigfigcal
             case SKPaymentTransactionStatePurchased:
                 // Disable ads as the user has purchased the "Ad Removal" product
                 self.removeAdsProductPurchased = YES;
+                [[SFBannerViewManager sharedInstance] hideAllCurrentlyShownBannerViews];
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
             case SKPaymentTransactionStateRestored:
                 // Removes ads just as if the product was just purchased
                 self.removeAdsProductPurchased = YES;
+                [[SFBannerViewManager sharedInstance] hideAllCurrentlyShownBannerViews];
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
             case SKPaymentTransactionStateFailed:
