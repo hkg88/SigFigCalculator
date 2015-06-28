@@ -79,6 +79,7 @@
       }
   } else if(cell == self.writeAReviewCell) {
     // Use a compose screen if possible? Or, send the user to the application's Store page
+      [self rerouteUserToReviewPage];
   } else if(cell == self.tellAFriendCell) {
     // Display a pre-composed compose screen to be used to send an e-mail to a friend
     [self displayEmailComposeView];
@@ -125,7 +126,26 @@
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
-    [self dismissViewControllerAnimated:controller completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)rerouteUserToReviewPage
+{
+    NSString *templateReviewURL = @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=APP_ID";
+    NSString *templateReviewURLiOS7 = @"itms-apps://itunes.apple.com/app/idAPP_ID";
+    NSString *templateReviewURLiOS8 = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=APP_ID&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software";
+    NSString *sigFigApplicationID = @"660032568";
+    
+    NSString *reviewURL;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 && [[[UIDevice currentDevice] systemVersion] floatValue] < 8.0) {
+        reviewURL = [templateReviewURLiOS7 stringByReplacingOccurrencesOfString:@"APP_ID" withString:[NSString stringWithFormat:@"%@", sigFigApplicationID]];
+    } else if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+        reviewURL = [templateReviewURLiOS8 stringByReplacingOccurrencesOfString:@"APP_ID" withString:[NSString stringWithFormat:@"%@", sigFigApplicationID]];
+    } else {
+        reviewURL = [templateReviewURL stringByReplacingOccurrencesOfString:@"APP_ID" withString:[NSString stringWithFormat:@"%@", sigFigApplicationID]];
+    }
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewURL]];
 }
 
 @end
