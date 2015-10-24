@@ -46,7 +46,21 @@
             }
             return price;
         }];
+        [[RACObserve(self.productsManager, removeAdsProductPurchased) distinctUntilChanged] subscribeNext:^(NSNumber *isPurchased) {
+            @strongify(self)
+            if (self.productsManager.removeAdsProductPurchased) {
+                self.tipJarProductPriceLabel.text = NSLocalizedString(@"Purchased", "Indicator that the In-App purchase has been purchased");
+            }
+            [self.tableView reloadData];
+        }];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[SFProductManager sharedManager] makeProductRequestIfPaymentsPossible];
+    
+    [super viewWillAppear:animated];
 }
 
 -(void)viewDidLayoutSubviews

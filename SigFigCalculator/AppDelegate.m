@@ -10,10 +10,7 @@
 {
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
-    SFProductManager *productManager = [SFProductManager sharedManager];
-    if([productManager canMakePayments]){
-        [productManager makeProductRequests];
-    }
+    [[SFProductManager sharedManager] makeProductRequestIfPaymentsPossible];
     
     return YES;
 }

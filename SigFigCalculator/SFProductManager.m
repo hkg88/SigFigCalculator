@@ -13,7 +13,11 @@ static const NSString *adRemovalProductIdentifier = @"com.kylegearhart.sigfigcal
 - (void)setRemoveAdsProductPurchased:(BOOL)value
 {
     [[SFUserDefaultsHelper sharedManager] setBoolean:value forKey:kAdsRemovedUserDefaultBoolean];
-    _removeAdsProductPurchased = value;
+}
+
+- (BOOL)removeAdsProductPurchased
+{
+    return [[SFUserDefaultsHelper sharedManager] getBooleanForKey:kAdsRemovedUserDefaultBoolean];
 }
 
 + (instancetype)sharedManager {
@@ -23,6 +27,14 @@ static const NSString *adRemovalProductIdentifier = @"com.kylegearhart.sigfigcal
         sharedProductManager = [[self alloc] init];
     });
     return sharedProductManager;
+}
+
+- (void)makeProductRequestIfPaymentsPossible
+{
+    if([self canMakePayments]){
+        [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+        [self makeProductRequests];
+    }
 }
 
 - (void)makeProductRequests

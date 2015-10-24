@@ -1,6 +1,7 @@
 #import <iAd/iAd.h>
 #import "SFBannerViewController.h"
 #import "SFBannerViewManager.h"
+#import "SFProductManager.h"
 
 @interface SFBannerViewController()
 @property (strong, nonatomic) ADBannerView *bannerView;
@@ -29,6 +30,11 @@
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
+    
+    if ([SFProductManager sharedManager].removeAdsProductPurchased) {
+        return ;
+    }
+    
     [self.bannerView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:self.bannerView];
     
@@ -80,8 +86,10 @@
                                                                           multiplier:1.0f
                                                                             constant:0.0f];
     [self.view addConstraint:self.contentViewBottomLayoutConstraint];
-        
-    self.bannerView = [SFBannerViewManager sharedInstance].bannerView;
+    
+    if (![SFProductManager sharedManager].removeAdsProductPurchased) {
+        self.bannerView = [SFBannerViewManager sharedInstance].bannerView;
+    }
 }
 
 

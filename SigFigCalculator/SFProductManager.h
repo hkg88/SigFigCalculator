@@ -7,6 +7,8 @@
 
 + (instancetype)sharedManager;
 
+- (void)makeProductRequestIfPaymentsPossible;
+
 - (BOOL)canMakePayments;
 
 - (void)purchaseAdRemovalProduct;

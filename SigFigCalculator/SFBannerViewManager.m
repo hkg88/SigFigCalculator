@@ -1,6 +1,7 @@
 #import "SFBannerViewManager.h"
 #import "SFBannerViewController.h"
 #import "SFConstants.h"
+#import "SFProductManager.h"
 #import "SFUserDefaultsHelper.h"
 
 @interface SFBannerViewManager()
@@ -25,12 +26,11 @@
 - (instancetype)init
 {
     self = [super init];
-    
-    if ([[SFUserDefaultsHelper sharedManager] getBooleanForKey:kRemoveAdsProductIdentifier]) {
-        return self;
-    }
-    
     if (self) {
+        if ([SFProductManager sharedManager].removeAdsProductPurchased) {
+            return self;
+        }
+        
         // On iOS 6 ADBannerView introduces a new initializer, use it when available.
         if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
             _bannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
@@ -55,7 +55,7 @@
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
-    if ([[SFUserDefaultsHelper sharedManager] getBooleanForKey:kRemoveAdsProductIdentifier]) {
+    if ([SFProductManager sharedManager].removeAdsProductPurchased) {
         return;
     }
     
@@ -67,7 +67,7 @@
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
-    if ([[SFUserDefaultsHelper sharedManager] getBooleanForKey:kRemoveAdsProductIdentifier]) {
+    if ([SFProductManager sharedManager].removeAdsProductPurchased) {
         return;
     }
     
@@ -82,6 +82,8 @@
     for (SFBannerViewController *bannerViewController in self.bannerViewControllers) {
         [bannerViewController hideBannerView];
     }
+    
+    self.bannerViewControllers = nil;
 }
 
 @end
