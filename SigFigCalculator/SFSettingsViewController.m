@@ -88,7 +88,7 @@
   if(cell == self.tipJarCell) {
       // Begin the payment process for the In-App purchase if it hasn't been bought, and the
       // user is able to pay for purchases
-      if ([[SFProductManager sharedManager] canMakePayments] && ![self.userDefaultsHelper getBooleanForKey:kAdsRemovedUserDefaultBoolean]) {
+      if ([[SFProductManager sharedManager] canMakePayments] && ![SFProductManager sharedManager].removeAdsProductPurchased) {
           [[SFProductManager sharedManager] purchaseAdRemovalProduct];
       }
   } else if(cell == self.writeAReviewCell) {
