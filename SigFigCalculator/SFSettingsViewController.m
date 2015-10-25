@@ -1,4 +1,5 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 #import <MessageUI/MessageUI.h>
 #import <StoreKit/SKProduct.h>
 #import "SFProductManager.h"
@@ -14,7 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITableViewCell *tipJarCell;
 @property (strong, nonatomic) IBOutlet UILabel *tipJarProductNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *tipJarProductPriceLabel;
-
+@property (strong, nonatomic) MBProgressHUD *progressHUD;
 @end
 
 @implementation SFSettingsViewController
@@ -53,6 +54,27 @@
             }
             [self.tableView reloadData];
         }];
+        
+        [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:SFProductManagerTransactionStartedNotification object:nil] takeUntil:[self rac_willDeallocSignal]]
+         subscribeNext:^(id x) {
+             @strongify(self)
+             [self displayActivityIndicatorView:YES];
+         }];
+        
+        [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:SFProductManagerTransactionEndedNotification object:nil] takeUntil:[self rac_willDeallocSignal]]
+         subscribeNext:^(id x) {
+             @strongify(self)
+             [self displayActivityIndicatorView:NO];
+         }];
+    }
+}
+
+- (void)displayActivityIndicatorView:(BOOL)willDisplay
+{
+    if (willDisplay) {
+        [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
+    } else {
+        [MBProgressHUD hideHUDForView:self.tableView animated:YES];
     }
 }
 
@@ -61,6 +83,15 @@
     [[SFProductManager sharedManager] makeProductRequestIfPaymentsPossible];
     
     [super viewWillAppear:animated];
+}
+
+- (void)viewWillLayoutSubviews
+{
+    if (!self.progressHUD) {
+        self.progressHUD = [[MBProgressHUD alloc] initWithView:self.tableView];
+    }
+    
+    [super viewWillLayoutSubviews];
 }
 
 -(void)viewDidLayoutSubviews

@@ -5,6 +5,9 @@
 
 static const NSString *adRemovalProductIdentifier = @"com.kylegearhart.sigfigcalculator.removeadvertisements";
 
+NSString *SFProductManagerTransactionStartedNotification = @"SFProductManagerTransactionStartedNotification";
+NSString *SFProductManagerTransactionEndedNotification = @"SFProductManagerTransactionEndedNotification";
+
 @interface SFProductManager ()
 @end
 
@@ -65,6 +68,18 @@ static const NSString *adRemovalProductIdentifier = @"com.kylegearhart.sigfigcal
     return [numberFormatter stringFromNumber:self.removeAdsProduct.price];
 }
 
+- (void)notifyTransactionBegin
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:SFProductManagerTransactionStartedNotification
+                                                        object:self];
+}
+
+- (void)notifyTransactionEnd
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:SFProductManagerTransactionEndedNotification
+                                                        object:self];
+}
+
 #pragma mark - SKProductRequestDelegate Methods
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
@@ -85,26 +100,31 @@ static const NSString *adRemovalProductIdentifier = @"com.kylegearhart.sigfigcal
     for(SKPaymentTransaction *transaction in transactions){
         switch (transaction.transactionState){
             case SKPaymentTransactionStatePurchasing:
+                [self notifyTransactionBegin];
                 break;
             case SKPaymentTransactionStatePurchased:
                 // Disable ads as the user has purchased the "Ad Removal" product
                 self.removeAdsProductPurchased = YES;
                 [[SFBannerViewManager sharedInstance] hideAllCurrentlyShownBannerViews];
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                [self notifyTransactionEnd];
                 break;
             case SKPaymentTransactionStateRestored:
                 // Removes ads just as if the product was just purchased
                 self.removeAdsProductPurchased = YES;
                 [[SFBannerViewManager sharedInstance] hideAllCurrentlyShownBannerViews];
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                [self notifyTransactionEnd];
                 break;
             case SKPaymentTransactionStateFailed:
                 // Called when the user cancels the current transaction
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                [self notifyTransactionEnd];
                 break;
             case SKPaymentTransactionStateDeferred:
                 // Allow for the StoreKit to handle the request, as it is indeterminate
                 // as to when we will receive notification of a failed or successful purchase
+                [self notifyTransactionEnd];
                 break;
         }
     }

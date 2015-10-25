@@ -3,6 +3,9 @@
 
 @class SKProduct;
 
+extern NSString *SFProductManagerTransactionStartedNotification;
+extern NSString *SFProductManagerTransactionEndedNotification;
+
 @interface SFProductManager : NSObject <SKProductsRequestDelegate, SKPaymentTransactionObserver>
 
 + (instancetype)sharedManager;
