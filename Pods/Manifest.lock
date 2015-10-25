@@ -1,4 +1,5 @@
 PODS:
+  - MBProgressHUD (0.9.1)
   - ReactiveCocoa (2.4.7):
     - ReactiveCocoa/UI (= 2.4.7)
   - ReactiveCocoa/Core (2.4.7):
@@ -8,9 +9,11 @@ PODS:
     - ReactiveCocoa/Core
 
 DEPENDENCIES:
+  - MBProgressHUD (~> 0.9.1)
   - ReactiveCocoa
 
 SPEC CHECKSUMS:
-  ReactiveCocoa: 313fc53cc9aeb2bbbc3f5f13c7eac16478d9af8f
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
 
-COCOAPODS: 0.37.1
+COCOAPODS: 0.39.0
