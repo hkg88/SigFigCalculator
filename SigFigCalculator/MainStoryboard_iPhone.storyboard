@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4q6-Yh-70M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4q6-Yh-70M">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCj-kZ-SmP" userLabel="Rules Text View">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCj-kZ-SmP" userLabel="Rules Text View">
                                 <rect key="frame" x="16" y="3" width="568" height="545"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -47,19 +47,19 @@
         <scene sceneID="rrP-4x-Xog">
             <objects>
                 <tableViewController id="DDK-eV-qbf" userLabel="Settings Table View Controller" customClass="SFSettingsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Toc-yq-A1c" userLabel="Settings Table View">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Toc-yq-A1c" userLabel="Settings Table View">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="8W8-dc-bDe">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="Dbk-Sg-8u0" userLabel="Settings Category Title Cell">
-                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dbk-Sg-8u0" id="0AX-GD-IJ4" userLabel="Settings Category Cell Content View">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16e-E6-5sw" userLabel="Settings Category Cell Title Label">
@@ -81,10 +81,10 @@
                                         <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="tcK-oj-EKN" userLabel="Write A Review Cell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="70" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tcK-oj-EKN" id="sc1-R2-403" userLabel="Settings Cell Content View">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a Review" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPD-AV-cyI" userLabel="Setting Title Label">
@@ -106,10 +106,10 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="cRW-CL-qQU" userLabel="Tell A Friend Cell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cRW-CL-qQU" id="ql4-eV-tQx" userLabel="Settings Cell Content View">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell a Friend" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GD7-zZ-KEj" userLabel="Setting Title Label">
@@ -135,10 +135,10 @@
                             <tableViewSection id="GJK-iV-OiM">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryTitleCell" rowHeight="70" id="iom-cn-7yF" userLabel="Content Category Title Cell">
-                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="158" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iom-cn-7yF" id="p9z-ps-VbA" userLabel="Category Cell Content View">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extras" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hf-fE-BMs" userLabel="Category Cell Title Label">
@@ -160,10 +160,10 @@
                                         <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="InAppPurchaseCell" id="RGu-Dd-8ak" userLabel="In App Purchase Cell">
-                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="228" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RGu-Dd-8ak" id="HC4-gJ-h3G">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f27-Q9-wlg" userLabel="Tip Jar Product Name Label">
@@ -228,10 +228,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="42" translatesAutoresizingMaskIntoConstraints="NO" id="4JE-wZ-DDa" userLabel="Number Header View">
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="42" translatesAutoresizingMaskIntoConstraints="NO" id="4JE-wZ-DDa" userLabel="Number Header View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="32"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" text="Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="JDd-Sf-b7v" userLabel="Number Header Label">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" text="Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="JDd-Sf-b7v" userLabel="Number Header Label">
                                         <rect key="frame" x="10" y="2" width="582" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -247,10 +247,10 @@
                                     <constraint firstAttribute="height" constant="32" id="afc-c3-x6X"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="104" translatesAutoresizingMaskIntoConstraints="NO" id="ipm-fD-Bdo" userLabel="Number Input Header">
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="104" translatesAutoresizingMaskIntoConstraints="NO" id="ipm-fD-Bdo" userLabel="Number Input Header">
                                 <rect key="frame" x="0.0" y="33" width="600" height="72"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ej3-xX-rpf" userLabel="Number Input Text View">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ej3-xX-rpf" userLabel="Number Input Text View">
                                         <rect key="frame" x="0.0" y="3" width="600" height="66"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -269,10 +269,10 @@
                                     <constraint firstAttribute="height" constant="72" id="zSl-MG-JeJ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="42" translatesAutoresizingMaskIntoConstraints="NO" id="QP8-AT-EvW" userLabel="Num of Sig Figs Header View">
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="42" translatesAutoresizingMaskIntoConstraints="NO" id="QP8-AT-EvW" userLabel="Num of Sig Figs Header View">
                                 <rect key="frame" x="0.0" y="106" width="600" height="32"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="31" text="Desired Number of Significant Figures:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9vN-JV-Xlw" userLabel="Num of Sig Figs Header Label">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="31" text="Desired Number of Significant Figures:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9vN-JV-Xlw" userLabel="Num of Sig Figs Header Label">
                                         <rect key="frame" x="10" y="0.0" width="582" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -288,10 +288,10 @@
                                     <constraint firstAttribute="trailing" secondItem="9vN-JV-Xlw" secondAttribute="trailing" constant="8" id="bVO-zM-6Fi"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-pN-zpe" userLabel="Num of Sig Figs Entry View">
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-pN-zpe" userLabel="Num of Sig Figs Entry View">
                                 <rect key="frame" x="0.0" y="139" width="600" height="72"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" placeholderIntrinsicWidth="140" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ej7-Cf-LK4" userLabel="Num of Sig Figs Entry Text Field">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="140" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ej7-Cf-LK4" userLabel="Num of Sig Figs Entry Text Field">
                                         <rect key="frame" x="0.0" y="3" width="600" height="66"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -310,10 +310,10 @@
                                     <constraint firstAttribute="height" constant="72" id="dYw-WV-GUz"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="42" translatesAutoresizingMaskIntoConstraints="NO" id="AK9-ef-frN" userLabel="Resulting Number Header View">
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="42" translatesAutoresizingMaskIntoConstraints="NO" id="AK9-ef-frN" userLabel="Resulting Number Header View">
                                 <rect key="frame" x="0.0" y="212" width="600" height="32"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" text="Resulting Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hd4-Ca-G79" userLabel="Resulting Number Header Label">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" text="Resulting Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hd4-Ca-G79" userLabel="Resulting Number Header Label">
                                         <rect key="frame" x="10" y="0.0" width="582" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -329,10 +329,10 @@
                                     <constraint firstItem="hd4-Ca-G79" firstAttribute="top" secondItem="AK9-ef-frN" secondAttribute="top" id="yfM-ZP-hpn"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="191" translatesAutoresizingMaskIntoConstraints="NO" id="d0I-v0-MVn" userLabel="Resulting Number Value View">
+                            <view contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="191" translatesAutoresizingMaskIntoConstraints="NO" id="d0I-v0-MVn" userLabel="Resulting Number Value View">
                                 <rect key="frame" x="0.0" y="245" width="600" height="310"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="236" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dfr-aJ-jIf" userLabel="Resulting Number Value Label">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="236" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dfr-aJ-jIf" userLabel="Resulting Number Value Label">
                                         <rect key="frame" x="0.0" y="20" width="600" height="282"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -405,10 +405,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="9Vk-eZ-6MR" userLabel="Number Text View Header View">
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="9Vk-eZ-6MR" userLabel="Number Text View Header View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="32"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" text="Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-RS-pTR" userLabel="Number Header Label">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" text="Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-RS-pTR" userLabel="Number Header Label">
                                         <rect key="frame" x="10" y="2" width="582" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -424,10 +424,10 @@
                                     <constraint firstAttribute="trailing" secondItem="ujZ-RS-pTR" secondAttribute="trailing" constant="8" id="o7o-tM-iYn"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="104" translatesAutoresizingMaskIntoConstraints="NO" id="cCh-C1-khl" userLabel="Text View Container View">
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="104" translatesAutoresizingMaskIntoConstraints="NO" id="cCh-C1-khl" userLabel="Text View Container View">
                                 <rect key="frame" x="0.0" y="33" width="600" height="72"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eKi-GH-dJ5" userLabel="Number Text Field">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eKi-GH-dJ5" userLabel="Number Text Field">
                                         <rect key="frame" x="0.0" y="3" width="600" height="66"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -446,10 +446,10 @@
                                     <constraint firstAttribute="bottom" secondItem="eKi-GH-dJ5" secondAttribute="bottom" constant="3" id="zeq-SS-kWb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="42" translatesAutoresizingMaskIntoConstraints="NO" id="beu-iL-GEv" userLabel="Num Sig Figs Header View">
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="42" translatesAutoresizingMaskIntoConstraints="NO" id="beu-iL-GEv" userLabel="Num Sig Figs Header View">
                                 <rect key="frame" x="0.0" y="106" width="600" height="32"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" text="Number of Significant Figures:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJS-Em-cmz" userLabel="Num Sig Figs Header Label">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" text="Number of Significant Figures:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJS-Em-cmz" userLabel="Num Sig Figs Header Label">
                                         <rect key="frame" x="10" y="0.0" width="582" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
@@ -465,10 +465,10 @@
                                     <constraint firstAttribute="bottom" secondItem="JJS-Em-cmz" secondAttribute="bottom" id="xAf-rM-3qz"/>
                                 </constraints>
                             </view>
-                            <view tag="100" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="104" translatesAutoresizingMaskIntoConstraints="NO" id="Szt-yc-afq" userLabel="Num Sig Figs Value View">
+                            <view tag="100" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="104" translatesAutoresizingMaskIntoConstraints="NO" id="Szt-yc-afq" userLabel="Num Sig Figs Value View">
                                 <rect key="frame" x="0.0" y="139" width="600" height="412"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="84" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3JS-Nf-5Pd" userLabel="Num Sig Figs Value Label">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="84" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3JS-Nf-5Pd" userLabel="Num Sig Figs Value Label">
                                         <rect key="frame" x="8" y="10" width="584" height="394"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <color key="textColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
@@ -621,23 +621,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="94" translatesAutoresizingMaskIntoConstraints="NO" id="uGM-XL-PGS" userLabel="Display View">
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="94" translatesAutoresizingMaskIntoConstraints="NO" id="uGM-XL-PGS" userLabel="Display View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="117"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y8b-nG-JpE" userLabel="Result Label">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y8b-nG-JpE" userLabel="Result Label">
                                         <rect key="frame" x="10" y="15" width="580" height="97"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="50"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZI-IH-LEX" userLabel="Status Bar Background View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZI-IH-LEX" userLabel="Status Bar Background View">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="yl1-FI-XnB"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bng-DH-Sw1" userLabel="Operator Label">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bng-DH-Sw1" userLabel="Operator Label">
                                         <rect key="frame" x="478" y="82" width="50" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="ifJ-Im-TTW"/>
@@ -664,7 +664,7 @@
                                     <constraint firstItem="AZI-IH-LEX" firstAttribute="top" secondItem="uGM-XL-PGS" secondAttribute="top" id="yhn-4e-n5l"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-sz-d0F">
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-sz-d0F">
                                 <rect key="frame" x="0.0" y="118" width="149" height="83"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -680,7 +680,7 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="Mwz-zS-gMo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udo-P2-3X8">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udo-P2-3X8">
                                 <rect key="frame" x="0.0" y="202" width="149" height="84"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -696,7 +696,7 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="htT-Ad-xsg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nws-Zs-83M">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nws-Zs-83M">
                                 <rect key="frame" x="0.0" y="287" width="149" height="84"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -712,7 +712,7 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="2um-J9-xK9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N26-X9-MSJ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N26-X9-MSJ">
                                 <rect key="frame" x="0.0" y="372" width="149" height="84"/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -728,7 +728,7 @@
                                     <action selector="pressedDecimal:" destination="2" eventType="touchUpInside" id="s2B-md-FXy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8u-bi-ROf">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8u-bi-ROf">
                                 <rect key="frame" x="0.0" y="457" width="149" height="84"/>
                                 <color key="backgroundColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -744,7 +744,7 @@
                                     <action selector="pressedClear:" destination="2" eventType="touchUpInside" id="CeG-Vf-qE0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfO-ww-TMW">
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfO-ww-TMW">
                                 <rect key="frame" x="150" y="118" width="149" height="83"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -760,7 +760,7 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="Sgd-zf-oXC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7f-Nu-gKa">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7f-Nu-gKa">
                                 <rect key="frame" x="150" y="202" width="149" height="84"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -776,7 +776,7 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="oPT-Jk-9U2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jb-Fr-XSx">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jb-Fr-XSx">
                                 <rect key="frame" x="150" y="287" width="149" height="84"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -792,7 +792,7 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="xSm-Vh-8U0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAj-Ex-Ny4">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAj-Ex-Ny4">
                                 <rect key="frame" x="150" y="372" width="149" height="84"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -808,7 +808,7 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="0rc-NQ-TtX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASv-ma-V4H">
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASv-ma-V4H">
                                 <rect key="frame" x="300" y="118" width="149" height="83"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -824,7 +824,7 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="3HO-3V-qC0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dp-FE-s7V">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dp-FE-s7V">
                                 <rect key="frame" x="300" y="202" width="149" height="84"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -840,7 +840,7 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="PdS-kz-QC7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtD-kP-il0">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtD-kP-il0">
                                 <rect key="frame" x="300" y="287" width="149" height="84"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -856,7 +856,7 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="Irc-BZ-ouc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPQ-m0-c5T">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPQ-m0-c5T">
                                 <rect key="frame" x="300" y="372" width="149" height="84"/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -872,7 +872,7 @@
                                     <action selector="pressedNegate:" destination="2" eventType="touchUpInside" id="Yq1-f5-oWL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyA-AQ-qpR">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyA-AQ-qpR">
                                 <rect key="frame" x="450" y="118" width="150" height="83"/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.45098039215686275" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -888,7 +888,7 @@
                                     <action selector="pressedOperator:" destination="2" eventType="touchUpInside" id="ksl-db-4oU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZP-YX-QEg">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZP-YX-QEg">
                                 <rect key="frame" x="450" y="202" width="150" height="84"/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.45098039215686275" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -904,7 +904,7 @@
                                     <action selector="pressedOperator:" destination="2" eventType="touchUpInside" id="sZr-Qq-wxV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBX-b7-Fiw">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBX-b7-Fiw">
                                 <rect key="frame" x="450" y="287" width="150" height="84"/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.45098039215686275" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -920,7 +920,7 @@
                                     <action selector="pressedOperator:" destination="2" eventType="touchUpInside" id="1Uv-x0-FrA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B74-nR-5iU">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B74-nR-5iU">
                                 <rect key="frame" x="450" y="372" width="150" height="84"/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.45098039215686275" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -936,7 +936,7 @@
                                     <action selector="pressedOperator:" destination="2" eventType="touchUpInside" id="OXX-PV-nHo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaP-lr-PKH">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaP-lr-PKH">
                                 <rect key="frame" x="450" y="457" width="150" height="84"/>
                                 <color key="backgroundColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -952,7 +952,7 @@
                                     <action selector="pressedBackspace:" destination="2" eventType="touchUpInside" id="RUl-jO-HXW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="159" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyH-IB-zGd">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="159" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyH-IB-zGd">
                                 <rect key="frame" x="150" y="457" width="300" height="84"/>
                                 <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
