@@ -1,0 +1,126 @@
+
+/* Class = "UIViewController"; title = "SFCalculator"; ObjectID = "2"; */
+"2.title" = "SFCalculator";
+
+/* Class = "UILabel"; text = "Review"; ObjectID = "16e-E6-5sw"; */
+"16e-E6-5sw.text" = "Review";
+
+/* Class = "UILabel"; text = "Remove Ads"; ObjectID = "f27-Q9-wlg"; */
+"f27-Q9-wlg.text" = "Remove Ads";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "2jb-Fr-XSx"; */
+"2jb-Fr-XSx.normalTitle" = "2";
+
+/* Class = "UITabBarItem"; title = "Calculator"; ObjectID = "2se-5E-j4Z"; */
+"2se-5E-j4Z.title" = "Calculator";
+
+/* Class = "UILabel"; text = "Extras"; ObjectID = "3hf-fE-BMs"; */
+"3hf-fE-BMs.text" = "Extras";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "5Dp-FE-s7V"; */
+"5Dp-FE-s7V.normalTitle" = "6";
+
+/* Class = "UILabel"; text = "Desired Number of Significant Figures:"; ObjectID = "9vN-JV-Xlw"; */
+"9vN-JV-Xlw.text" = "Desired Number of Significant Figures:";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "ASv-ma-V4H"; */
+"ASv-ma-V4H.normalTitle" = "9";
+
+/* Class = "UIViewController"; title = "SFRules"; ObjectID = "Aq6-u5-JTT"; */
+"Aq6-u5-JTT.title" = "SFRules";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "B74-nR-5iU"; */
+"B74-nR-5iU.normalTitle" = "+";
+
+/* Class = "UITabBarItem"; title = "Converter"; ObjectID = "BUG-a9-xNi"; */
+"BUG-a9-xNi.title" = "Converter";
+
+/* Class = "UIButton"; normalTitle = "<--"; ObjectID = "EaP-lr-PKH"; */
+"EaP-lr-PKH.normalTitle" = "<--";
+
+/* Class = "UIButton"; normalTitle = "AC"; ObjectID = "F8u-bi-ROf"; */
+"F8u-bi-ROf.normalTitle" = "AC";
+
+/* Class = "UILabel"; text = "Tell a Friend"; ObjectID = "GD7-zZ-KEj"; */
+"GD7-zZ-KEj.text" = "Tell a Friend";
+
+/* Class = "UITabBarItem"; title = "Counter"; ObjectID = "IAv-xn-EcF"; */
+"IAv-xn-EcF.title" = "Counter";
+
+/* Class = "UILabel"; text = "Number:"; ObjectID = "JDd-Sf-b7v"; */
+"JDd-Sf-b7v.text" = "Number:";
+
+/* Class = "UILabel"; text = "Number of Significant Figures:"; ObjectID = "JJS-Em-cmz"; */
+"JJS-Em-cmz.text" = "Number of Significant Figures:";
+
+/* Class = "UITabBarItem"; title = "Rules"; ObjectID = "Jcm-vK-NJg"; */
+"Jcm-vK-NJg.title" = "Rules";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "KAj-Ex-Ny4"; */
+"KAj-Ex-Ny4.normalTitle" = "0";
+
+/* Class = "UIButton"; normalTitle = "."; ObjectID = "N26-X9-MSJ"; */
+"N26-X9-MSJ.normalTitle" = ".";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "Nws-Zs-83M"; */
+"Nws-Zs-83M.normalTitle" = "1";
+
+/* Class = "UITabBarItem"; title = "Converter"; ObjectID = "Vcg-H7-7Gt"; */
+"Vcg-H7-7Gt.title" = "Converter";
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "VfO-ww-TMW"; */
+"VfO-ww-TMW.normalTitle" = "8";
+
+/* Class = "UITabBarItem"; title = "Counter"; ObjectID = "Xsc-RT-NfL"; */
+"Xsc-RT-NfL.title" = "Counter";
+
+/* Class = "UIViewController"; title = "SFConverter"; ObjectID = "c43-VU-DF4"; */
+"c43-VU-DF4.title" = "SFConverter";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "c7f-Nu-gKa"; */
+"c7f-Nu-gKa.normalTitle" = "5";
+
+/* Class = "UIViewController"; title = "SFCounter"; ObjectID = "fVV-GE-vKU"; */
+"fVV-GE-vKU.title" = "SFCounter";
+
+/* Class = "UIButton"; normalTitle = "="; ObjectID = "fyH-IB-zGd"; */
+"fyH-IB-zGd.normalTitle" = "=";
+
+/* Class = "UITabBarItem"; title = "Calculator"; ObjectID = "hZx-4T-p9g"; */
+"hZx-4T-p9g.title" = "Calculator";
+
+/* Class = "UILabel"; text = "Resulting Number:"; ObjectID = "hd4-Ca-G79"; */
+"hd4-Ca-G79.text" = "Resulting Number:";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "kZP-YX-QEg"; */
+"kZP-YX-QEg.normalTitle" = "X";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "kn0-sz-d0F"; */
+"kn0-sz-d0F.normalTitle" = "7";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "lkv-II-xNN"; */
+"lkv-II-xNN.title" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "qBX-b7-Fiw"; */
+"qBX-b7-Fiw.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "Write a Review"; ObjectID = "uPD-AV-cyI"; */
+"uPD-AV-cyI.text" = "Write a Review";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "udo-P2-3X8"; */
+"udo-P2-3X8.normalTitle" = "4";
+
+/* Class = "UILabel"; text = "Number"; ObjectID = "ujZ-RS-pTR"; */
+"ujZ-RS-pTR.text" = "Number";
+
+/* Class = "UIButton"; normalTitle = "/"; ObjectID = "vyA-AQ-qpR"; */
+"vyA-AQ-qpR.normalTitle" = "/";
+
+/* Class = "UITabBarItem"; title = "SigFig Rules"; ObjectID = "wRI-Dd-aZZ"; */
+"wRI-Dd-aZZ.title" = "SigFig Rules";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "wtD-kP-il0"; */
+"wtD-kP-il0.normalTitle" = "3";
+
+/* Class = "UIButton"; normalTitle = "+/-"; ObjectID = "yPQ-m0-c5T"; */
+"yPQ-m0-c5T.normalTitle" = "+/-";

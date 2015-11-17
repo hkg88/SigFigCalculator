@@ -15,17 +15,14 @@
 		2706EBA516852F6600326CCD /* SigFigCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EBA416852F6600326CCD /* SigFigCalculator.m */; };
 		2706EBAE16852F6600326CCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8B16852F6500326CCD /* UIKit.framework */; };
 		2706EBAF16852F6600326CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706EB8D16852F6500326CCD /* Foundation.framework */; };
-		2706EBB716852F6600326CCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2706EBB516852F6600326CCD /* InfoPlist.strings */; };
 		2706EBBA16852F6600326CCD /* SigFigCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706EBB916852F6600326CCD /* SigFigCalculatorTests.m */; };
 		271AC79E16C5B6FE001C7FD8 /* Operand.m in Sources */ = {isa = PBXBuildFile; fileRef = 271AC79D16C5B6FE001C7FD8 /* Operand.m */; };
 		271AC7A116C5B851001C7FD8 /* SFCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271AC7A016C5B851001C7FD8 /* SFCalculatorViewController.m */; };
-		271B0DC817DCD849003E8B92 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 271B0DCA17DCD849003E8B92 /* Localizable.strings */; };
 		271B88CB16E990A100684311 /* SFCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88CA16E990A100684311 /* SFCounterViewController.m */; };
 		271B88D516EBDA3600684311 /* SigFigCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88D416EBDA3600684311 /* SigFigCounter.m */; };
 		271B88D816EBF91A00684311 /* SFRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88D716EBF91A00684311 /* SFRulesViewController.m */; };
 		271B88E316EC147100684311 /* SFConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88E216EC147100684311 /* SFConverterViewController.m */; };
 		271B88E616F1158100684311 /* SigFigConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B88E516F1158100684311 /* SigFigConverter.m */; };
-		2757BFFE17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2757BFFD17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard */; };
 		2788C661173F7D9D007DF05A /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2788C660173F7D9D007DF05A /* iAd.framework */; };
 		2790A29717DCC1E0008A56DB /* NSObject+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A28817DCC1E0008A56DB /* NSObject+AGi18n.m */; };
 		2790A29817DCC1E0008A56DB /* UIBarButtonItem+AGi18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790A28A17DCC1E0008A56DB /* UIBarButtonItem+AGi18n.m */; };
@@ -41,8 +38,10 @@
 		EE32037C19BC737E009085C0 /* SFUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE32037B19BC737E009085C0 /* SFUserDefaultsHelper.m */; };
 		EE493EB61AB598F10080A97F /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE493EB51AB598F10080A97F /* Launch Screen.xib */; };
 		EE52938519036544008AF503 /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE52938419036544008AF503 /* SFSettingsViewController.m */; };
+		EE6838D31BFAB77E00411DD7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE6838D11BFAB77E00411DD7 /* Localizable.strings */; };
 		EE9354E51AA754F900E9D389 /* SFBannerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9354E41AA754F900E9D389 /* SFBannerViewManager.m */; };
 		EE9354E81AA7618D00E9D389 /* SFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9354E71AA7618D00E9D389 /* SFTabBar.m */; };
+		EEACA1651BECE1E400CA14A5 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEACA1671BECE1E400CA14A5 /* MainStoryboard_iPhone.storyboard */; };
 		EEC2ECB81B0650BC00AA1EBC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC2ECB71B0650BC00AA1EBC /* libPods.a */; };
 		EEF0796D1A74FDC700271599 /* SFBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF0796C1A74FDC700271599 /* SFBannerViewController.m */; };
 		EEF8052219AE9A76008FF4FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF8052119AE9A76008FF4FF /* StoreKit.framework */; };
@@ -72,15 +71,12 @@
 		2706EBA416852F6600326CCD /* SigFigCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigFigCalculator.m; sourceTree = "<group>"; };
 		2706EBAB16852F6600326CCD /* SigFigCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SigFigCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2706EBB416852F6600326CCD /* SigFigCalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SigFigCalculatorTests-Info.plist"; sourceTree = "<group>"; };
-		2706EBB616852F6600326CCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2706EBB816852F6600326CCD /* SigFigCalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SigFigCalculatorTests.h; sourceTree = "<group>"; };
 		2706EBB916852F6600326CCD /* SigFigCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigFigCalculatorTests.m; sourceTree = "<group>"; };
 		271AC79C16C5B6FE001C7FD8 /* Operand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operand.h; sourceTree = "<group>"; };
 		271AC79D16C5B6FE001C7FD8 /* Operand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operand.m; sourceTree = "<group>"; };
 		271AC79F16C5B851001C7FD8 /* SFCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCalculatorViewController.h; sourceTree = "<group>"; };
 		271AC7A016C5B851001C7FD8 /* SFCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCalculatorViewController.m; sourceTree = "<group>"; };
-		271B0DC917DCD849003E8B92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		271B0DCB17DCD84D003E8B92 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		271B88C916E990A100684311 /* SFCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCounterViewController.h; sourceTree = "<group>"; };
 		271B88CA16E990A100684311 /* SFCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCounterViewController.m; sourceTree = "<group>"; };
 		271B88D316EBDA3600684311 /* SigFigCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigFigCounter.h; sourceTree = "<group>"; };
@@ -91,9 +87,7 @@
 		271B88E216EC147100684311 /* SFConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFConverterViewController.m; sourceTree = "<group>"; };
 		271B88E416F1158100684311 /* SigFigConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigFigConverter.h; sourceTree = "<group>"; };
 		271B88E516F1158100684311 /* SigFigConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigFigConverter.m; sourceTree = "<group>"; };
-		2757BFFD17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		2788C660173F7D9D007DF05A /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		2790A28517DCB9FC008A56DB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2790A28717DCC1E0008A56DB /* NSObject+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AGi18n.h"; sourceTree = "<group>"; };
 		2790A28817DCC1E0008A56DB /* NSObject+AGi18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AGi18n.m"; sourceTree = "<group>"; };
 		2790A28917DCC1E0008A56DB /* UIBarButtonItem+AGi18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+AGi18n.h"; sourceTree = "<group>"; };
@@ -123,10 +117,15 @@
 		EE493EB51AB598F10080A97F /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		EE52938319036544008AF503 /* SFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSettingsViewController.h; sourceTree = "<group>"; };
 		EE52938419036544008AF503 /* SFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSettingsViewController.m; sourceTree = "<group>"; };
+		EE6838D21BFAB77E00411DD7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EE6838D41BFAB78900411DD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EE9354E31AA754F900E9D389 /* SFBannerViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBannerViewManager.h; sourceTree = "<group>"; };
 		EE9354E41AA754F900E9D389 /* SFBannerViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBannerViewManager.m; sourceTree = "<group>"; };
 		EE9354E61AA7618D00E9D389 /* SFTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTabBar.h; sourceTree = "<group>"; };
 		EE9354E71AA7618D00E9D389 /* SFTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTabBar.m; sourceTree = "<group>"; };
+		EEACA1691BECE2C900CA14A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		EEACA1701BECE60900CA14A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainStoryboard_iPhone.strings; sourceTree = "<group>"; };
+		EEACA1731BECE71700CA14A5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPhone.strings; sourceTree = "<group>"; };
 		EEC2ECB51B0650B400AA1EBC /* libPods-ReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ReactiveCocoa.a"; path = "Pods/../build/Debug-iphoneos/libPods-ReactiveCocoa.a"; sourceTree = "<group>"; };
 		EEC2ECB71B0650BC00AA1EBC /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		EEF0796B1A74FDC700271599 /* SFBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBannerViewController.h; sourceTree = "<group>"; };
@@ -201,6 +200,7 @@
 		2706EB9116852F6500326CCD /* SigFigCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				EE6838D51BFAB7AC00411DD7 /* Resources */,
 				2745FFAC16C40ED70004EED6 /* Controller */,
 				2745FFAB16C40ED20004EED6 /* View */,
 				2745FFA916C40EC80004EED6 /* Model */,
@@ -218,7 +218,6 @@
 				2706EB9316852F6500326CCD /* SigFigCalculator-Info.plist */,
 				2706EB9716852F6500326CCD /* main.m */,
 				2706EB9916852F6500326CCD /* SigFigCalculator-Prefix.pch */,
-				271B0DCA17DCD849003E8B92 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -237,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				2706EBB416852F6600326CCD /* SigFigCalculatorTests-Info.plist */,
-				2706EBB516852F6600326CCD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -265,7 +263,7 @@
 		2745FFAB16C40ED20004EED6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2757BFFD17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard */,
+				EEACA1671BECE1E400CA14A5 /* MainStoryboard_iPhone.storyboard */,
 				EE493EB51AB598F10080A97F /* Launch Screen.xib */,
 			);
 			name = View;
@@ -326,6 +324,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EE6838D51BFAB7AC00411DD7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE6838D11BFAB77E00411DD7 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,6 +344,7 @@
 				2706EB8416852F6500326CCD /* Frameworks */,
 				2706EB8516852F6500326CCD /* Resources */,
 				366EE1A48253D4C40798F660 /* Copy Pods Resources */,
+				354B3710E034F33DDE085F73 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -382,8 +389,9 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
+				Base,
 				ja,
+				en,
 			);
 			mainGroup = 2706EB7C16852F6500326CCD;
 			productRefGroup = 2706EB8816852F6500326CCD /* Products */;
@@ -401,9 +409,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				271B0DC817DCD849003E8B92 /* Localizable.strings in Resources */,
 				EE493EB61AB598F10080A97F /* Launch Screen.xib in Resources */,
-				2757BFFE17DCDB570075CE13 /* MainStoryboard_iPhone.storyboard in Resources */,
+				EE6838D31BFAB77E00411DD7 /* Localizable.strings in Resources */,
+				EEACA1651BECE1E400CA14A5 /* MainStoryboard_iPhone.storyboard in Resources */,
 				27C9950F1808E73C00D6C252 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,7 +420,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2706EBB716852F6600326CCD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +438,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		354B3710E034F33DDE085F73 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		366EE1A48253D4C40798F660 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -515,22 +537,23 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2706EBB516852F6600326CCD /* InfoPlist.strings */ = {
+		EE6838D11BFAB77E00411DD7 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2706EBB616852F6600326CCD /* en */,
-				2790A28517DCB9FC008A56DB /* ja */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		271B0DCA17DCD849003E8B92 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				271B0DC917DCD849003E8B92 /* en */,
-				271B0DCB17DCD84D003E8B92 /* ja */,
+				EE6838D21BFAB77E00411DD7 /* ja */,
+				EE6838D41BFAB78900411DD7 /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		EEACA1671BECE1E400CA14A5 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEACA1691BECE2C900CA14A5 /* Base */,
+				EEACA1701BECE60900CA14A5 /* en */,
+				EEACA1731BECE71700CA14A5 /* ja */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
