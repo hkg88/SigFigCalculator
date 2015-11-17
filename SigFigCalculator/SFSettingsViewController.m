@@ -145,8 +145,8 @@
       // Initialize and define the content for the mail compose view controller which will be displayed to the user
     MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
     mailer.mailComposeDelegate = self;
-    [mailer setSubject:@"An Invitation to try Significant Figures Calculator"];
-    NSString *emailBody = @"Hey! I've recently stumbled upon this great application! Want to give it a try?";
+    [mailer setSubject:NSLocalizedString(@"An Invitation to try Significant Figures Calculator", @"Tell a Friend: Subject")];
+    NSString *emailBody = NSLocalizedString(@"Hey! I've recently stumbled upon this great application! Want to give it a try?", @"Tell a Friend: Body");
     [mailer setMessageBody:emailBody isHTML:NO];
     
     // Show the mail composition view controller
@@ -155,7 +155,7 @@
   } else {
       // In the event that mail isn't set up on the device, show an alert informing the user of this
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
-                                                    message:@"Your device doesn't support sending e-mail"
+                                                    message:NSLocalizedString(@"Your device doesn't support sending e-mail", @"Tell a Friend: Error")
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles: nil];
