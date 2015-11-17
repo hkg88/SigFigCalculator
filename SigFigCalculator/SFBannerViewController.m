@@ -105,6 +105,7 @@
         
         [UIView animateWithDuration:0.25 animations:^{
             self.contentViewBottomLayoutConstraint.constant = 0.0;
+            [self.view layoutIfNeeded];
         } completion:^(BOOL finished) {
             self.bannerViewIsDisplayed = NO;
         }];
@@ -118,6 +119,7 @@
         
         [UIView animateWithDuration:0.25 animations:^{
             self.contentViewBottomLayoutConstraint.constant = -50.0f;
+            [self.view layoutIfNeeded];
         } completion:^(BOOL finished) {
             self.bannerViewIsDisplayed = YES;
         }];
