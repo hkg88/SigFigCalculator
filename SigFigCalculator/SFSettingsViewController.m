@@ -80,18 +80,11 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [[SFProductManager sharedManager] makeProductRequestIfPaymentsPossible];
-    
-    [super viewWillAppear:animated];
-}
-
-- (void)viewWillLayoutSubviews
-{
-    if (!self.progressHUD) {
-        self.progressHUD = [[MBProgressHUD alloc] initWithView:self.tableView];
+    if (![SFProductManager sharedManager].removeAdsProduct) {
+        [[SFProductManager sharedManager] makeProductRequestIfPaymentsPossible];
     }
     
-    [super viewWillLayoutSubviews];
+    [super viewWillAppear:animated];
 }
 
 -(void)viewDidLayoutSubviews
