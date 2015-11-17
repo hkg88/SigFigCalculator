@@ -35,6 +35,7 @@
     [super viewDidLoad];
     
     self.productsManager = [SFProductManager sharedManager];
+    self.progressHUD = [[MBProgressHUD alloc] initWithView:self.tableView];
     
     // Only request product meta-data to display here if the user is able to purchase in-App purchases
     if([self.productsManager canMakePayments]){
