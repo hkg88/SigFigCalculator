@@ -111,7 +111,7 @@
 "udo-P2-3X8.normalTitle" = "4";
 
 /* Class = "UILabel"; text = "数字"; ObjectID = "ujZ-RS-pTR"; */
-"ujZ-RS-pTR.text" = "数字";
+"ujZ-RS-pTR.text" = "数字:";
 
 /* Class = "UIButton"; normalTitle = "/"; ObjectID = "vyA-AQ-qpR"; */
 "vyA-AQ-qpR.normalTitle" = "/";
