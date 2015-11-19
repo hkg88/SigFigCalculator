@@ -136,6 +136,15 @@
     }
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if (![self.productsManager canMakePayments]) {
+        return 1;
+    }
+    
+    return 2;
+}
+
 #pragma mark - SFSettingsViewController Unique Methods
 
 // Displays an e-mail compose view with most information pre-filled in to be sent to
