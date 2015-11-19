@@ -40,7 +40,8 @@
     // Only request product meta-data to display here if the user is able to purchase in-App purchases
     if([self.productsManager canMakePayments]){
         @weakify(self)
-        RAC(self.tipJarProductNameLabel, text) = RACObserve(self.productsManager, removeAdsProductLocalizedTitle);
+        self.tipJarProductNameLabel.text = NSLocalizedString(@"Remove Ads", "In-App purchase title");
+        RAC(self.tipJarProductNameLabel, text) = [RACObserve(self.productsManager, removeAdsProductLocalizedTitle) ignore:nil];
         RAC(self.tipJarProductPriceLabel, text) = [RACObserve(self.productsManager, removeAdsProductLocalizedPrice) map:^id(NSString *price) {
             @strongify(self);
             if (self.productsManager.removeAdsProductPurchased) {
