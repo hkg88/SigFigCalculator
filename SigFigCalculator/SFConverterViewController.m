@@ -42,14 +42,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
 }
 
-- (void)viewDidDisappear:(BOOL)animated
-{
-    self.numberTextField.text = @"";
-    self.numSigFigsTextField.text = @"";
-    self.resultingNumberLabel.text = @"";
-    [super viewDidDisappear:animated];
-}
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     if (textField == self.numberTextField || textField == self.numSigFigsTextField) {

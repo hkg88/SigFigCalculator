@@ -33,13 +33,6 @@
     
 }
 
-- (void)viewDidDisappear:(BOOL)animated
-{
-    self.textField.text = @"";
-    self.numSigFigsLabel.text = @"";
-    [super viewDidDisappear:animated];
-}
-
 - (IBAction)numberEntered:(UITextField *)sender
 {
     // Only attempt and count the SigFigs of a non-empty NSString
