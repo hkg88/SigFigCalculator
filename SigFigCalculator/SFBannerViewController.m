@@ -17,6 +17,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         [[SFBannerViewManager sharedInstance] addBannerViewController:self];
+        self.bannerViewIsDisplayed = NO;
     }
     return self;
 }
@@ -35,16 +36,23 @@
         return ;
     }
     
-    [self.bannerView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.view addSubview:self.bannerView];
+    if (![self.view.subviews containsObject:self.bannerView]) {
+        [self.bannerView setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+        CGRect offBottomScreenFrame = CGRectMake(0.0f, CGRectGetHeight(self.contentViewController.view.frame) + self.bannerView.bounds.size.height, self.bannerView.bounds.size.width, self.bannerView.bounds.size.height);
+        self.bannerView.frame = offBottomScreenFrame;
+
+        [self.view addSubview:self.bannerView];
+
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.bannerView
+                                                              attribute:NSLayoutAttributeTop
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.contentViewController.view
+                                                              attribute:NSLayoutAttributeBottom
+                                                             multiplier:1.0f
+                                                               constant:0.0f]];
+    }
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.bannerView
-                                                          attribute:NSLayoutAttributeTop
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.contentViewController.view
-                                                          attribute:NSLayoutAttributeBottom
-                                                         multiplier:1.0f
-                                                           constant:0.0f]];
 }
 
 - (void)viewDidLoad
@@ -101,7 +109,6 @@
 - (void)hideBannerView
 {
     if (self.bannerViewIsDisplayed) {
-        [self.view layoutIfNeeded];
         
         [UIView animateWithDuration:0.25 animations:^{
             self.contentViewBottomLayoutConstraint.constant = 0.0;
@@ -115,7 +122,6 @@
 - (void)showBannerView
 {
     if (!self.bannerViewIsDisplayed) {
-        [self.view layoutIfNeeded];
         
         [UIView animateWithDuration:0.25 animations:^{
             self.contentViewBottomLayoutConstraint.constant = -50.0f;
