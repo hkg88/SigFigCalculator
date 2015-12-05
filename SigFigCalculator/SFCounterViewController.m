@@ -4,6 +4,8 @@
 
 @interface SFCounterViewController()
 
+@property (strong, nonatomic) UIGestureRecognizer *keyboardDismissalTapGestureRecognizer;
+
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 @property (strong, nonatomic) IBOutlet UILabel *numSigFigsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *numberTextLabel;
@@ -31,6 +33,15 @@
     self.numSigFigsLabel.font = [UIFont fontWithName:@"Helvetica" size:125];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
     
+    self.keyboardDismissalTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                         action:@selector(dismissKeyboard:)];
+    self.keyboardDismissalTapGestureRecognizer.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:self.keyboardDismissalTapGestureRecognizer];
+}
+
+- (void)dismissKeyboard:(UIGestureRecognizer *)gestureRecognizer
+{
+    [self.view endEditing:YES];
 }
 
 - (IBAction)numberEntered:(UITextField *)sender
