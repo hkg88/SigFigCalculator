@@ -16,6 +16,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *numSigFigsTextField;
 @property (strong, nonatomic) IBOutlet UILabel *resultingNumberTextLabel;
 @property (strong, nonatomic) IBOutlet UILabel *resultingNumberLabel;
+@property (strong, nonatomic) NSString *valueBeforeEdit;
+@property (strong, nonatomic) UITextField *textFieldBeingEdited;
 
 @property (strong, nonatomic) SigFigCounter *sigFigCounter;
 @property (strong, nonatomic) SigFigConverter *sigFigConverter;
@@ -44,12 +46,80 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
     
     self.keyboardDismissalTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                         action:@selector(dismissKeyboard:)];
+                                                                                         action:@selector(dismissKeyboard)];
     self.keyboardDismissalTapGestureRecognizer.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:self.keyboardDismissalTapGestureRecognizer];
+    
+    [self setupNumberEntryKeyboardAccessoryToolbar];
+    [self setupNumSigFigsEntryKeyboardAccessoryToolbar];
+    
+    
 }
 
-- (void)dismissKeyboard:(UIGestureRecognizer *)gestureRecognizer
+- (void)setupNumberEntryKeyboardAccessoryToolbar
+{
+    UIToolbar *numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    numberToolbar.barStyle = UIBarStyleDefault;
+    numberToolbar.items = @[[[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain
+                                                            target:self
+                                                            action:@selector(cancelPressed)],
+                            [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                                         target:nil
+                                                                         action:nil],
+                            [[UIBarButtonItem alloc]initWithTitle:@"+/-"
+                                                            style:UIBarButtonItemStylePlain
+                                                           target:self
+                                                           action:@selector(changeSignPressed)],
+                            [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                                         target:nil
+                                                                         action:nil],
+                            [[UIBarButtonItem alloc]initWithTitle:@"Done"
+                                                            style:UIBarButtonItemStyleDone
+                                                           target:self
+                                                           action:@selector(numberEntered)]];
+    [numberToolbar sizeToFit];
+    self.numberTextField.inputAccessoryView = numberToolbar;
+}
+
+- (void)setupNumSigFigsEntryKeyboardAccessoryToolbar
+{
+    UIToolbar *numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    numberToolbar.barStyle = UIBarStyleDefault;
+    numberToolbar.items = @[[[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain
+                                                            target:self
+                                                            action:@selector(cancelPressed)],
+                            [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                                         target:nil
+                                                                         action:nil],
+                            [[UIBarButtonItem alloc]initWithTitle:@"Done"
+                                                            style:UIBarButtonItemStyleDone
+                                                           target:self
+                                                           action:@selector(numberEntered)]];
+    [numberToolbar sizeToFit];
+    self.numSigFigsTextField.inputAccessoryView = numberToolbar;
+}
+
+- (void)changeSignPressed
+{
+    if ([self.numberTextField.text isEqualToString:@""]) {
+        return;
+    }
+    
+    NSMutableString *mutableText = self.numberTextField.text.mutableCopy;
+    if ([self.numberTextField.text hasPrefix:@"-"]) {
+        self.numberTextField.text = [self.numberTextField.text.mutableCopy substringWithRange:NSMakeRange(1, mutableText.length - 1)];
+    } else {
+        self.numberTextField.text = [@"-".mutableCopy stringByAppendingString:self.numberTextField.text];
+    }
+}
+
+-(void)cancelPressed
+{
+    self.textFieldBeingEdited.text = self.valueBeforeEdit;
+    [self dismissKeyboard];
+}
+
+- (void)dismissKeyboard
 {
     [self.view endEditing:YES];
 }
@@ -62,7 +132,7 @@
     return NO;
 }
 
-- (IBAction)numberEntered:(UITextField *)sender
+- (void)numberEntered
 {
     // If both text fields have values, attempt to count and convert the sigFigs
     if(![self.numberTextField.text isEqualToString:@""] && ![self.numSigFigsTextField.text isEqualToString:@""]) {
@@ -74,12 +144,8 @@
     } else {
         self.resultingNumberLabel.text = @" ";
     }
-}
-
-- (IBAction)backgroundTapped:(UIControl *)sender
-{
-    [self.numberTextField resignFirstResponder];
-    [self.numSigFigsTextField resignFirstResponder];
+    
+    [self dismissKeyboard];
 }
 
 - (void)preferredContentSizeChanged:(NSNotification *)notification
@@ -91,6 +157,15 @@
     self.numSigFigsTextField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     self.resultingNumberTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
+}
+
+#pragma mark - UITextViewDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    // Store the current value prior to editing to be used if the user cancels their edit
+    self.textFieldBeingEdited = textField;
+    self.valueBeforeEdit = textField.text;
 }
 
 @end
