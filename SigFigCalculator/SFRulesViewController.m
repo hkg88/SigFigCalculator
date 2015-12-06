@@ -35,9 +35,18 @@
     NSString *rulesString = self.rulesTextView.text;
     NSMutableAttributedString *rulesAttributedString = [[NSMutableAttributedString alloc] initWithString:rulesString];
     
-    UIFont *biggestTitleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle1];
-    UIFont *biggerTitleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
-    UIFont *titleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle3];
+    UIFont *biggestTitleFont;
+    UIFont *biggerTitleFont;
+    UIFont *titleFont;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 9.0) {
+        biggestTitleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+        biggerTitleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+        titleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    } else {
+        biggestTitleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle1];
+        biggerTitleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
+        titleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle3];
+    }
     
     [rulesAttributedString addAttribute:NSFontAttributeName
                                   value:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]
