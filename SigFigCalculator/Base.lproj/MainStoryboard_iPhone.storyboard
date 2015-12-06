@@ -356,7 +356,7 @@
                                 <rect key="frame" x="0.0" y="245" width="600" height="310"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="236" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dfr-aJ-jIf" userLabel="Resulting Number Value Label">
-                                        <rect key="frame" x="0.0" y="20" width="600" height="282"/>
+                                        <rect key="frame" x="8" y="20" width="584" height="282"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -367,9 +367,9 @@
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Dfr-aJ-jIf" secondAttribute="bottom" constant="8" id="FoL-uR-NhR"/>
-                                    <constraint firstAttribute="trailing" secondItem="Dfr-aJ-jIf" secondAttribute="trailing" id="a9F-Pi-eM9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dfr-aJ-jIf" secondAttribute="trailing" constant="8" id="a9F-Pi-eM9"/>
                                     <constraint firstItem="Dfr-aJ-jIf" firstAttribute="top" secondItem="d0I-v0-MVn" secondAttribute="top" constant="20" id="bIb-y5-fvA"/>
-                                    <constraint firstItem="Dfr-aJ-jIf" firstAttribute="leading" secondItem="d0I-v0-MVn" secondAttribute="leading" id="rNp-Tl-5LG"/>
+                                    <constraint firstItem="Dfr-aJ-jIf" firstAttribute="leading" secondItem="d0I-v0-MVn" secondAttribute="leading" constant="8" id="rNp-Tl-5LG"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -497,7 +497,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="84" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3JS-Nf-5Pd" userLabel="Num Sig Figs Value Label">
                                         <rect key="frame" x="8" y="10" width="584" height="394"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -652,26 +652,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="94" translatesAutoresizingMaskIntoConstraints="NO" id="uGM-XL-PGS" userLabel="Display View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="117"/>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="94" translatesAutoresizingMaskIntoConstraints="NO" id="uGM-XL-PGS" userLabel="Display View">
+                                <rect key="frame" x="4" y="0.0" width="592" height="117"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y8b-nG-JpE" userLabel="Result Label">
-                                        <rect key="frame" x="10" y="15" width="580" height="97"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y8b-nG-JpE" userLabel="Result Label">
+                                        <rect key="frame" x="10" y="15" width="572" height="97"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="50"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZI-IH-LEX" userLabel="Status Bar Background View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZI-IH-LEX" userLabel="Status Bar Background View">
+                                        <rect key="frame" x="0.0" y="0.0" width="592" height="20"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="yl1-FI-XnB"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bng-DH-Sw1" userLabel="Operator Label">
-                                        <rect key="frame" x="478" y="82" width="50" height="35"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bng-DH-Sw1" userLabel="Operator Label">
+                                        <rect key="frame" x="470" y="82" width="50" height="35"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="ifJ-Im-TTW"/>
@@ -699,8 +699,8 @@
                                     <constraint firstItem="AZI-IH-LEX" firstAttribute="top" secondItem="uGM-XL-PGS" secondAttribute="top" id="yhn-4e-n5l"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-sz-d0F">
-                                <rect key="frame" x="0.0" y="118" width="149" height="83"/>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-sz-d0F">
+                                <rect key="frame" x="4" y="118" width="149" height="83"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -716,8 +716,8 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="Mwz-zS-gMo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udo-P2-3X8">
-                                <rect key="frame" x="0.0" y="202" width="149" height="84"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udo-P2-3X8">
+                                <rect key="frame" x="4" y="202" width="149" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -733,8 +733,8 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="htT-Ad-xsg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nws-Zs-83M">
-                                <rect key="frame" x="0.0" y="287" width="149" height="84"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nws-Zs-83M">
+                                <rect key="frame" x="4" y="287" width="149" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -750,8 +750,8 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="2um-J9-xK9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N26-X9-MSJ">
-                                <rect key="frame" x="0.0" y="372" width="149" height="84"/>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N26-X9-MSJ">
+                                <rect key="frame" x="4" y="372" width="149" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -767,8 +767,8 @@
                                     <action selector="pressedDecimal:" destination="2" eventType="touchUpInside" id="s2B-md-FXy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8u-bi-ROf">
-                                <rect key="frame" x="0.0" y="457" width="149" height="84"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8u-bi-ROf">
+                                <rect key="frame" x="4" y="457" width="149" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -784,8 +784,8 @@
                                     <action selector="pressedClear:" destination="2" eventType="touchUpInside" id="CeG-Vf-qE0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfO-ww-TMW">
-                                <rect key="frame" x="150" y="118" width="149" height="83"/>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfO-ww-TMW">
+                                <rect key="frame" x="154" y="118" width="149" height="83"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -801,8 +801,8 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="Sgd-zf-oXC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7f-Nu-gKa">
-                                <rect key="frame" x="150" y="202" width="149" height="84"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7f-Nu-gKa">
+                                <rect key="frame" x="154" y="202" width="149" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -818,8 +818,8 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="oPT-Jk-9U2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jb-Fr-XSx">
-                                <rect key="frame" x="150" y="287" width="149" height="84"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jb-Fr-XSx">
+                                <rect key="frame" x="154" y="287" width="149" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -835,8 +835,8 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="xSm-Vh-8U0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAj-Ex-Ny4">
-                                <rect key="frame" x="150" y="372" width="149" height="84"/>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAj-Ex-Ny4">
+                                <rect key="frame" x="154" y="372" width="149" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -852,8 +852,8 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="0rc-NQ-TtX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASv-ma-V4H">
-                                <rect key="frame" x="300" y="118" width="149" height="83"/>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASv-ma-V4H">
+                                <rect key="frame" x="304" y="118" width="149" height="83"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -869,8 +869,8 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="3HO-3V-qC0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dp-FE-s7V">
-                                <rect key="frame" x="300" y="202" width="149" height="84"/>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dp-FE-s7V">
+                                <rect key="frame" x="304" y="202" width="149" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -886,8 +886,8 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="PdS-kz-QC7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtD-kP-il0">
-                                <rect key="frame" x="300" y="287" width="149" height="84"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtD-kP-il0">
+                                <rect key="frame" x="304" y="287" width="149" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -903,8 +903,8 @@
                                     <action selector="pressedDigit:" destination="2" eventType="touchUpInside" id="Irc-BZ-ouc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPQ-m0-c5T">
-                                <rect key="frame" x="300" y="372" width="149" height="84"/>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="79" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPQ-m0-c5T">
+                                <rect key="frame" x="304" y="372" width="149" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -920,8 +920,8 @@
                                     <action selector="pressedNegate:" destination="2" eventType="touchUpInside" id="Yq1-f5-oWL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyA-AQ-qpR">
-                                <rect key="frame" x="450" y="118" width="150" height="83"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyA-AQ-qpR">
+                                <rect key="frame" x="454" y="118" width="150" height="83"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.45098039215686275" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -937,8 +937,8 @@
                                     <action selector="pressedOperator:" destination="2" eventType="touchUpInside" id="ksl-db-4oU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZP-YX-QEg">
-                                <rect key="frame" x="450" y="202" width="150" height="84"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZP-YX-QEg">
+                                <rect key="frame" x="454" y="202" width="150" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.45098039215686275" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -954,8 +954,8 @@
                                     <action selector="pressedOperator:" destination="2" eventType="touchUpInside" id="sZr-Qq-wxV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBX-b7-Fiw">
-                                <rect key="frame" x="450" y="287" width="150" height="84"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBX-b7-Fiw">
+                                <rect key="frame" x="454" y="287" width="150" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.45098039215686275" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -971,8 +971,8 @@
                                     <action selector="pressedOperator:" destination="2" eventType="touchUpInside" id="1Uv-x0-FrA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B74-nR-5iU">
-                                <rect key="frame" x="450" y="372" width="150" height="84"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B74-nR-5iU">
+                                <rect key="frame" x="454" y="372" width="150" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.45098039215686275" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -988,8 +988,8 @@
                                     <action selector="pressedOperator:" destination="2" eventType="touchUpInside" id="OXX-PV-nHo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaP-lr-PKH">
-                                <rect key="frame" x="450" y="457" width="150" height="84"/>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaP-lr-PKH">
+                                <rect key="frame" x="454" y="457" width="150" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -1005,8 +1005,8 @@
                                     <action selector="pressedBackspace:" destination="2" eventType="touchUpInside" id="RUl-jO-HXW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="159" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyH-IB-zGd">
-                                <rect key="frame" x="150" y="457" width="300" height="84"/>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="159" placeholderIntrinsicHeight="84" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyH-IB-zGd">
+                                <rect key="frame" x="154" y="457" width="299" height="84"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
@@ -1035,12 +1035,11 @@
                             <constraint firstAttribute="height" secondItem="B74-nR-5iU" secondAttribute="height" multiplier="551/84" id="2iG-4W-Peh"/>
                             <constraint firstItem="kZP-YX-QEg" firstAttribute="leading" secondItem="vyA-AQ-qpR" secondAttribute="leading" id="2qG-Zk-JWM"/>
                             <constraint firstItem="B74-nR-5iU" firstAttribute="width" secondItem="F8u-bi-ROf" secondAttribute="width" constant="1" id="39i-ct-SPJ"/>
-                            <constraint firstItem="EaP-lr-PKH" firstAttribute="leading" secondItem="fyH-IB-zGd" secondAttribute="trailing" id="3yB-A0-GH5"/>
+                            <constraint firstItem="EaP-lr-PKH" firstAttribute="leading" secondItem="fyH-IB-zGd" secondAttribute="trailing" constant="1" id="3yB-A0-GH5"/>
                             <constraint firstItem="B74-nR-5iU" firstAttribute="height" secondItem="vyA-AQ-qpR" secondAttribute="height" constant="1" id="3yz-fq-7Wr"/>
                             <constraint firstItem="VfO-ww-TMW" firstAttribute="leading" secondItem="c7f-Nu-gKa" secondAttribute="leading" id="4hF-la-nCe"/>
                             <constraint firstItem="B74-nR-5iU" firstAttribute="width" secondItem="VfO-ww-TMW" secondAttribute="width" constant="1" id="64v-pa-W4e"/>
                             <constraint firstItem="B74-nR-5iU" firstAttribute="height" secondItem="N26-X9-MSJ" secondAttribute="height" id="6Ni-Nd-Npj"/>
-                            <constraint firstItem="uGM-XL-PGS" firstAttribute="top" secondItem="uNj-8f-g2t" secondAttribute="bottom" constant="-20" id="6ub-y7-zoe"/>
                             <constraint firstItem="B74-nR-5iU" firstAttribute="width" secondItem="EaP-lr-PKH" secondAttribute="width" id="7CS-Df-1aO"/>
                             <constraint firstItem="fyH-IB-zGd" firstAttribute="leading" secondItem="F8u-bi-ROf" secondAttribute="trailing" constant="1" id="7Hi-pg-MDS"/>
                             <constraint firstItem="B74-nR-5iU" firstAttribute="height" secondItem="c7f-Nu-gKa" secondAttribute="height" id="7bg-yW-8K6"/>
@@ -1085,6 +1084,7 @@
                             <constraint firstItem="VfO-ww-TMW" firstAttribute="top" secondItem="kn0-sz-d0F" secondAttribute="top" id="djk-yX-s2X"/>
                             <constraint firstItem="F8u-bi-ROf" firstAttribute="top" secondItem="N26-X9-MSJ" secondAttribute="bottom" constant="1" id="e0B-Wb-kgK"/>
                             <constraint firstItem="udo-P2-3X8" firstAttribute="top" secondItem="5Dp-FE-s7V" secondAttribute="top" id="eYT-4l-1bT"/>
+                            <constraint firstItem="uGM-XL-PGS" firstAttribute="top" secondItem="3" secondAttribute="topMargin" id="fic-B5-ayb"/>
                             <constraint firstItem="ASv-ma-V4H" firstAttribute="leading" secondItem="VfO-ww-TMW" secondAttribute="trailing" constant="1" id="iRN-zu-59D"/>
                             <constraint firstItem="B74-nR-5iU" firstAttribute="height" secondItem="VfO-ww-TMW" secondAttribute="height" constant="1" id="iT0-VV-5lg"/>
                             <constraint firstItem="B74-nR-5iU" firstAttribute="width" secondItem="vyA-AQ-qpR" secondAttribute="width" id="iwJ-ST-tRl"/>
