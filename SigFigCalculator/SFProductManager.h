@@ -1,4 +1,3 @@
-#import <Foundation/Foundation.h>
 #import <StoreKit/Storekit.h>
 
 @class SKProduct;

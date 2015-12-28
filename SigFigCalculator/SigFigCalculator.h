@@ -1,7 +1,5 @@
-#import <UIKit/UIKit.h>
-#import "Operand.h"
-#import "SigFigCounter.h"
-#import "SigFigConverter.h"
+@class Operand;
+@class SigFigCounter;
 
 @interface SigFigCalculator : NSObject
 

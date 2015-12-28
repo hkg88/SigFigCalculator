@@ -1,5 +1,6 @@
 #import "SFCalculatorViewController.h"
 #import "Math.h"
+#import "Operand.h"
 #import "SigFigCalculator.h"
 #import "SigFigCounter.h"
 #import "SigFigConverter.h"

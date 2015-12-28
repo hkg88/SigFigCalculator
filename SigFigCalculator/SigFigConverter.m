@@ -1,4 +1,5 @@
 #import "SigFigConverter.h"
+#import "SigFigCounter.h"
 
 @implementation SigFigConverter
 

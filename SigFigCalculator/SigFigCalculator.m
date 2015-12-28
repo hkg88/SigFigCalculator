@@ -1,4 +1,7 @@
 #import "SigFigCalculator.h"
+#import "Operand.h"
+#import "SigFigCounter.h"
+#import "SigFigConverter.h"
 
 @implementation SigFigCalculator
 
