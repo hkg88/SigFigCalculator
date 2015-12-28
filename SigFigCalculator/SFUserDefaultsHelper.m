@@ -24,11 +24,4 @@
     [userDefaults synchronize];
 }
 
-- (void)removeObjectForKey:(NSString *)key
-{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults removeObjectForKey:key];
-    [userDefaults synchronize];
-}
-
 @end
