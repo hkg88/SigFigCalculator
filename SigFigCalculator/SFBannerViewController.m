@@ -108,7 +108,6 @@
 - (void)hideBannerView
 {
     if (self.bannerViewIsDisplayed) {
-        [self.view layoutIfNeeded];
         
         [UIView animateWithDuration:0.25 animations:^{
             self.contentViewBottomLayoutConstraint.constant = 0.0;
