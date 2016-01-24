@@ -46,7 +46,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
     
     self.keyboardDismissalTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                         action:@selector(dismissKeyboard)];
+                                                                                         action:@selector(numberEntered)];
     self.keyboardDismissalTapGestureRecognizer.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:self.keyboardDismissalTapGestureRecognizer];
     
