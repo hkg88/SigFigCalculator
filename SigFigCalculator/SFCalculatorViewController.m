@@ -175,14 +175,7 @@ enum {
 - (IBAction)pressedEquals:(UIButton *)sender
 {
     if(self.sigFigCalculator.currOperator) {
-        // Have the SigFigCalculator calculate the result
-        // Only utilize attributedStrings if the device supports them
-        if(atLeastIOS6) {
-            self.display.attributedText = [self.sigFigCalculator calculateResult];
-        } else {
-            self.display.text = [[self.sigFigCalculator calculateResult] string];
-        }
-        
+        self.display.attributedText = [self.sigFigCalculator calculateResult];
     
         // Force the user to clear out the calculator after recording the result
         for(UIButton *button in self.nonClearButtons) {

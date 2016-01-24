@@ -87,11 +87,9 @@
     }
   }
   
-  // Create an attributed version of the result to be returned
-  NSMutableAttributedString *attributedResult =
-                      [[NSMutableAttributedString alloc] initWithString:result];
-  // Only underline if the device supports it
-  if(atLeastIOS6){
+    // Create an attributed version of the result to be returned
+    NSMutableAttributedString *attributedResult =
+    [[NSMutableAttributedString alloc] initWithString:result];
     int underlineBeginDelimiter;
     int underlineRangeSize = [desiredNumSigFigs intValue];
     
@@ -110,7 +108,7 @@
     // The beginning of the underline range is the index of the first significant
     // figure
     underlineBeginDelimiter = index;
-  
+    
     // Ensure that any decimals surrounded by significant figures will be
     // underlined
     if(!decimalSeen && [result rangeOfString:@"."].location != NSNotFound){
@@ -121,8 +119,7 @@
                              value:[NSNumber numberWithInt:NSUnderlineStyleSingle]
                              range:NSMakeRange(underlineBeginDelimiter, underlineRangeSize)];
     
-  }
-  return [[NSAttributedString alloc] initWithAttributedString:attributedResult];
+    return [[NSAttributedString alloc] initWithAttributedString:attributedResult];
 }
 
 
@@ -135,12 +132,10 @@
       result = [result stringByAppendingString:@"0"];
   }
   NSMutableAttributedString *underlinedString = [[NSMutableAttributedString alloc] initWithString:result];
-  // Only underline if the device supports it
-  if(atLeastIOS6) {
-      [underlinedString addAttribute:NSUnderlineStyleAttributeName
-                               value:[NSNumber numberWithInt:NSUnderlineStyleSingle]
-                               range:NSMakeRange(0, underlinedString.length)];
-  }
+  [underlinedString addAttribute:NSUnderlineStyleAttributeName
+                           value:[NSNumber numberWithInt:NSUnderlineStyleSingle]
+                           range:NSMakeRange(0, underlinedString.length)];
+    
   return [[NSAttributedString alloc] initWithAttributedString:underlinedString];
 }
 

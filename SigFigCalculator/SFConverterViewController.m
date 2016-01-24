@@ -136,11 +136,7 @@
 {
     // If both text fields have values, attempt to count and convert the sigFigs
     if(![self.numberTextField.text isEqualToString:@""] && ![self.numSigFigsTextField.text isEqualToString:@""]) {
-        if(atLeastIOS6) {
-            self.resultingNumberLabel.attributedText = [self.sigFigConverter convertNumSigFigs:self.numberTextField.text to:self.numSigFigsTextField.text];
-        } else {
-            self.resultingNumberLabel.text = [[self.sigFigConverter convertNumSigFigs:self.numberTextField.text to:self.numSigFigsTextField.text] string];
-        }
+        self.resultingNumberLabel.attributedText = [self.sigFigConverter convertNumSigFigs:self.numberTextField.text to:self.numSigFigsTextField.text];
     } else {
         self.resultingNumberLabel.text = @" ";
     }
